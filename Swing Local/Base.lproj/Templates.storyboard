@@ -16,10 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="460" height="1200"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view appearanceType="aqua" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTK-yt-fSD">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fTK-yt-fSD">
                                 <rect key="frame" x="0.0" y="0.0" width="474" height="66"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTE-BN-jkJ">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTE-BN-jkJ">
                                         <rect key="frame" x="0.0" y="20" width="460" height="46"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,15 +33,8 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.56220591070000003" green="0.26218384500000003" blue="0.20902511479999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="XTE-BN-jkJ" secondAttribute="bottom" id="7lA-0R-cF0"/>
-                                    <constraint firstItem="XTE-BN-jkJ" firstAttribute="top" secondItem="fTK-yt-fSD" secondAttribute="top" constant="20" symbolic="YES" id="Afp-T9-Sr1"/>
-                                    <constraint firstAttribute="height" constant="66" id="Dh1-Y6-7Ux"/>
-                                    <constraint firstItem="XTE-BN-jkJ" firstAttribute="leading" secondItem="fTK-yt-fSD" secondAttribute="leading" id="EbS-by-tZ0"/>
-                                    <constraint firstAttribute="trailing" secondItem="XTE-BN-jkJ" secondAttribute="trailing" constant="14" id="Ewq-Eb-sUF"/>
-                                </constraints>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3L1-0H-jta">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3L1-0H-jta">
                                 <rect key="frame" x="18" y="87" width="425" height="161"/>
                                 <subviews>
                                     <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MAP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scD-ci-Vq2">
@@ -53,7 +46,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.22190037109999999" green="0.26443271019999998" blue="0.42004925269999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAt-x1-J4f">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAt-x1-J4f">
                                 <rect key="frame" x="18" y="249" width="425" height="61"/>
                                 <subviews>
                                     <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seattle, WA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B66-kT-uZo">
@@ -74,10 +67,10 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j10-EI-i9V">
                                 <rect key="frame" x="-2" y="468" width="465" height="629"/>
                                 <subviews>
-                                    <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FnX-vK-QqY">
+                                    <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FnX-vK-QqY">
                                         <rect key="frame" x="20" y="20" width="425" height="76"/>
                                         <subviews>
-                                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="CHATTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tu-eo-4wf">
+                                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CHATTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tu-eo-4wf">
                                                 <rect key="frame" x="93" y="24" width="238" height="28"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -87,12 +80,6 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.17647058823529413" green="0.60392156862745094" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="5Tu-eo-4wf" firstAttribute="top" secondItem="FnX-vK-QqY" secondAttribute="top" constant="24" id="DuQ-s0-5HR"/>
-                                            <constraint firstItem="5Tu-eo-4wf" firstAttribute="leading" secondItem="FnX-vK-QqY" secondAttribute="leading" constant="93" id="o8l-au-P77"/>
-                                            <constraint firstItem="5Tu-eo-4wf" firstAttribute="centerY" secondItem="FnX-vK-QqY" secondAttribute="centerY" id="pDn-Z2-4PQ"/>
-                                            <constraint firstItem="5Tu-eo-4wf" firstAttribute="centerX" secondItem="FnX-vK-QqY" secondAttribute="centerX" id="qEl-eW-alu"/>
-                                        </constraints>
                                     </view>
                                     <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g8h-6a-ZIR">
                                         <rect key="frame" x="20" y="97" width="425" height="86"/>
@@ -176,10 +163,10 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Umh-Wo-fVn">
                                 <rect key="frame" x="-2" y="313" width="465" height="168"/>
                                 <subviews>
-                                    <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-0a-uqK">
+                                    <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-0a-uqK">
                                         <rect key="frame" x="20" y="20" width="425" height="61"/>
                                         <subviews>
-                                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="TODAY'S EVENTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="may-oq-cHM">
+                                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TODAY'S EVENTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="may-oq-cHM">
                                                 <rect key="frame" x="93" y="17" width="238" height="28"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -189,12 +176,6 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.56220591068267822" green="0.26218384504318237" blue="0.20902511477470398" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="may-oq-cHM" firstAttribute="top" secondItem="Gci-0a-uqK" secondAttribute="top" constant="17" id="7Yw-0v-C6O"/>
-                                            <constraint firstItem="may-oq-cHM" firstAttribute="centerX" secondItem="Gci-0a-uqK" secondAttribute="centerX" id="Bo8-Jn-3KY"/>
-                                            <constraint firstItem="may-oq-cHM" firstAttribute="leading" secondItem="Gci-0a-uqK" secondAttribute="leading" constant="93" id="dRm-ZE-GyT"/>
-                                            <constraint firstAttribute="bottom" secondItem="may-oq-cHM" secondAttribute="bottom" constant="16" id="yqs-ie-bbB"/>
-                                        </constraints>
                                     </view>
                                     <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tkb-bG-8dV">
                                         <rect key="frame" x="20" y="82" width="425" height="66"/>
@@ -233,17 +214,6 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.13816350344730238" green="0.16558555127995933" blue="0.20069969093406592" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="fAt-x1-J4f" firstAttribute="trailing" secondItem="3L1-0H-jta" secondAttribute="trailing" id="14f-nT-yw9"/>
-                            <constraint firstAttribute="trailing" secondItem="fTK-yt-fSD" secondAttribute="trailing" constant="-14" id="9c8-am-24o"/>
-                            <constraint firstItem="3L1-0H-jta" firstAttribute="leading" secondItem="fAt-x1-J4f" secondAttribute="leading" id="AEN-M1-IJi"/>
-                            <constraint firstItem="fTK-yt-fSD" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="NWe-M5-mLq"/>
-                            <constraint firstItem="fTK-yt-fSD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Vcu-iZ-HLf"/>
-                            <constraint firstItem="3L1-0H-jta" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="18" id="XS7-HT-mfd"/>
-                            <constraint firstItem="fAt-x1-J4f" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="249" id="aNj-Sc-kfz"/>
-                            <constraint firstItem="fAt-x1-J4f" firstAttribute="top" secondItem="3L1-0H-jta" secondAttribute="bottom" constant="1" id="doy-Uh-V8D"/>
-                            <constraint firstItem="3L1-0H-jta" firstAttribute="top" secondItem="fTK-yt-fSD" secondAttribute="bottom" constant="21" id="s5S-U0-nXz"/>
-                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="e8o-MU-4QD"/>
@@ -266,10 +236,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="460" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kJK-G2-r7r">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kJK-G2-r7r">
                                 <rect key="frame" x="0.0" y="0.0" width="460" height="66"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="FAVORITES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjV-Uj-Xru">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FAVORITES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjV-Uj-Xru">
                                         <rect key="frame" x="0.0" y="20" width="446" height="46"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -283,13 +253,6 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2360737383" green="0.51408646449999995" blue="0.53556404530000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="NjV-Uj-Xru" secondAttribute="trailing" constant="14" id="Woe-FB-bIr"/>
-                                    <constraint firstAttribute="bottom" secondItem="NjV-Uj-Xru" secondAttribute="bottom" id="XEP-aJ-ikC"/>
-                                    <constraint firstItem="NjV-Uj-Xru" firstAttribute="top" secondItem="kJK-G2-r7r" secondAttribute="top" constant="20" symbolic="YES" id="fKV-km-VP6"/>
-                                    <constraint firstItem="NjV-Uj-Xru" firstAttribute="leading" secondItem="kJK-G2-r7r" secondAttribute="leading" id="fPf-23-AE5"/>
-                                    <constraint firstAttribute="height" constant="66" id="wdt-kt-yrw"/>
-                                </constraints>
                             </view>
                             <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B1e-aS-GQR">
                                 <rect key="frame" x="20" y="84" width="205" height="205"/>
@@ -364,7 +327,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.1647058824" green="0.31764705879999999" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.56220591070000003" green="0.26218384500000003" blue="0.20902511479999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 CALENDARS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChZ-uM-kSF">
                                         <rect key="frame" x="20" y="115" width="165" height="21"/>
@@ -394,7 +357,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.56220591070000003" green="0.26218384500000003" blue="0.20902511479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.2360737383" green="0.51408646449999995" blue="0.53556404530000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 CALENDARS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ht-AM-AwG">
                                         <rect key="frame" x="20" y="115" width="165" height="21"/>
@@ -424,7 +387,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.1647058824" green="0.31764705879999999" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.56220591070000003" green="0.26218384500000003" blue="0.20902511479999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3 CALENDARS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFE-DQ-685">
                                         <rect key="frame" x="20" y="115" width="165" height="21"/>
@@ -524,7 +487,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Wc-c3-RoE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904" y="88"/>
+            <point key="canvasLocation" x="902" y="88"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bmK-lF-5PC">
@@ -538,10 +501,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="460" height="1152"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LlS-jA-TXr">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LlS-jA-TXr">
                                 <rect key="frame" x="0.0" y="0.0" width="460" height="66"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="CALENDARS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Y8-TM-nhf">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CALENDARS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Y8-TM-nhf">
                                         <rect key="frame" x="0.0" y="20" width="446" height="46"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -555,15 +518,8 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2360737383" green="0.51408646449999995" blue="0.53556404530000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="7Y8-TM-nhf" firstAttribute="leading" secondItem="LlS-jA-TXr" secondAttribute="leading" id="0tf-C9-j6u"/>
-                                    <constraint firstAttribute="height" constant="66" id="UC8-Rs-Drf"/>
-                                    <constraint firstAttribute="bottom" secondItem="7Y8-TM-nhf" secondAttribute="bottom" id="XiO-Y5-Zds"/>
-                                    <constraint firstAttribute="trailing" secondItem="7Y8-TM-nhf" secondAttribute="trailing" constant="14" id="roz-qg-LHD"/>
-                                    <constraint firstItem="7Y8-TM-nhf" firstAttribute="top" secondItem="LlS-jA-TXr" secondAttribute="top" constant="20" symbolic="YES" id="zuL-Q4-yn0"/>
-                                </constraints>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bgc-hK-Xt5">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bgc-hK-Xt5">
                                 <rect key="frame" x="15" y="238" width="425" height="275"/>
                                 <subviews>
                                     <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="krq-pi-yab">
@@ -629,10 +585,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.22190037109999999" green="0.26443271019999998" blue="0.42004925269999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ff-lX-5Ht">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ff-lX-5Ht">
                                 <rect key="frame" x="15" y="176" width="425" height="61"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="April 2014" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdr-JM-VI3">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="April 2014" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdr-JM-VI3">
                                         <rect key="frame" x="93" y="17" width="238" height="28"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -648,17 +604,11 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16470588235294117" green="0.31764705882352939" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Wdr-JM-VI3" secondAttribute="bottom" constant="16" id="0ZA-Wo-gNd"/>
-                                    <constraint firstItem="Wdr-JM-VI3" firstAttribute="centerX" secondItem="1Ff-lX-5Ht" secondAttribute="centerX" id="4a5-eN-Hcr"/>
-                                    <constraint firstItem="Wdr-JM-VI3" firstAttribute="leading" secondItem="1Ff-lX-5Ht" secondAttribute="leading" constant="93" id="aaV-ZU-RQR"/>
-                                    <constraint firstItem="Wdr-JM-VI3" firstAttribute="top" secondItem="1Ff-lX-5Ht" secondAttribute="top" constant="17" id="eg2-Gb-rS7"/>
-                                </constraints>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zfP-KY-eiE">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zfP-KY-eiE">
                                 <rect key="frame" x="15" y="83" width="425" height="67"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="SEATTLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVc-3Y-1Iy">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SEATTLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVc-3Y-1Iy">
                                         <rect key="frame" x="93" y="13" width="238" height="34"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -671,23 +621,12 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.082352941176470587" green="0.22745098039215686" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="zVc-3Y-1Iy" secondAttribute="bottom" constant="16" id="Eul-tu-52D"/>
-                                    <constraint firstItem="zVc-3Y-1Iy" firstAttribute="leading" secondItem="zfP-KY-eiE" secondAttribute="leading" constant="93" id="jed-pM-qKr"/>
-                                    <constraint firstItem="zVc-3Y-1Iy" firstAttribute="centerX" secondItem="zfP-KY-eiE" secondAttribute="centerX" id="rib-0c-0pk"/>
-                                    <constraint firstItem="zVc-3Y-1Iy" firstAttribute="top" secondItem="zfP-KY-eiE" secondAttribute="top" constant="17" id="tKU-bB-QWs"/>
-                                </constraints>
                             </view>
                             <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FLAT_LOGO-14" translatesAutoresizingMaskIntoConstraints="NO" id="MKg-7u-Qn7">
                                 <rect key="frame" x="0.0" y="980" width="120" height="120"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1381635034" green="0.16558555129999999" blue="0.20069969090000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="1Ff-lX-5Ht" firstAttribute="trailing" secondItem="bgc-hK-Xt5" secondAttribute="trailing" id="1Qv-85-BVh"/>
-                            <constraint firstItem="bgc-hK-Xt5" firstAttribute="top" secondItem="1Ff-lX-5Ht" secondAttribute="bottom" constant="1" id="yVz-gK-YLG"/>
-                            <constraint firstItem="1Ff-lX-5Ht" firstAttribute="leading" secondItem="bgc-hK-Xt5" secondAttribute="leading" id="zUP-jf-l2h"/>
-                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -709,10 +648,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="460" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O3l-xF-efg">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O3l-xF-efg">
                                 <rect key="frame" x="0.0" y="0.0" width="460" height="66"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7Z-sV-ZME">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7Z-sV-ZME">
                                         <rect key="frame" x="0.0" y="20" width="446" height="46"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -726,18 +665,11 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.56220591070000003" green="0.26218384500000003" blue="0.20902511479999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="S7Z-sV-ZME" secondAttribute="bottom" id="0U7-gD-Wpw"/>
-                                    <constraint firstItem="S7Z-sV-ZME" firstAttribute="leading" secondItem="O3l-xF-efg" secondAttribute="leading" id="1rl-dt-U1g"/>
-                                    <constraint firstAttribute="trailing" secondItem="S7Z-sV-ZME" secondAttribute="trailing" constant="14" id="E7N-4V-b9D"/>
-                                    <constraint firstAttribute="height" constant="66" id="Z6e-7y-Lol"/>
-                                    <constraint firstItem="S7Z-sV-ZME" firstAttribute="top" secondItem="O3l-xF-efg" secondAttribute="top" constant="20" symbolic="YES" id="m37-ry-4fL"/>
-                                </constraints>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m5x-E5-ll6">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m5x-E5-ll6">
                                 <rect key="frame" x="18" y="472" width="425" height="62"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRc-FW-Bx6">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRc-FW-Bx6">
                                         <rect key="frame" x="93" y="17" width="238" height="29"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -747,20 +679,14 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1647058824" green="0.31764705879999999" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="rRc-FW-Bx6" secondAttribute="bottom" constant="16" id="6GJ-26-ccY"/>
-                                    <constraint firstItem="rRc-FW-Bx6" firstAttribute="leading" secondItem="m5x-E5-ll6" secondAttribute="leading" constant="93" id="6xA-AV-Hw8"/>
-                                    <constraint firstItem="rRc-FW-Bx6" firstAttribute="top" secondItem="m5x-E5-ll6" secondAttribute="top" constant="17" id="Qce-0b-QU2"/>
-                                    <constraint firstItem="rRc-FW-Bx6" firstAttribute="centerX" secondItem="m5x-E5-ll6" secondAttribute="centerX" id="ffP-hc-O8b"/>
-                                </constraints>
                             </view>
                             <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FLAT_LOGO-14" translatesAutoresizingMaskIntoConstraints="NO" id="wfL-yC-Q35">
                                 <rect key="frame" x="0.0" y="980" width="120" height="120"/>
                             </imageView>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9AN-vM-Mga">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9AN-vM-Mga">
                                 <rect key="frame" x="18" y="559" width="425" height="62"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sign Up With Facebook" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoV-i4-Wlo">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up With Facebook" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoV-i4-Wlo">
                                         <rect key="frame" x="105" y="16" width="238" height="29"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -774,12 +700,6 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.1019607843" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="hoV-i4-Wlo" firstAttribute="leading" secondItem="9AN-vM-Mga" secondAttribute="leading" constant="93" id="e8a-eH-eOW"/>
-                                    <constraint firstItem="hoV-i4-Wlo" firstAttribute="centerX" secondItem="9AN-vM-Mga" secondAttribute="centerX" id="efz-uc-yQd"/>
-                                    <constraint firstItem="hoV-i4-Wlo" firstAttribute="top" secondItem="9AN-vM-Mga" secondAttribute="top" constant="17" id="ik8-sd-6bD"/>
-                                    <constraint firstAttribute="bottom" secondItem="hoV-i4-Wlo" secondAttribute="bottom" constant="16" id="q3i-RG-8fT"/>
-                                </constraints>
                             </view>
                             <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b0Y-Nz-r10">
                                 <rect key="frame" x="18" y="84" width="425" height="388"/>
@@ -849,10 +769,10 @@
                             <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FLAT_LOGO-14" translatesAutoresizingMaskIntoConstraints="NO" id="BT1-aZ-idw">
                                 <rect key="frame" x="0.0" y="980" width="120" height="120"/>
                             </imageView>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhr-Ne-Lbc">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhr-Ne-Lbc">
                                 <rect key="frame" x="0.0" y="0.0" width="460" height="66"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="ORGANIZER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZ2-o0-YCJ">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ORGANIZER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZ2-o0-YCJ">
                                         <rect key="frame" x="0.0" y="20" width="446" height="46"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -866,15 +786,8 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2360737383" green="0.51408646449999995" blue="0.53556404530000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="SZ2-o0-YCJ" secondAttribute="bottom" id="45H-jS-IBS"/>
-                                    <constraint firstAttribute="trailing" secondItem="SZ2-o0-YCJ" secondAttribute="trailing" constant="14" id="CNK-jX-Oac"/>
-                                    <constraint firstItem="SZ2-o0-YCJ" firstAttribute="top" secondItem="fhr-Ne-Lbc" secondAttribute="top" constant="20" symbolic="YES" id="bf3-dF-ntG"/>
-                                    <constraint firstAttribute="height" constant="66" id="c6I-1R-v5l"/>
-                                    <constraint firstItem="SZ2-o0-YCJ" firstAttribute="leading" secondItem="fhr-Ne-Lbc" secondAttribute="leading" id="rrL-am-5tH"/>
-                                </constraints>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L9A-6V-hoL">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L9A-6V-hoL">
                                 <rect key="frame" x="18" y="173" width="425" height="275"/>
                                 <subviews>
                                     <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PiZ-nc-LKQ">
@@ -940,10 +853,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.22190037109999999" green="0.26443271019999998" blue="0.42004925269999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RF1-gQ-J0W">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RF1-gQ-J0W">
                                 <rect key="frame" x="18" y="88" width="425" height="61"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="April 2014" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UG4-tw-6Pn">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="April 2014" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UG4-tw-6Pn">
                                         <rect key="frame" x="93" y="17" width="238" height="28"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -959,12 +872,6 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1647058824" green="0.31764705879999999" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="UG4-tw-6Pn" firstAttribute="centerX" secondItem="RF1-gQ-J0W" secondAttribute="centerX" id="7dV-DE-7Vh"/>
-                                    <constraint firstAttribute="bottom" secondItem="UG4-tw-6Pn" secondAttribute="bottom" constant="16" id="k7a-jK-XWu"/>
-                                    <constraint firstItem="UG4-tw-6Pn" firstAttribute="leading" secondItem="RF1-gQ-J0W" secondAttribute="leading" constant="93" id="nVq-43-4Uv"/>
-                                    <constraint firstItem="UG4-tw-6Pn" firstAttribute="top" secondItem="RF1-gQ-J0W" secondAttribute="top" constant="17" id="vpG-5d-Ylq"/>
-                                </constraints>
                             </view>
                             <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5G-ZL-CUb">
                                 <rect key="frame" x="18" y="150" width="425" height="22"/>
@@ -980,7 +887,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.08235294118" green="0.2274509804" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dDC-hS-1qn">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dDC-hS-1qn">
                                 <rect key="frame" x="18" y="560" width="425" height="275"/>
                                 <subviews>
                                     <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xXh-5q-IA3">
@@ -1046,10 +953,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.22190037109999999" green="0.26443271019999998" blue="0.42004925269999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tCs-R3-F1u">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tCs-R3-F1u">
                                 <rect key="frame" x="18" y="475" width="425" height="61"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="April 2014" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kID-qR-lex">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="April 2014" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kID-qR-lex">
                                         <rect key="frame" x="93" y="17" width="238" height="28"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1065,12 +972,6 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1647058824" green="0.31764705879999999" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="kID-qR-lex" firstAttribute="centerX" secondItem="tCs-R3-F1u" secondAttribute="centerX" id="HQe-IC-WZM"/>
-                                    <constraint firstItem="kID-qR-lex" firstAttribute="leading" secondItem="tCs-R3-F1u" secondAttribute="leading" constant="93" id="I5C-S2-no3"/>
-                                    <constraint firstItem="kID-qR-lex" firstAttribute="top" secondItem="tCs-R3-F1u" secondAttribute="top" constant="17" id="OQs-fz-5Yt"/>
-                                    <constraint firstAttribute="bottom" secondItem="kID-qR-lex" secondAttribute="bottom" constant="16" id="aJl-N8-WJo"/>
-                                </constraints>
                             </view>
                             <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uiT-x0-uUU">
                                 <rect key="frame" x="18" y="537" width="425" height="22"/>
@@ -1086,7 +987,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.08235294118" green="0.2274509804" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zhf-9c-izj">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zhf-9c-izj">
                                 <rect key="frame" x="18" y="947" width="425" height="275"/>
                                 <subviews>
                                     <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Til-gh-YI4">
@@ -1152,10 +1053,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.22190037109999999" green="0.26443271019999998" blue="0.42004925269999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2hh-ft-5Mn">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2hh-ft-5Mn">
                                 <rect key="frame" x="18" y="862" width="425" height="61"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="April 2014" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zov-Os-V17">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="April 2014" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zov-Os-V17">
                                         <rect key="frame" x="93" y="17" width="238" height="28"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1171,12 +1072,6 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1647058824" green="0.31764705879999999" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="zov-Os-V17" firstAttribute="top" secondItem="2hh-ft-5Mn" secondAttribute="top" constant="17" id="2Xr-kX-AC2"/>
-                                    <constraint firstItem="zov-Os-V17" firstAttribute="leading" secondItem="2hh-ft-5Mn" secondAttribute="leading" constant="93" id="djo-qs-Bp7"/>
-                                    <constraint firstItem="zov-Os-V17" firstAttribute="centerX" secondItem="2hh-ft-5Mn" secondAttribute="centerX" id="gdB-ah-gez"/>
-                                    <constraint firstAttribute="bottom" secondItem="zov-Os-V17" secondAttribute="bottom" constant="16" id="ufD-tz-oo7"/>
-                                </constraints>
                             </view>
                             <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uhC-iS-fis">
                                 <rect key="frame" x="18" y="924" width="425" height="22"/>
@@ -1194,17 +1089,6 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1381635034" green="0.16558555129999999" blue="0.20069969090000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="zhf-9c-izj" firstAttribute="top" secondItem="2hh-ft-5Mn" secondAttribute="bottom" constant="1" id="0Q6-1f-Pxc"/>
-                            <constraint firstItem="tCs-R3-F1u" firstAttribute="trailing" secondItem="dDC-hS-1qn" secondAttribute="trailing" id="9tS-e0-rIx"/>
-                            <constraint firstItem="L9A-6V-hoL" firstAttribute="top" secondItem="RF1-gQ-J0W" secondAttribute="bottom" constant="1" id="CT5-gN-mIa"/>
-                            <constraint firstItem="dDC-hS-1qn" firstAttribute="top" secondItem="tCs-R3-F1u" secondAttribute="bottom" constant="1" id="H8d-RJ-Noy"/>
-                            <constraint firstItem="2hh-ft-5Mn" firstAttribute="trailing" secondItem="zhf-9c-izj" secondAttribute="trailing" id="hkY-lz-afo"/>
-                            <constraint firstItem="2hh-ft-5Mn" firstAttribute="leading" secondItem="zhf-9c-izj" secondAttribute="leading" id="jkd-6Q-pSh"/>
-                            <constraint firstItem="RF1-gQ-J0W" firstAttribute="leading" secondItem="L9A-6V-hoL" secondAttribute="leading" id="s6Z-85-x9U"/>
-                            <constraint firstItem="tCs-R3-F1u" firstAttribute="leading" secondItem="dDC-hS-1qn" secondAttribute="leading" id="stc-lR-Afb"/>
-                            <constraint firstItem="RF1-gQ-J0W" firstAttribute="trailing" secondItem="L9A-6V-hoL" secondAttribute="trailing" id="xq7-bK-G8e"/>
-                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1226,10 +1110,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="460" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pda-eC-5PK">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pda-eC-5PK">
                                 <rect key="frame" x="0.0" y="0.0" width="460" height="66"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ta1-0U-Crp">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ta1-0U-Crp">
                                         <rect key="frame" x="0.0" y="20" width="446" height="46"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1243,13 +1127,6 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.56220591070000003" green="0.26218384500000003" blue="0.20902511479999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="ta1-0U-Crp" firstAttribute="top" secondItem="pda-eC-5PK" secondAttribute="top" constant="20" symbolic="YES" id="Gbm-Z3-Zyq"/>
-                                    <constraint firstAttribute="height" constant="66" id="Spl-yV-NCO"/>
-                                    <constraint firstAttribute="bottom" secondItem="ta1-0U-Crp" secondAttribute="bottom" id="ccG-V0-opD"/>
-                                    <constraint firstItem="ta1-0U-Crp" firstAttribute="leading" secondItem="pda-eC-5PK" secondAttribute="leading" id="hf8-He-dHH"/>
-                                    <constraint firstAttribute="trailing" secondItem="ta1-0U-Crp" secondAttribute="trailing" constant="14" id="vHl-Se-ShM"/>
-                                </constraints>
                             </view>
                             <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FLAT_LOGO-14" translatesAutoresizingMaskIntoConstraints="NO" id="rYV-tW-8Fl">
                                 <rect key="frame" x="0.0" y="1280" width="120" height="120"/>
@@ -1294,10 +1171,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.22190037109999999" green="0.26443271019999998" blue="0.42004925269999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7RF-ZY-LqH">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7RF-ZY-LqH">
                                 <rect key="frame" x="18" y="535" width="425" height="62"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="FAVORITES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmg-jR-0d6">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FAVORITES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmg-jR-0d6">
                                         <rect key="frame" x="93" y="17" width="238" height="29"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1307,12 +1184,6 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2360737383" green="0.51408646449999995" blue="0.53556404530000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="fmg-jR-0d6" firstAttribute="top" secondItem="7RF-ZY-LqH" secondAttribute="top" constant="17" id="Xbe-Uu-WPQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="fmg-jR-0d6" secondAttribute="bottom" constant="16" id="a1t-k9-KNH"/>
-                                    <constraint firstItem="fmg-jR-0d6" firstAttribute="leading" secondItem="7RF-ZY-LqH" secondAttribute="leading" constant="93" id="obP-1W-G9x"/>
-                                    <constraint firstItem="fmg-jR-0d6" firstAttribute="centerX" secondItem="7RF-ZY-LqH" secondAttribute="centerX" id="sAz-7s-pyP"/>
-                                </constraints>
                             </view>
                             <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v0L-Sq-sHa">
                                 <rect key="frame" x="18" y="376" width="425" height="66"/>
@@ -1350,10 +1221,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.22190037109999999" green="0.26443271019999998" blue="0.42004925269999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z2b-Sp-iR6">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z2b-Sp-iR6">
                                 <rect key="frame" x="18" y="314" width="425" height="62"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="LINKED ACCOUNTS:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NU-3z-bqz">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LINKED ACCOUNTS:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NU-3z-bqz">
                                         <rect key="frame" x="93" y="17" width="238" height="29"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1363,12 +1234,6 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1647058824" green="0.31764705879999999" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="2NU-3z-bqz" secondAttribute="bottom" constant="16" id="3oz-My-CuT"/>
-                                    <constraint firstItem="2NU-3z-bqz" firstAttribute="leading" secondItem="Z2b-Sp-iR6" secondAttribute="leading" constant="93" id="Rxw-pm-Dfz"/>
-                                    <constraint firstItem="2NU-3z-bqz" firstAttribute="centerX" secondItem="Z2b-Sp-iR6" secondAttribute="centerX" id="Uch-If-sgr"/>
-                                    <constraint firstItem="2NU-3z-bqz" firstAttribute="top" secondItem="Z2b-Sp-iR6" secondAttribute="top" constant="17" id="Wv5-hi-P3P"/>
-                                </constraints>
                             </view>
                             <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K8P-es-lME">
                                 <rect key="frame" x="18" y="598" width="425" height="32"/>
@@ -1380,7 +1245,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.56220591070000003" green="0.26218384500000003" blue="0.20902511479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.23137254900000001" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m59-em-p6X">
                                 <rect key="frame" x="18" y="705" width="425" height="32"/>
@@ -1392,7 +1257,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.56220591070000003" green="0.26218384500000003" blue="0.20902511479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.23137254900000001" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uBo-xW-j9D">
                                 <rect key="frame" x="18" y="805" width="425" height="66"/>
@@ -1494,7 +1359,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.22190037109999999" green="0.26443271019999998" blue="0.42004925269999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0hi-FK-Vge">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0hi-FK-Vge">
                                 <rect key="frame" x="18" y="1159" width="425" height="62"/>
                                 <subviews>
                                     <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tz8-7e-gBx">
@@ -1506,7 +1371,7 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.43992530909999999" green="0.2012072339" blue="0.15954821150000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="FEEDBACK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mH5-ve-8L2">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FEEDBACK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mH5-ve-8L2">
                                         <rect key="frame" x="104" y="19" width="238" height="29"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1516,12 +1381,6 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.56220591070000003" green="0.26218384500000003" blue="0.20902511479999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="mH5-ve-8L2" firstAttribute="leading" secondItem="0hi-FK-Vge" secondAttribute="leading" constant="93" id="ITn-JU-XTU"/>
-                                    <constraint firstItem="mH5-ve-8L2" firstAttribute="top" secondItem="0hi-FK-Vge" secondAttribute="top" constant="17" id="KOi-f3-w1Z"/>
-                                    <constraint firstAttribute="bottom" secondItem="mH5-ve-8L2" secondAttribute="bottom" constant="16" id="O4v-zL-SEE"/>
-                                    <constraint firstItem="mH5-ve-8L2" firstAttribute="centerX" secondItem="0hi-FK-Vge" secondAttribute="centerX" id="oU8-ne-Y7a"/>
-                                </constraints>
                             </view>
                             <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gd7-aO-C4C">
                                 <rect key="frame" x="18" y="631" width="425" height="73"/>
@@ -1569,10 +1428,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.22190037109999999" green="0.26443271019999998" blue="0.42004925269999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bwy-u3-9AN">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bwy-u3-9AN">
                                 <rect key="frame" x="18" y="1241" width="425" height="62"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Add Google+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vf4-uL-83s">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Google+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vf4-uL-83s">
                                         <rect key="frame" x="105" y="16" width="238" height="29"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1586,12 +1445,6 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.10196078431372549" blue="0.25882352941176473" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="vf4-uL-83s" firstAttribute="top" secondItem="bwy-u3-9AN" secondAttribute="top" constant="17" id="HPq-7L-oxN"/>
-                                    <constraint firstItem="vf4-uL-83s" firstAttribute="leading" secondItem="bwy-u3-9AN" secondAttribute="leading" constant="93" id="dlX-9A-hHA"/>
-                                    <constraint firstItem="vf4-uL-83s" firstAttribute="centerX" secondItem="bwy-u3-9AN" secondAttribute="centerX" id="ekU-tg-VZf"/>
-                                    <constraint firstAttribute="bottom" secondItem="vf4-uL-83s" secondAttribute="bottom" constant="16" id="fX3-ox-NCp"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1381635034" green="0.16558555129999999" blue="0.20069969090000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1616,10 +1469,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="460" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DRu-Yj-iJk">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DRu-Yj-iJk">
                                 <rect key="frame" x="0.0" y="0.0" width="460" height="66"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="EVENTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11v-ke-g1U">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EVENTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11v-ke-g1U">
                                         <rect key="frame" x="0.0" y="20" width="446" height="46"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1636,21 +1489,14 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2360737383" green="0.51408646449999995" blue="0.53556404530000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="11v-ke-g1U" firstAttribute="top" secondItem="DRu-Yj-iJk" secondAttribute="top" constant="20" symbolic="YES" id="0Op-Pf-cbL"/>
-                                    <constraint firstAttribute="bottom" secondItem="11v-ke-g1U" secondAttribute="bottom" id="27X-Ou-sg5"/>
-                                    <constraint firstAttribute="height" constant="66" id="RU8-20-S5G"/>
-                                    <constraint firstAttribute="trailing" secondItem="11v-ke-g1U" secondAttribute="trailing" constant="14" id="TXw-N4-pqb"/>
-                                    <constraint firstItem="11v-ke-g1U" firstAttribute="leading" secondItem="DRu-Yj-iJk" secondAttribute="leading" id="qQo-lV-0ES"/>
-                                </constraints>
                             </view>
                             <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FLAT_LOGO-14" translatesAutoresizingMaskIntoConstraints="NO" id="sKa-t3-5Py">
                                 <rect key="frame" x="0.0" y="980" width="120" height="120"/>
                             </imageView>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zcq-zn-ceQ">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zcq-zn-ceQ">
                                 <rect key="frame" x="18" y="88" width="425" height="62"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="April 29th, 2014" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKA-5X-EKG">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="April 29th, 2014" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKA-5X-EKG">
                                         <rect key="frame" x="93" y="16" width="238" height="29"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1666,14 +1512,8 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1647058824" green="0.31764705879999999" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="yKA-5X-EKG" firstAttribute="top" secondItem="zcq-zn-ceQ" secondAttribute="top" constant="17" id="FlD-4Y-G6H"/>
-                                    <constraint firstItem="yKA-5X-EKG" firstAttribute="leading" secondItem="zcq-zn-ceQ" secondAttribute="leading" constant="93" id="P6e-Jo-SFH"/>
-                                    <constraint firstAttribute="bottom" secondItem="yKA-5X-EKG" secondAttribute="bottom" constant="16" id="QFq-fu-TrD"/>
-                                    <constraint firstItem="yKA-5X-EKG" firstAttribute="centerX" secondItem="zcq-zn-ceQ" secondAttribute="centerX" id="rbF-Yx-clr"/>
-                                </constraints>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nTr-bx-wlh">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nTr-bx-wlh">
                                 <rect key="frame" x="18" y="151" width="425" height="66"/>
                                 <subviews>
                                     <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PIN_FLAT_WHITE-03" translatesAutoresizingMaskIntoConstraints="NO" id="8ok-r9-3Bb">
@@ -1733,11 +1573,6 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1381635034" green="0.16558555129999999" blue="0.20069969090000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="nTr-bx-wlh" firstAttribute="top" secondItem="zcq-zn-ceQ" secondAttribute="bottom" constant="1" id="o6u-q4-vCD"/>
-                            <constraint firstItem="zcq-zn-ceQ" firstAttribute="trailing" secondItem="nTr-bx-wlh" secondAttribute="trailing" id="sr7-DY-K93"/>
-                            <constraint firstItem="zcq-zn-ceQ" firstAttribute="leading" secondItem="nTr-bx-wlh" secondAttribute="leading" id="vjv-Ib-Xjy"/>
-                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1759,10 +1594,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="460" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pAh-Nq-5cf">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pAh-Nq-5cf">
                                 <rect key="frame" x="0.0" y="0.0" width="460" height="66"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Swing: DJ Mark Kihara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGr-Do-JAI">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swing: DJ Mark Kihara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGr-Do-JAI">
                                         <rect key="frame" x="0.0" y="20" width="446" height="46"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1776,13 +1611,6 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2360737383" green="0.51408646449999995" blue="0.53556404530000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="gGr-Do-JAI" firstAttribute="top" secondItem="pAh-Nq-5cf" secondAttribute="top" constant="20" symbolic="YES" id="GHG-dg-Eo5"/>
-                                    <constraint firstAttribute="height" constant="66" id="RCS-jw-R2f"/>
-                                    <constraint firstAttribute="trailing" secondItem="gGr-Do-JAI" secondAttribute="trailing" constant="14" id="et7-Ix-wCB"/>
-                                    <constraint firstItem="gGr-Do-JAI" firstAttribute="leading" secondItem="pAh-Nq-5cf" secondAttribute="leading" id="i9S-UP-JLH"/>
-                                    <constraint firstAttribute="bottom" secondItem="gGr-Do-JAI" secondAttribute="bottom" id="zpp-x4-T1b"/>
-                                </constraints>
                             </view>
                             <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FLAT_LOGO-14" translatesAutoresizingMaskIntoConstraints="NO" id="2XN-rh-CVO">
                                 <rect key="frame" x="0.0" y="980" width="120" height="120"/>
@@ -1928,10 +1756,10 @@ Pay the highest cover of the night and get into all dances
                         <rect key="frame" x="0.0" y="0.0" width="640" height="980"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GB6-Mc-8OW">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GB6-Mc-8OW">
                                 <rect key="frame" x="0.0" y="0.0" width="640" height="66"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="EVENTS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYB-dC-HrO">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EVENTS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYB-dC-HrO">
                                         <rect key="frame" x="20" y="20" width="201" height="46"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1939,13 +1767,6 @@ Pay the highest cover of the night and get into all dances
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2360737383" green="0.51408646449999995" blue="0.53556404530000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="fYB-dC-HrO" secondAttribute="trailing" constant="14" id="0Ug-jn-4Wm"/>
-                                    <constraint firstItem="fYB-dC-HrO" firstAttribute="top" secondItem="GB6-Mc-8OW" secondAttribute="top" constant="20" symbolic="YES" id="E58-1u-HZn"/>
-                                    <constraint firstAttribute="height" constant="66" id="Id9-Gg-uTE"/>
-                                    <constraint firstAttribute="bottom" secondItem="fYB-dC-HrO" secondAttribute="bottom" id="ccv-ku-WHv"/>
-                                    <constraint firstItem="fYB-dC-HrO" firstAttribute="leading" secondItem="GB6-Mc-8OW" secondAttribute="leading" id="dcV-OS-hnM"/>
-                                </constraints>
                             </view>
                             <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ygf-oQ-q5K">
                                 <rect key="frame" x="0.0" y="220" width="640" height="50"/>
