@@ -91,41 +91,40 @@
     [_theTableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.row == [_menuItems count]) {
-        return 60.f;
-    } else if (self.theTableView.editing && indexPath.row == [_menuItems count]+1){
-        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
-            return 80.f;
-        } else {
-            return 150.f;
-        }
-    } else if (indexPath.row < [_menuItems count]){
-        return 35.f;
-    } else {
-        return 50.f;
-    }
-}
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (indexPath.row == [_menuItems count]) {
+//        return 60.f;
+//    } else if (self.theTableView.editing && indexPath.row == [_menuItems count]+1){
+//        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+//            return 80.f;
+//        } else {
+//            return 150.f;
+//        }
+//    } else if (indexPath.row < [_menuItems count]){
+//        return 35.f;
+//    } else {
+//        return 50.f;
+//    }
+//}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSInteger total =[self.menuItems count] + 1 + [_savedCities count];
-    if (self.theTableView.editing){
-        total++;
-    }
+    NSInteger total = [_menuItems count] + 1;
     return total;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSInteger menuRow = indexPath.row;
     UITableViewCell *cell;
-
-    if (indexPath.row < [_menuItems count]) {
-        cell = [_theTableView dequeueReusableCellWithIdentifier:[_menuItems objectAtIndex:indexPath.row] forIndexPath:indexPath];
+    if (menuRow == 0) {
+        cell = [_theTableView dequeueReusableCellWithIdentifier:@"HeaderMenu" forIndexPath:indexPath];
+    } else if (menuRow <= [_menuItems count]) {
+        cell = [_theTableView dequeueReusableCellWithIdentifier:[_menuItems objectAtIndex:(menuRow-1)] forIndexPath:indexPath];
         
     }
-    cell.contentView.backgroundColor = self.view.backgroundColor;
+    NSLog(@"%@",cell);
     return cell;
 }
 

@@ -64,7 +64,7 @@
                     <navigationItem key="navigationItem" id="7iQ-9h-oJ6"/>
                     <connections>
                         <outlet property="mainView" destination="kOX-Yc-y2h" id="Vfv-Sf-q7u"/>
-                        <segue destination="bag-ut-tlR" kind="custom" identifier="showHome" customClass="SplitControllerSegue" id="0lr-Cf-Mfs"/>
+                        <segue destination="bag-ut-tlR" kind="custom" identifier="showHome" customClass="SplitControllerSegue" id="CpF-cj-p4J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6c5-WP-Pd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -89,7 +89,7 @@
                                 <color key="separatorColor" red="0.2117647231" green="0.29803922770000002" blue="0.33725491169999999" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" rowHeight="66" id="1Wq-9K-8Mt">
+                                    <tableViewCell appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderMenu" rowHeight="66" id="1Wq-9K-8Mt">
                                         <rect key="frame" x="0.0" y="0.0" width="286" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Wq-9K-8Mt" id="6Fn-EV-ZDM">
@@ -289,10 +289,11 @@
             </objects>
             <point key="canvasLocation" x="1329" y="527"/>
         </scene>
-        <!--View Controller-->
+        <!--Front View Controller-->
         <scene sceneID="584-SO-ESx">
             <objects>
-                <viewController id="bag-ut-tlR" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HnR-iB-j7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="bag-ut-tlR" customClass="FrontViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vH0-hz-mbU"/>
                         <viewControllerLayoutGuide type="bottom" id="5ZI-56-T0W"/>
@@ -303,9 +304,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HnR-iB-j7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1763" y="436"/>
+            <point key="canvasLocation" x="1760" y="1739"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r6F-ri-OVH">

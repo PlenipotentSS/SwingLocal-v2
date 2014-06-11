@@ -44,11 +44,8 @@
 }
 
 -(void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
-    if ([identifier isEqualToString:@"showSupport"]) {
-    } else {
-        NSLog(@"%@",identifier);
-        [super performSegueWithIdentifier:identifier sender:sender];
-    }
+    NSLog(@"%@",identifier);
+    [super performSegueWithIdentifier:identifier sender:sender];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
