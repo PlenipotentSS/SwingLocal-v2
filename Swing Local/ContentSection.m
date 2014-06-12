@@ -10,4 +10,34 @@
 
 @implementation ContentSection
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _needsHeightMeasurement = YES;
+    }
+    return self;
+}
+
+- (BOOL)findCellFromIdentifierWithTableView:(UITableView *)tableView
+{
+    ContentTableCell *cell = [tableView dequeueReusableCellWithIdentifier:_cellIdentifier];
+    if (cell) {
+        _contentCell = cell;
+        return true;
+    } else {
+        return false;
+    }
+}
+
+- (CGFloat)height
+{
+    if (_contentCell && self.needsHeightMeasurement) {
+        [_contentCell.sectionTableView reloadData];
+        return [_contentCell sectionHeight];
+    } else {
+        return _height;
+    }
+}
+
 @end

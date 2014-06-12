@@ -23,7 +23,10 @@
 {
     // Initialization code
     self.clipsToBounds = YES;
-    self.layer.cornerRadius = 2.f;
+    self.layer.cornerRadius = 5.f;
+    
+    self.sectionTableView.heightDelegate = self;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -32,5 +35,13 @@
 
     // Configure the view for the selected state
 }
+
+#pragma mark BaseTableViewDelegate
+
+- (void)heightOfCurrentSection:(CGFloat)height
+{
+    _sectionHeight = height;
+}
+
 
 @end

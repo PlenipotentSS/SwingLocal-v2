@@ -8,11 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "ContentTableCell.h"
 
 @interface ContentSection : NSObject
 
 @property (nonatomic) CGFloat height;
 
 @property (nonatomic) NSString *cellIdentifier;
+
+@property (nonatomic, weak) ContentTableCell *contentCell;
+
+@property (nonatomic) BOOL needsHeightMeasurement;
+
+- (BOOL)findCellFromIdentifierWithTableView: (UITableView*) tableView;
+
 
 @end

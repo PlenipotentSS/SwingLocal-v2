@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseSectionTableView.h"
 
-@interface ContentTableCell : UITableViewCell
+
+@interface ContentTableCell : UITableViewCell <BaseSectionTableViewDelegate>
+
+@property (nonatomic) IBOutlet BaseSectionTableView *sectionTableView;
+@property (nonatomic) CGFloat sectionHeight;
 
 @end

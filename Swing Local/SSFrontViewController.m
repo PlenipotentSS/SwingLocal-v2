@@ -44,7 +44,6 @@
 }
 
 -(void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
-    NSLog(@"%@",identifier);
     [super performSegueWithIdentifier:identifier sender:sender];
 }
 

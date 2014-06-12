@@ -24,6 +24,13 @@
 		3BA17D471946E5A600127DAD /* Templates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA17D451946E5A600127DAD /* Templates.storyboard */; };
 		3BA17D551946E5A600127DAD /* Swing_LocalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA17D541946E5A600127DAD /* Swing_LocalTests.m */; };
 		3BA17D5F1946ECFF00127DAD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA17D5E1946ECFF00127DAD /* MapKit.framework */; };
+		3BD98E37194A3CBB000EF668 /* BaseSectionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98E36194A3CBB000EF668 /* BaseSectionTableView.m */; };
+		3BD98E3A194A40E1000EF668 /* ContentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98E39194A40E1000EF668 /* ContentTableView.m */; };
+		3BD98E3D194A4719000EF668 /* HeaderWithDynamicTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98E3C194A4719000EF668 /* HeaderWithDynamicTableView.m */; };
+		3BD98E40194A5333000EF668 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98E3F194A5333000EF668 /* HomeViewController.m */; };
+		3BD98E44194A5511000EF668 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98E43194A5511000EF668 /* FavoritesViewController.m */; };
+		3BD98E47194A5888000EF668 /* CalendarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98E46194A5888000EF668 /* CalendarsViewController.m */; };
+		3BD98E49194A6303000EF668 /* pin_flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BD98E48194A6303000EF668 /* pin_flat.png */; };
 		3BF3FB7819490DB60087E469 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BF3FB5D19490DB60087E469 /* Contents.json */; };
 		3BF3FB7919490DB60087E469 /* leftward-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF3FB5E19490DB60087E469 /* leftward-arrow.png */; };
 		3BF3FB7A19490DB60087E469 /* leftward-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF3FB5F19490DB60087E469 /* leftward-arrow@2x.png */; };
@@ -112,6 +119,19 @@
 		3BA17D531946E5A600127DAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BA17D541946E5A600127DAD /* Swing_LocalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Swing_LocalTests.m; sourceTree = "<group>"; };
 		3BA17D5E1946ECFF00127DAD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3BD98E35194A3CBB000EF668 /* BaseSectionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSectionTableView.h; sourceTree = "<group>"; };
+		3BD98E36194A3CBB000EF668 /* BaseSectionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSectionTableView.m; sourceTree = "<group>"; };
+		3BD98E38194A40E1000EF668 /* ContentTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentTableView.h; sourceTree = "<group>"; };
+		3BD98E39194A40E1000EF668 /* ContentTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentTableView.m; sourceTree = "<group>"; };
+		3BD98E3B194A4719000EF668 /* HeaderWithDynamicTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderWithDynamicTableView.h; sourceTree = "<group>"; };
+		3BD98E3C194A4719000EF668 /* HeaderWithDynamicTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderWithDynamicTableView.m; sourceTree = "<group>"; };
+		3BD98E3E194A5333000EF668 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		3BD98E3F194A5333000EF668 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		3BD98E42194A5511000EF668 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		3BD98E43194A5511000EF668 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
+		3BD98E45194A5888000EF668 /* CalendarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarsViewController.h; sourceTree = "<group>"; };
+		3BD98E46194A5888000EF668 /* CalendarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarsViewController.m; sourceTree = "<group>"; };
+		3BD98E48194A6303000EF668 /* pin_flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_flat.png; sourceTree = "<group>"; };
 		3BF3FB5D19490DB60087E469 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		3BF3FB5E19490DB60087E469 /* leftward-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftward-arrow.png"; sourceTree = "<group>"; };
 		3BF3FB5F19490DB60087E469 /* leftward-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftward-arrow@2x.png"; sourceTree = "<group>"; };
@@ -180,6 +200,8 @@
 			children = (
 				3B1C049419497AE300211EFA /* ContentTableCell.h */,
 				3B1C049519497AE300211EFA /* ContentTableCell.m */,
+				3BD98E38194A40E1000EF668 /* ContentTableView.h */,
+				3BD98E39194A40E1000EF668 /* ContentTableView.m */,
 				3B1C049E19498C6B00211EFA /* TableViewSections */,
 			);
 			name = View;
@@ -197,8 +219,12 @@
 		3B1C049E19498C6B00211EFA /* TableViewSections */ = {
 			isa = PBXGroup;
 			children = (
+				3BD98E35194A3CBB000EF668 /* BaseSectionTableView.h */,
+				3BD98E36194A3CBB000EF668 /* BaseSectionTableView.m */,
 				3B1C049B19498C6800211EFA /* CurrentCityMapTableView.h */,
 				3B1C049C19498C6800211EFA /* CurrentCityMapTableView.m */,
+				3BD98E3B194A4719000EF668 /* HeaderWithDynamicTableView.h */,
+				3BD98E3C194A4719000EF668 /* HeaderWithDynamicTableView.m */,
 			);
 			name = TableViewSections;
 			sourceTree = "<group>";
@@ -252,9 +278,10 @@
 		3B522D011948F9AD0014FF2B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3B4C300519484A0300F06E46 /* CustomSplitViewController */,
 				3B522CFE1948F9A40014FF2B /* BaseViewController.h */,
 				3B522CFF1948F9A40014FF2B /* BaseViewController.m */,
+				3BD98E41194A54F0000EF668 /* View Controllers */,
+				3B4C300519484A0300F06E46 /* CustomSplitViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -282,8 +309,8 @@
 		3BA17D3A1946E5A600127DAD /* Swing Local */ = {
 			isa = PBXGroup;
 			children = (
-				3B1C049719497E0F00211EFA /* Models */,
 				3B4C2FF819483B0E00F06E46 /* UI */,
+				3B1C049719497E0F00211EFA /* Models */,
 				3B1C049319497AB800211EFA /* View */,
 				3B522D011948F9AD0014FF2B /* Controllers */,
 				3BA17D3F1946E5A600127DAD /* AppDelegate.h */,
@@ -320,6 +347,19 @@
 				3BA17D531946E5A600127DAD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3BD98E41194A54F0000EF668 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3BD98E3E194A5333000EF668 /* HomeViewController.h */,
+				3BD98E3F194A5333000EF668 /* HomeViewController.m */,
+				3BD98E42194A5511000EF668 /* FavoritesViewController.h */,
+				3BD98E43194A5511000EF668 /* FavoritesViewController.m */,
+				3BD98E45194A5888000EF668 /* CalendarsViewController.h */,
+				3BD98E46194A5888000EF668 /* CalendarsViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		3BF3FB5B19490DB60087E469 /* Icons */ = {
@@ -425,6 +465,7 @@
 		3BF3FB9E194910210087E469 /* Flat Designs */ = {
 			isa = PBXGroup;
 			children = (
+				3BD98E48194A6303000EF668 /* pin_flat.png */,
 				3BF3FB9F194910570087E469 /* FLAT_LOGO-14-14 copy.imageset */,
 				3BF3FBA2194910570087E469 /* FLAT_LOGO-14.imageset */,
 				3BF3FBA5194910570087E469 /* MAP_FLAT_WHITE-04.imageset */,
@@ -603,6 +644,7 @@
 				3BF3FBB1194910570087E469 /* Contents.json in Resources */,
 				3BF3FBB9194910570087E469 /* Contents.json in Resources */,
 				3BF3FB8919490DB60087E469 /* lock@2x.png in Resources */,
+				3BD98E49194A6303000EF668 /* pin_flat.png in Resources */,
 				3BF3FB7A19490DB60087E469 /* leftward-arrow@2x.png in Resources */,
 				3BF3FB9319490E1B0087E469 /* home-7@2x.png in Resources */,
 				3BF3FBB2194910570087E469 /* FLAT_LOGO-14-14 copy.png in Resources */,
@@ -633,14 +675,20 @@
 			files = (
 				3B4C300E19484AF900F06E46 /* SplitControllerSegue.m in Sources */,
 				3B4C2FFE194849D400F06E46 /* FrontViewController.m in Sources */,
+				3BD98E47194A5888000EF668 /* CalendarsViewController.m in Sources */,
+				3BD98E3A194A40E1000EF668 /* ContentTableView.m in Sources */,
 				3B4C3004194849FA00F06E46 /* SplitViewController.m in Sources */,
+				3BD98E3D194A4719000EF668 /* HeaderWithDynamicTableView.m in Sources */,
 				3B1C049D19498C6800211EFA /* CurrentCityMapTableView.m in Sources */,
 				3B1C049A19497E3000211EFA /* ContentSection.m in Sources */,
 				3B522D001948F9A40014FF2B /* BaseViewController.m in Sources */,
+				3BD98E40194A5333000EF668 /* HomeViewController.m in Sources */,
+				3BD98E37194A3CBB000EF668 /* BaseSectionTableView.m in Sources */,
 				3B4C301119484B3000F06E46 /* CustomSegue.m in Sources */,
 				3B1C049619497AE300211EFA /* ContentTableCell.m in Sources */,
 				3B4C3001194849E400F06E46 /* BackViewController.m in Sources */,
 				3BA17D411946E5A600127DAD /* AppDelegate.m in Sources */,
+				3BD98E44194A5511000EF668 /* FavoritesViewController.m in Sources */,
 				3BA17D3E1946E5A600127DAD /* main.m in Sources */,
 				3B4C300A19484A9500F06E46 /* SSFrontViewController.m in Sources */,
 				3B4C300B19484A9500F06E46 /* SSBackViewController.m in Sources */,

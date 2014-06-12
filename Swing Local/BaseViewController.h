@@ -7,8 +7,13 @@
 //
 
 #import "FrontViewController.h"
+#import "ContentTableView.h"
+#import "ContentSection.h"
+#import "ContentTableCell.h"
 
-@interface BaseViewController : FrontViewController
+@interface BaseViewController : FrontViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet ContentTableView *theTableView;
 
 @property (nonatomic) NSMutableArray *viewItems;
 

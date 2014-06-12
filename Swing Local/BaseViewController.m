@@ -7,15 +7,18 @@
 //
 
 #import "BaseViewController.h"
-#import "ContentSection.h"
 
-@interface BaseViewController () <UITableViewDataSource, UITableViewDelegate>
-
-@property (weak, nonatomic) IBOutlet UITableView *theTableView;
+@interface BaseViewController () 
 
 @end
 
 @implementation BaseViewController
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 - (void)viewDidLoad
 {
@@ -23,25 +26,6 @@
     
     _theTableView.dataSource = self;
     _theTableView.delegate = self;
-    
-    [self setupContentSection];
-}
-
-- (void)setupContentSection
-{
-    ContentSection *sec1 = [[ContentSection alloc] init];
-    sec1.height = 200.f;
-    sec1.cellIdentifier = @"currentCityCell";
-    
-    ContentSection *sec2 = [[ContentSection alloc] init];
-    sec2.height = 100.f;
-    sec2.cellIdentifier = @"todayEventCell";
-    
-    ContentSection *sec3 = [[ContentSection alloc] init];
-    sec3.height = 300.f;
-    sec3.cellIdentifier = @"socialMediaCell";
-    
-    _viewItems = [[NSMutableArray alloc] initWithObjects:sec1, sec2, sec3, nil];
 }
 
 - (NSMutableArray*)viewItems {
@@ -64,21 +48,22 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row % 2 == 0) {
-        NSInteger tableItemIndex = indexPath.row / 2;
-        return [[_viewItems objectAtIndex:tableItemIndex] height];
-    } else {
         return 20.f;
+    } else {
+        NSInteger tableItemIndex = indexPath.row / 2;
+        CGFloat sectionHeight = [[_viewItems objectAtIndex:tableItemIndex] height];
+        return sectionHeight;
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell;
+    ContentTableCell *cell;
     if (indexPath.row % 2 == 0) {
-        NSInteger tableItemIndex = indexPath.row / 2;
-        cell = [tableView dequeueReusableCellWithIdentifier:[[_viewItems objectAtIndex:tableItemIndex] cellIdentifier] forIndexPath:indexPath];
-    } else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"spacerCell" forIndexPath:indexPath];
+    } else {
+        NSInteger tableItemIndex = indexPath.row / 2;
+        cell = [[_viewItems objectAtIndex:tableItemIndex] contentCell];
     }
     return cell;
 }

@@ -6,8 +6,10 @@
 //  Copyright (c) 2014 Steven Stevenson. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseSectionTableView.h"
 
-@interface CurrentCityMapTableView : UITableView <UITableViewDataSource, UITableViewDelegate>
+
+
+@interface CurrentCityMapTableView : BaseSectionTableView <UITableViewDataSource, UITableViewDelegate>
 
 @end
