@@ -47,8 +47,8 @@
     [self addChildViewController:self.backViewController];
     [self.backViewController didMoveToParentViewController:self];
 
-//    self.view.backgroundColor = [UIColor viewFlipsideBackgroundColor];
-    self.view.backgroundColor = [(UIViewController*)[[self.backViewController viewControllers] firstObject] view].backgroundColor;
+    self.view.backgroundColor = [UIColor colorWithWhite:.1f alpha:1.f];
+//    self.view.backgroundColor = [(UIViewController*)[[self.backViewController viewControllers] firstObject] view].backgroundColor;
     
     self.frontViewController = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"front"];
     [self.view addSubview:self.frontViewController.view];
@@ -166,7 +166,6 @@
 }
 
 ///////// END VIEW CONTROLLER FRAME SETS WITH ROTATIONS
-
 //#pragma mark - pan Gesture Actions
 //- (void)slidePanel:(id)sender
 //{
