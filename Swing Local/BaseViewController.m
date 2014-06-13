@@ -100,6 +100,7 @@
             cell = [[_viewItems objectAtIndex:tableItemIndex] contentCell];
         }
     }
+    cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
 

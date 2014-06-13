@@ -316,10 +316,10 @@
 		3BA17D2F1946E5A600127DAD = {
 			isa = PBXGroup;
 			children = (
+				3BA17D3A1946E5A600127DAD /* Swing Local */,
 				3BA17D5E1946ECFF00127DAD /* MapKit.framework */,
 				3BD98E50194B7A43000EF668 /* SSPagedView */,
 				3B4C2FF9194849A400F06E46 /* SplitViewController */,
-				3BA17D3A1946E5A600127DAD /* Swing Local */,
 				3BA17D511946E5A600127DAD /* Swing LocalTests */,
 				3BA17D391946E5A600127DAD /* Products */,
 			);
@@ -871,7 +871,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Swing Local/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -889,7 +889,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Swing Local/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

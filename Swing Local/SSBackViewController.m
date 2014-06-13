@@ -121,11 +121,22 @@
     UITableViewCell *cell;
     if (menuRow < [_menuItems count]) {
         cell = [_theTableView dequeueReusableCellWithIdentifier:[_menuItems objectAtIndex:menuRow] forIndexPath:indexPath];
+        if ( menuRow == 0) {    //header color for main menu
+            cell.backgroundColor = [UIColor colorWithRed:60.f/256.f green:131.f/256.f blue:137.f/256.f alpha:1.f];
+        } else {
+            cell.backgroundColor = [UIColor colorWithRed:49.f/256.f green:59.f/256.f blue:71.f/256.f alpha:1.f];
+        }
     } else if ( menuRow == [_menuItems count]) {
         cell = [_theTableView dequeueReusableCellWithIdentifier:@"spacerCell" forIndexPath:indexPath];
+        cell.backgroundColor = [UIColor clearColor];
     } else if ( menuRow - [_menuItems count] <= [_quickLookItems count]) {
         NSInteger extraRows = menuRow - ([_menuItems count]+1);
         cell = [_theTableView dequeueReusableCellWithIdentifier:[_quickLookItems objectAtIndex:extraRows] forIndexPath:indexPath];
+        if ( menuRow - [_menuItems count] == 1 ) {  //header color for quick look
+            cell.backgroundColor = [UIColor colorWithRed:60.f/256.f green:131.f/256.f blue:137.f/256.f alpha:1.f];
+        } else {
+            cell.backgroundColor = [UIColor colorWithRed:49.f/256.f green:59.f/256.f blue:71.f/256.f alpha:1.f];
+        }
     }
     return cell;
 }
