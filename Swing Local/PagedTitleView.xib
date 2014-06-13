@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PagedTitleView">
+            <rect key="frame" x="0.0" y="0.0" width="426" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yGS-vP-7zH">
+                    <rect key="frame" x="0.0" y="0.0" width="426" height="82"/>
+                </imageView>
+                <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0U-p4-LS9">
+                    <rect key="frame" x="94" y="27" width="238" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="238" id="JyM-fn-wOO"/>
+                        <constraint firstAttribute="height" constant="28" id="wDG-do-zoF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.047058823530000002" green="0.050980392159999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                    <size key="shadowOffset" width="1" height="1"/>
+                </label>
+                <view appearanceType="aqua" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dh5-HB-jTG" userLabel="HighlightColor">
+                    <rect key="frame" x="0.0" y="0.0" width="426" height="6"/>
+                    <color key="backgroundColor" red="0.63529411759999999" green="0.23137254900000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="6" id="bD9-fv-L1r"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.19215686269999999" green="0.23137254900000001" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Dh5-HB-jTG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="D6a-eZ-TaL"/>
+                <constraint firstAttribute="centerY" secondItem="a0U-p4-LS9" secondAttribute="centerY" id="KTQ-s4-n02"/>
+                <constraint firstAttribute="centerX" secondItem="a0U-p4-LS9" secondAttribute="centerX" id="LmD-EM-Tml"/>
+                <constraint firstItem="Dh5-HB-jTG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VH6-eb-cFT"/>
+                <constraint firstAttribute="trailing" secondItem="Dh5-HB-jTG" secondAttribute="trailing" id="xrw-OD-bxX"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backgroundImage" destination="yGS-vP-7zH" id="Ojd-j0-zgq"/>
+                <outlet property="titleLabel" destination="a0U-p4-LS9" id="lro-uy-2Oe"/>
+            </connections>
+            <point key="canvasLocation" x="482" y="191"/>
+        </view>
+    </objects>
+</document>

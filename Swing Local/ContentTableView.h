@@ -10,4 +10,8 @@
 
 @interface ContentTableView : UITableView
 
+@property (nonatomic) BOOL isVisible;
+
+@property (nonatomic, copy) void (^recognizerBlock)(NSSet *view);
+
 @end

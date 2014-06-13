@@ -17,4 +17,6 @@
 
 @property (nonatomic) NSMutableArray *viewItems;
 
+@property (nonatomic) CGFloat backgroundCellHeight;
+
 @end

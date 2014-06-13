@@ -18,6 +18,8 @@
 
 @property (nonatomic, weak) ContentTableCell *contentCell;
 
+@property (nonatomic,weak) NSMutableArray *tableData;
+
 @property (nonatomic) BOOL needsHeightMeasurement;
 
 - (BOOL)findCellFromIdentifierWithTableView: (UITableView*) tableView;

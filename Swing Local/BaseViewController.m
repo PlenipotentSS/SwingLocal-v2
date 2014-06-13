@@ -26,6 +26,23 @@
     
     _theTableView.dataSource = self;
     _theTableView.delegate = self;
+    
+    _backgroundCellHeight = 20.f;
+    
+    __block BaseViewController *weakself = self;
+    _theTableView.recognizerBlock = ^void(NSSet *veiw) {
+        if (weakself.theTableView.isVisible) {
+            NSLog(@"showBackground");
+        } else {
+            NSLog(@"show Table View");
+        }
+    };
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    [self.theTableView reloadData];
 }
 
 - (NSMutableArray*)viewItems {
@@ -33,6 +50,11 @@
         _viewItems = [[NSMutableArray alloc] init];
     }
     return _viewItems;
+}
+
+- (NSInteger)numberOfRows
+{
+    return [_viewItems count]*2+1;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -45,9 +67,16 @@
     return 1;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self numberOfRows];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row % 2 == 0) {
+    if (indexPath.row+1 == [self numberOfRows]) {
+        return _backgroundCellHeight;
+    } else if (indexPath.row % 2 == 0) {
         return 20.f;
     } else {
         NSInteger tableItemIndex = indexPath.row / 2;
@@ -59,18 +88,20 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ContentTableCell *cell;
-    if (indexPath.row % 2 == 0) {
+    if (indexPath.row+1 == [self numberOfRows]) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"showBackgroundCell" forIndexPath:indexPath];
+    } else if (indexPath.row % 2 == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"spacerCell" forIndexPath:indexPath];
     } else {
         NSInteger tableItemIndex = indexPath.row / 2;
-        cell = [[_viewItems objectAtIndex:tableItemIndex] contentCell];
+        if (!(cell = [[_viewItems objectAtIndex:tableItemIndex] contentCell])) {
+            ContentSection *section = [_viewItems objectAtIndex:tableItemIndex];
+            [section findCellFromIdentifierWithTableView: self.theTableView];
+            cell = [[_viewItems objectAtIndex:tableItemIndex] contentCell];
+        }
     }
     return cell;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [_viewItems count]*2;
-}
 
 @end

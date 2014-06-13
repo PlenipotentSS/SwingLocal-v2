@@ -19,15 +19,6 @@
     }
     return self;
 }
-
-- (NSMutableArray *)dynamicData
-{
-    if (!_dynamicData) {
-        _dynamicData = [NSMutableArray new];
-    }
-    return _dynamicData;
-}
-
 - (void)awakeFromNib
 {
     [super awakeFromNib];
@@ -36,13 +27,11 @@
     self.dataSource = self;
     
     self.sectionHeight = 50.f;
-    
-    _dynamicData = [[NSMutableArray alloc] initWithObjects:@"Test",@"Testing", nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_dynamicData count];
+    return [self.dynamicData count];
 }
 
 - (NSInteger)numberOfSections

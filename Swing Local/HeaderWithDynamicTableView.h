@@ -10,8 +10,6 @@
 
 @interface HeaderWithDynamicTableView : BaseSectionTableView <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic) NSMutableArray *dynamicData;
-
 @property (nonatomic, weak) IBOutlet UIView *headerView;
 
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;

@@ -19,11 +19,20 @@
     return self;
 }
 
+- (void)setTableData:(NSMutableArray *)tableData
+{
+    _contentCell.sectionTableView.dynamicData = tableData;
+    _tableData = tableData;
+}
+
 - (BOOL)findCellFromIdentifierWithTableView:(UITableView *)tableView
 {
     ContentTableCell *cell = [tableView dequeueReusableCellWithIdentifier:_cellIdentifier];
     if (cell) {
         _contentCell = cell;
+        if (self.tableData) {
+            _contentCell.sectionTableView.dynamicData = self.tableData;
+        }
         return true;
     } else {
         return false;

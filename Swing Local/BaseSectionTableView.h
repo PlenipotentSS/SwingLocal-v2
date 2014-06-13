@@ -16,6 +16,8 @@
 
 @interface BaseSectionTableView : UITableView
 
+@property (nonatomic,weak) NSMutableArray *dynamicData;
+
 @property (nonatomic) CGFloat sectionHeight;
 
 @property (unsafe_unretained) id<BaseSectionTableViewDelegate> heightDelegate;

@@ -8,6 +8,12 @@
 
 #import "ContentTableView.h"
 
+@interface ContentTableView()
+
+@property (nonatomic) BOOL touchesMoved;
+
+@end
+
 @implementation ContentTableView
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -19,13 +25,31 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (void)awakeFromNib
 {
-    // Drawing code
+    [super awakeFromNib];
+    self.isVisible = YES;
 }
-*/
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    self.touchesMoved = NO;
+    [super touchesBegan:touches withEvent:event];
+}
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    self.touchesMoved = YES;
+    [super touchesMoved:touches withEvent:event];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if (![[[[[touches valueForKey:@"view"] anyObject] superview] superview] isKindOfClass:[UITableViewCell class]] && !self.touchesMoved && ![[[touches valueForKey:@"view"] anyObject] isKindOfClass:[ContentTableView class]])
+    {
+        self.recognizerBlock(touches);
+    }
+    [super touchesEnded:touches withEvent:event];
+}
 
 @end

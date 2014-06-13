@@ -10,6 +10,12 @@
 
 @implementation BaseSectionTableView
 
+- (void)setDynamicData:(NSMutableArray *)dynamicData
+{
+    _dynamicData = dynamicData;
+    [self reloadData];
+}
+
 - (void)reloadData
 {
     [super reloadData];

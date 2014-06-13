@@ -10,4 +10,8 @@
 
 @interface HomeViewController : BaseViewController
 
+@property (nonatomic) NSMutableArray *todayEvents;
+
+@property (nonatomic) NSMutableArray *currentChatter;
+
 @end

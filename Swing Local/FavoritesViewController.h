@@ -10,4 +10,8 @@
 
 @interface FavoritesViewController : BaseViewController
 
+@property (nonatomic) NSMutableArray *favoriteCities;
+
+@property (nonatomic) NSMutableArray *favoriteCalendars;
+
 @end

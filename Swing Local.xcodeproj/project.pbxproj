@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B167EBB194B8FAC009D8E6E /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B167EBA194B8FAC009D8E6E /* MapManager.m */; };
 		3B1C049619497AE300211EFA /* ContentTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C049519497AE300211EFA /* ContentTableCell.m */; };
 		3B1C049A19497E3000211EFA /* ContentSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C049919497E3000211EFA /* ContentSection.m */; };
 		3B1C049D19498C6800211EFA /* CurrentCityMapTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C049C19498C6800211EFA /* CurrentCityMapTableView.m */; };
@@ -31,6 +32,10 @@
 		3BD98E44194A5511000EF668 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98E43194A5511000EF668 /* FavoritesViewController.m */; };
 		3BD98E47194A5888000EF668 /* CalendarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98E46194A5888000EF668 /* CalendarsViewController.m */; };
 		3BD98E49194A6303000EF668 /* pin_flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BD98E48194A6303000EF668 /* pin_flat.png */; };
+		3BD98E4C194A666F000EF668 /* BackgroundTriggerCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98E4B194A666F000EF668 /* BackgroundTriggerCellTableViewCell.m */; };
+		3BD98E4F194B7A3E000EF668 /* SSPagedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98E4E194B7A3E000EF668 /* SSPagedView.m */; };
+		3BD98E54194B85D1000EF668 /* PagedTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98E53194B85D1000EF668 /* PagedTitleView.m */; };
+		3BD98E56194B85E3000EF668 /* PagedTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD98E55194B85E3000EF668 /* PagedTitleView.xib */; };
 		3BF3FB7819490DB60087E469 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BF3FB5D19490DB60087E469 /* Contents.json */; };
 		3BF3FB7919490DB60087E469 /* leftward-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF3FB5E19490DB60087E469 /* leftward-arrow.png */; };
 		3BF3FB7A19490DB60087E469 /* leftward-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF3FB5F19490DB60087E469 /* leftward-arrow@2x.png */; };
@@ -86,6 +91,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B167EB9194B8FAC009D8E6E /* MapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapManager.h; sourceTree = "<group>"; };
+		3B167EBA194B8FAC009D8E6E /* MapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapManager.m; sourceTree = "<group>"; };
 		3B1C049419497AE300211EFA /* ContentTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentTableCell.h; sourceTree = "<group>"; };
 		3B1C049519497AE300211EFA /* ContentTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentTableCell.m; sourceTree = "<group>"; };
 		3B1C049819497E3000211EFA /* ContentSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentSection.h; sourceTree = "<group>"; };
@@ -132,6 +139,13 @@
 		3BD98E45194A5888000EF668 /* CalendarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarsViewController.h; sourceTree = "<group>"; };
 		3BD98E46194A5888000EF668 /* CalendarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarsViewController.m; sourceTree = "<group>"; };
 		3BD98E48194A6303000EF668 /* pin_flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_flat.png; sourceTree = "<group>"; };
+		3BD98E4A194A666F000EF668 /* BackgroundTriggerCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundTriggerCellTableViewCell.h; sourceTree = "<group>"; };
+		3BD98E4B194A666F000EF668 /* BackgroundTriggerCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundTriggerCellTableViewCell.m; sourceTree = "<group>"; };
+		3BD98E4D194B7A3E000EF668 /* SSPagedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPagedView.h; sourceTree = "<group>"; };
+		3BD98E4E194B7A3E000EF668 /* SSPagedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPagedView.m; sourceTree = "<group>"; };
+		3BD98E52194B85D1000EF668 /* PagedTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagedTitleView.h; sourceTree = "<group>"; };
+		3BD98E53194B85D1000EF668 /* PagedTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagedTitleView.m; sourceTree = "<group>"; };
+		3BD98E55194B85E3000EF668 /* PagedTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PagedTitleView.xib; sourceTree = "<group>"; };
 		3BF3FB5D19490DB60087E469 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		3BF3FB5E19490DB60087E469 /* leftward-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftward-arrow.png"; sourceTree = "<group>"; };
 		3BF3FB5F19490DB60087E469 /* leftward-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftward-arrow@2x.png"; sourceTree = "<group>"; };
@@ -195,9 +209,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B167EBC194B8FCC009D8E6E /* SharedManagers */ = {
+			isa = PBXGroup;
+			children = (
+				3B167EB9194B8FAC009D8E6E /* MapManager.h */,
+				3B167EBA194B8FAC009D8E6E /* MapManager.m */,
+			);
+			name = SharedManagers;
+			sourceTree = "<group>";
+		};
 		3B1C049319497AB800211EFA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3BD98E51194B85AF000EF668 /* PagedView */,
+				3BD98E4A194A666F000EF668 /* BackgroundTriggerCellTableViewCell.h */,
+				3BD98E4B194A666F000EF668 /* BackgroundTriggerCellTableViewCell.m */,
 				3B1C049419497AE300211EFA /* ContentTableCell.h */,
 				3B1C049519497AE300211EFA /* ContentTableCell.m */,
 				3BD98E38194A40E1000EF668 /* ContentTableView.h */,
@@ -210,6 +236,7 @@
 		3B1C049719497E0F00211EFA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3B167EBC194B8FCC009D8E6E /* SharedManagers */,
 				3B1C049819497E3000211EFA /* ContentSection.h */,
 				3B1C049919497E3000211EFA /* ContentSection.m */,
 			);
@@ -290,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				3BA17D5E1946ECFF00127DAD /* MapKit.framework */,
+				3BD98E50194B7A43000EF668 /* SSPagedView */,
 				3B4C2FF9194849A400F06E46 /* SplitViewController */,
 				3BA17D3A1946E5A600127DAD /* Swing Local */,
 				3BA17D511946E5A600127DAD /* Swing LocalTests */,
@@ -360,6 +388,25 @@
 				3BD98E46194A5888000EF668 /* CalendarsViewController.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3BD98E50194B7A43000EF668 /* SSPagedView */ = {
+			isa = PBXGroup;
+			children = (
+				3BD98E4D194B7A3E000EF668 /* SSPagedView.h */,
+				3BD98E4E194B7A3E000EF668 /* SSPagedView.m */,
+			);
+			name = SSPagedView;
+			sourceTree = "<group>";
+		};
+		3BD98E51194B85AF000EF668 /* PagedView */ = {
+			isa = PBXGroup;
+			children = (
+				3BD98E52194B85D1000EF668 /* PagedTitleView.h */,
+				3BD98E53194B85D1000EF668 /* PagedTitleView.m */,
+				3BD98E55194B85E3000EF668 /* PagedTitleView.xib */,
+			);
+			name = PagedView;
 			sourceTree = "<group>";
 		};
 		3BF3FB5B19490DB60087E469 /* Icons */ = {
@@ -642,6 +689,7 @@
 				3BF3FBBE194910930087E469 /* ios8Images.xcassets in Resources */,
 				3BF3FBB3194910570087E469 /* Contents.json in Resources */,
 				3BF3FBB1194910570087E469 /* Contents.json in Resources */,
+				3BD98E56194B85E3000EF668 /* PagedTitleView.xib in Resources */,
 				3BF3FBB9194910570087E469 /* Contents.json in Resources */,
 				3BF3FB8919490DB60087E469 /* lock@2x.png in Resources */,
 				3BD98E49194A6303000EF668 /* pin_flat.png in Resources */,
@@ -676,13 +724,17 @@
 				3B4C300E19484AF900F06E46 /* SplitControllerSegue.m in Sources */,
 				3B4C2FFE194849D400F06E46 /* FrontViewController.m in Sources */,
 				3BD98E47194A5888000EF668 /* CalendarsViewController.m in Sources */,
+				3BD98E4F194B7A3E000EF668 /* SSPagedView.m in Sources */,
 				3BD98E3A194A40E1000EF668 /* ContentTableView.m in Sources */,
 				3B4C3004194849FA00F06E46 /* SplitViewController.m in Sources */,
+				3B167EBB194B8FAC009D8E6E /* MapManager.m in Sources */,
 				3BD98E3D194A4719000EF668 /* HeaderWithDynamicTableView.m in Sources */,
 				3B1C049D19498C6800211EFA /* CurrentCityMapTableView.m in Sources */,
 				3B1C049A19497E3000211EFA /* ContentSection.m in Sources */,
 				3B522D001948F9A40014FF2B /* BaseViewController.m in Sources */,
 				3BD98E40194A5333000EF668 /* HomeViewController.m in Sources */,
+				3BD98E54194B85D1000EF668 /* PagedTitleView.m in Sources */,
+				3BD98E4C194A666F000EF668 /* BackgroundTriggerCellTableViewCell.m in Sources */,
 				3BD98E37194A3CBB000EF668 /* BaseSectionTableView.m in Sources */,
 				3B4C301119484B3000F06E46 /* CustomSegue.m in Sources */,
 				3B1C049619497AE300211EFA /* ContentTableCell.m in Sources */,
@@ -819,11 +871,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Swing Local/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos7.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
@@ -836,11 +889,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Swing Local/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos7.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
