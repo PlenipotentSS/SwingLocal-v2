@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "ContentTableCell.h"
 
-@interface ContentSection : NSObject
+@interface ContentSection : NSObject <BaseSectionTableViewDelegate>
 
 @property (nonatomic) CGFloat height;
 

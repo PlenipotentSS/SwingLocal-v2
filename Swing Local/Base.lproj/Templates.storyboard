@@ -214,7 +214,6 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.13816350344730238" green="0.16558555127995933" blue="0.20069969093406592" alpha="1" colorSpace="calibratedRGB"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="e8o-MU-4QD"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -480,7 +479,6 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1381635034" green="0.16558555129999999" blue="0.20069969090000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="460" height="1100"/>
@@ -627,7 +625,6 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1381635034" green="0.16558555129999999" blue="0.20069969090000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="460" height="1152"/>
@@ -745,7 +742,6 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1381635034" green="0.16558555129999999" blue="0.20069969090000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="460" height="1100"/>
@@ -1089,7 +1085,6 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1381635034" green="0.16558555129999999" blue="0.20069969090000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="460" height="1100"/>
@@ -1448,7 +1443,6 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1381635034" green="0.16558555129999999" blue="0.20069969090000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="460" height="1400"/>
@@ -1573,7 +1567,6 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1381635034" green="0.16558555129999999" blue="0.20069969090000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="460" height="1100"/>
@@ -1735,7 +1728,6 @@ Pay the highest cover of the night and get into all dances
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1381635034" green="0.16558555129999999" blue="0.20069969090000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="460" height="1100"/>
@@ -1929,7 +1921,6 @@ Pay the highest cover of the night and get into all dances
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1381635034" green="0.16558555129999999" blue="0.20069969090000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="640" height="980"/>

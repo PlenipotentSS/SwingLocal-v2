@@ -12,6 +12,9 @@
 
 - (void)heightOfCurrentSection:(CGFloat)height;
 
+@optional
+- (void)selectedRowAtIndexPath:(NSIndexPath*)indexPath forTableView:(UITableView*)tableView;
+
 @end
 
 @interface BaseSectionTableView : UITableView
@@ -20,7 +23,7 @@
 
 @property (nonatomic) CGFloat sectionHeight;
 
-@property (unsafe_unretained) id<BaseSectionTableViewDelegate> heightDelegate;
+@property (unsafe_unretained) id<BaseSectionTableViewDelegate> baseDelegate;
 
 
 @end

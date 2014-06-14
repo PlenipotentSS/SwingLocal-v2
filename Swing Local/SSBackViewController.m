@@ -9,6 +9,7 @@
 #import "SSBackViewController.h"
 #import "SplitViewController.h"
 #import "SplitControllerSegue.h"
+#import "UIColor+SwingLocal.h"
 
 
 @interface SSBackViewController () <UITableViewDataSource,UITableViewDelegate>
@@ -122,9 +123,9 @@
     if (menuRow < [_menuItems count]) {
         cell = [_theTableView dequeueReusableCellWithIdentifier:[_menuItems objectAtIndex:menuRow] forIndexPath:indexPath];
         if ( menuRow == 0) {    //header color for main menu
-            cell.backgroundColor = [UIColor colorWithRed:60.f/256.f green:131.f/256.f blue:137.f/256.f alpha:1.f];
+            cell.backgroundColor = [UIColor customTealColor];
         } else {
-            cell.backgroundColor = [UIColor colorWithRed:49.f/256.f green:59.f/256.f blue:71.f/256.f alpha:1.f];
+            cell.backgroundColor = [UIColor customDarkCellColor];
         }
     } else if ( menuRow == [_menuItems count]) {
         cell = [_theTableView dequeueReusableCellWithIdentifier:@"spacerCell" forIndexPath:indexPath];
@@ -133,9 +134,9 @@
         NSInteger extraRows = menuRow - ([_menuItems count]+1);
         cell = [_theTableView dequeueReusableCellWithIdentifier:[_quickLookItems objectAtIndex:extraRows] forIndexPath:indexPath];
         if ( menuRow - [_menuItems count] == 1 ) {  //header color for quick look
-            cell.backgroundColor = [UIColor colorWithRed:60.f/256.f green:131.f/256.f blue:137.f/256.f alpha:1.f];
+            cell.backgroundColor = [UIColor customTealColor];
         } else {
-            cell.backgroundColor = [UIColor colorWithRed:49.f/256.f green:59.f/256.f blue:71.f/256.f alpha:1.f];
+            cell.backgroundColor = [UIColor customDarkCellColor];
         }
     }
     return cell;

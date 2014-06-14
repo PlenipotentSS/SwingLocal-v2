@@ -14,7 +14,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="426" height="82"/>
                 </imageView>
                 <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0U-p4-LS9">
-                    <rect key="frame" x="94" y="27" width="238" height="28"/>
+                    <rect key="frame" x="94" y="33" width="238" height="28"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="238" id="JyM-fn-wOO"/>
                         <constraint firstAttribute="height" constant="28" id="wDG-do-zoF"/>
@@ -33,10 +33,10 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.19215686269999999" green="0.23137254900000001" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.1381635034" green="0.16558555129999999" blue="0.20069969090000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="Dh5-HB-jTG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="D6a-eZ-TaL"/>
-                <constraint firstAttribute="centerY" secondItem="a0U-p4-LS9" secondAttribute="centerY" id="KTQ-s4-n02"/>
+                <constraint firstAttribute="centerY" secondItem="a0U-p4-LS9" secondAttribute="centerY" constant="-6" id="KTQ-s4-n02"/>
                 <constraint firstAttribute="centerX" secondItem="a0U-p4-LS9" secondAttribute="centerX" id="LmD-EM-Tml"/>
                 <constraint firstItem="Dh5-HB-jTG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VH6-eb-cFT"/>
                 <constraint firstAttribute="trailing" secondItem="Dh5-HB-jTG" secondAttribute="trailing" id="xrw-OD-bxX"/>
@@ -45,6 +45,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="backgroundImage" destination="yGS-vP-7zH" id="Ojd-j0-zgq"/>
+                <outlet property="highlightView" destination="Dh5-HB-jTG" id="7MW-q9-h10"/>
                 <outlet property="titleLabel" destination="a0U-p4-LS9" id="lro-uy-2Oe"/>
             </connections>
             <point key="canvasLocation" x="482" y="191"/>

@@ -77,11 +77,11 @@
     if (indexPath.row+1 == [self numberOfRows]) {
         return _backgroundCellHeight;
     } else if (indexPath.row % 2 == 0) {
-        return 20.f;
-    } else {
         NSInteger tableItemIndex = indexPath.row / 2;
         CGFloat sectionHeight = [[_viewItems objectAtIndex:tableItemIndex] height];
         return sectionHeight;
+    } else {
+        return 20.f;
     }
 }
 
@@ -91,14 +91,15 @@
     if (indexPath.row+1 == [self numberOfRows]) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"showBackgroundCell" forIndexPath:indexPath];
     } else if (indexPath.row % 2 == 0) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"spacerCell" forIndexPath:indexPath];
-    } else {
         NSInteger tableItemIndex = indexPath.row / 2;
         if (!(cell = [[_viewItems objectAtIndex:tableItemIndex] contentCell])) {
             ContentSection *section = [_viewItems objectAtIndex:tableItemIndex];
             [section findCellFromIdentifierWithTableView: self.theTableView];
             cell = [[_viewItems objectAtIndex:tableItemIndex] contentCell];
         }
+    } else {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"spacerCell" forIndexPath:indexPath];
+
     }
     cell.backgroundColor = [UIColor clearColor];
     return cell;

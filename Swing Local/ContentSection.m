@@ -7,6 +7,9 @@
 //
 
 #import "ContentSection.h"
+@interface ContentSection () <UITableViewDelegate>
+
+@end
 
 @implementation ContentSection
 
@@ -19,6 +22,12 @@
     return self;
 }
 
+- (void)setContentCell:(ContentTableCell *)contentCell
+{
+    _contentCell = contentCell;
+    _contentCell.sectionTableView.baseDelegate = self;
+}
+
 - (void)setTableData:(NSMutableArray *)tableData
 {
     _contentCell.sectionTableView.dynamicData = tableData;
@@ -29,7 +38,7 @@
 {
     ContentTableCell *cell = [tableView dequeueReusableCellWithIdentifier:_cellIdentifier];
     if (cell) {
-        _contentCell = cell;
+        self.contentCell = cell;
         if (self.tableData) {
             _contentCell.sectionTableView.dynamicData = self.tableData;
         }
@@ -47,6 +56,20 @@
     } else {
         return _height;
     }
+}
+
+#pragma mark BaseTableViewDelegate
+
+- (void)heightOfCurrentSection:(CGFloat)height
+{
+    _contentCell.sectionHeight = height;
+}
+
+- (void)selectedRowAtIndexPath:(NSIndexPath *)indexPath forTableView:(UITableView *)tableView
+{
+    NSLog(@"%@ had row selected at index: %ld",tableView,indexPath.row);
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

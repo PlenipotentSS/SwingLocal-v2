@@ -19,8 +19,8 @@
 - (void)reloadData
 {
     [super reloadData];
-    if (self.heightDelegate) {
-        [self.heightDelegate heightOfCurrentSection:self.sectionHeight];
+    if (self.baseDelegate) {
+        [self.baseDelegate heightOfCurrentSection:self.sectionHeight];
     }
 }
 

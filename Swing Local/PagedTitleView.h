@@ -12,6 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
+@property (weak, nonatomic) IBOutlet UIView *highlightView;
+
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
+
+- (void)changedBackgroundColor:(UIColor *)color;
 
 @end

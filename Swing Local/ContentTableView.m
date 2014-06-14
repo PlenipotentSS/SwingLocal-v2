@@ -29,6 +29,8 @@
 {
     [super awakeFromNib];
     self.isVisible = YES;
+    
+    self.clipsToBounds = NO;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

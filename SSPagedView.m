@@ -158,6 +158,10 @@
         [self setPageAtOffset:self.theScrollView.contentOffset];
         self.currentPageIndex = index;
         [self reloadVisibleEntries];
+        
+        if (self.delegate) {
+            [self.delegate pageView:self didScrollToPageAtIndex:index];
+        }
     }
 }
 

@@ -20,5 +20,10 @@
     return self;
 }
 
+- (void)changedBackgroundColor:(UIColor *)color
+{
+    _highlightView.backgroundColor = color;
+}
+
 
 @end

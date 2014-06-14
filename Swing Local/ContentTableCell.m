@@ -7,6 +7,9 @@
 //
 
 #import "ContentTableCell.h"
+@interface ContentTableCell ()
+
+@end
 
 @implementation ContentTableCell
 
@@ -22,11 +25,16 @@
 - (void)awakeFromNib
 {
     // Initialization code
-    self.clipsToBounds = YES;
-    self.layer.cornerRadius = 5.f;
+
+    self.wrapperView.clipsToBounds = YES;
+    self.wrapperView.layer.cornerRadius = 5.f;
     
-    self.sectionTableView.heightDelegate = self;
+    self.contentView.layer.shadowColor = [[UIColor blackColor] CGColor];
+    self.contentView.layer.shadowOpacity = 0.8;
+    self.contentView.layer.shadowOffset = CGSizeMake(2.f,2.f);
+    self.contentView.clipsToBounds = NO;
     
+    self.clipsToBounds = NO;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -35,13 +43,5 @@
 
     // Configure the view for the selected state
 }
-
-#pragma mark BaseTableViewDelegate
-
-- (void)heightOfCurrentSection:(CGFloat)height
-{
-    _sectionHeight = height;
-}
-
 
 @end

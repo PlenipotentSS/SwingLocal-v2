@@ -1,14 +1,14 @@
 //
-//  HeaderWithDynamicTableView.m
+//  HeaderWithMonthTableView.m
 //  Swing Local
 //
-//  Created by Steven Stevenson on 6/12/14.
+//  Created by Steven Stevenson on 6/13/14.
 //  Copyright (c) 2014 Steven Stevenson. All rights reserved.
 //
 
-#import "HeaderWithDynamicTableView.h"
+#import "HeaderWithMonthTableView.h"
 
-@implementation HeaderWithDynamicTableView
+@implementation HeaderWithMonthTableView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -32,7 +32,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.dynamicData count];
+    return 1;
 }
 
 - (NSInteger)numberOfSections
@@ -42,7 +42,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat runningTotal = 50.f;
+    CGFloat runningTotal = 240.f;
     self.sectionHeight += runningTotal;
     return runningTotal;
 }
@@ -65,6 +65,5 @@
     self.sectionHeight = 50.f;
     [super reloadData];
 }
-
 
 @end

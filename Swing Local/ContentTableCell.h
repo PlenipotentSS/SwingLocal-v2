@@ -10,9 +10,12 @@
 #import "BaseSectionTableView.h"
 
 
-@interface ContentTableCell : UITableViewCell <BaseSectionTableViewDelegate>
+@interface ContentTableCell : UITableViewCell
+
+@property (nonatomic) IBOutlet UIView *wrapperView;
 
 @property (nonatomic) IBOutlet BaseSectionTableView *sectionTableView;
+
 @property (nonatomic) CGFloat sectionHeight;
 
 @end
