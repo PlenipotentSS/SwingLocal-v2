@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseSectionTableView.h"
+#import "BaseSectionCollectionView.h"
 
 
 @interface ContentTableCell : UITableViewCell
@@ -15,6 +16,8 @@
 @property (nonatomic) IBOutlet UIView *wrapperView;
 
 @property (nonatomic) IBOutlet BaseSectionTableView *sectionTableView;
+
+@property (nonatomic) IBOutlet BaseSectionCollectionView *sectionCollectionView;
 
 @property (nonatomic) CGFloat sectionHeight;
 

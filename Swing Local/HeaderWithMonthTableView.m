@@ -8,6 +8,12 @@
 
 #import "HeaderWithMonthTableView.h"
 
+@interface HeaderWithMonthTableView ()
+
+@property (nonatomic) CGFloat heightForMonth;
+
+@end
+
 @implementation HeaderWithMonthTableView
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -42,9 +48,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat runningTotal = 240.f;
-    self.sectionHeight += runningTotal;
-    return runningTotal;
+    self.sectionHeight += self.heightForMonth;
+    return self.heightForMonth;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,5 +70,6 @@
     self.sectionHeight = 50.f;
     [super reloadData];
 }
+
 
 @end

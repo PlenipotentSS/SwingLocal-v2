@@ -20,6 +20,11 @@
     return [UIColor colorWithRed:213.f/256.f green:214.f/256.f blue:216.f/256.f alpha:1.f];
 }
 
++(UIColor *) customGreyColor
+{
+    return [UIColor colorWithRed:200.f/256.f green:200.f/256.f blue:201.f/256.f alpha:1.f];
+}
+
 +(UIColor *) customBlueColor
 {
     return [UIColor colorWithRed:42.f/256.f green:81.f/256.f blue:163.f/256.f alpha:1.f];

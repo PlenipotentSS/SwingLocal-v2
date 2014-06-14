@@ -81,6 +81,7 @@
 		3BF3FBBB194910570087E469 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BF3FBAF194910570087E469 /* Contents.json */; };
 		3BF3FBBC194910570087E469 /* pin_flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF3FBB0194910570087E469 /* pin_flat.png */; };
 		3BF3FBBE194910930087E469 /* ios8Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BF3FBBD194910930087E469 /* ios8Images.xcassets */; };
+		D20EF0D4194C4AAA00A107DA /* BaseSectionCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D20EF0D3194C4AAA00A107DA /* BaseSectionCollectionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +199,8 @@
 		3BF3FBAF194910570087E469 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		3BF3FBB0194910570087E469 /* pin_flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_flat.png; sourceTree = "<group>"; };
 		3BF3FBBD194910930087E469 /* ios8Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ios8Images.xcassets; sourceTree = "<group>"; };
+		D20EF0D2194C4AAA00A107DA /* BaseSectionCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSectionCollectionView.h; sourceTree = "<group>"; };
+		D20EF0D3194C4AAA00A107DA /* BaseSectionCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSectionCollectionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +331,8 @@
 		3B6FB6EE194C29A900D9B192 /* CollectionViews */ = {
 			isa = PBXGroup;
 			children = (
+				D20EF0D2194C4AAA00A107DA /* BaseSectionCollectionView.h */,
+				D20EF0D3194C4AAA00A107DA /* BaseSectionCollectionView.m */,
 				3B6FB6EF194C30E000D9B192 /* MonthCollectionView.h */,
 				3B6FB6F0194C30E000D9B192 /* MonthCollectionView.m */,
 				3B765BAD194C3ABD0087872A /* MonthCollectionViewCell.h */,
@@ -758,6 +763,7 @@
 				3BD98E47194A5888000EF668 /* CalendarsViewController.m in Sources */,
 				3BD98E4F194B7A3E000EF668 /* SSPagedView.m in Sources */,
 				3BD98E3A194A40E1000EF668 /* ContentTableView.m in Sources */,
+				D20EF0D4194C4AAA00A107DA /* BaseSectionCollectionView.m in Sources */,
 				3B4C3004194849FA00F06E46 /* SplitViewController.m in Sources */,
 				3B167EBB194B8FAC009D8E6E /* MapManager.m in Sources */,
 				3BD98E3D194A4719000EF668 /* HeaderWithDynamicTableView.m in Sources */,
@@ -896,6 +902,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Swing Local/Info.plist";
@@ -904,6 +911,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos7.1;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -914,6 +922,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Swing Local/Info.plist";

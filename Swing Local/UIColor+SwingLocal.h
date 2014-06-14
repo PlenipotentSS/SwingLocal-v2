@@ -13,6 +13,7 @@
 //color scheme
 +(UIColor *) customTealColor;
 +(UIColor *) customLightGreyColor;
++(UIColor *) customGreyColor;
 +(UIColor *) customBurntColor;
 +(UIColor *) customAquaColor;
 +(UIColor *) customDarkAquaColor;

@@ -13,6 +13,7 @@
 - (void)heightOfCurrentSection:(CGFloat)height;
 
 @optional
+
 - (void)selectedRowAtIndexPath:(NSIndexPath*)indexPath forTableView:(UITableView*)tableView;
 
 @end

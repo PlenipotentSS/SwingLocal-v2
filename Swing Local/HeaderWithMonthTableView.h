@@ -7,8 +7,8 @@
 //
 
 #import "HeaderWithDynamicTableView.h"
+#import "MonthCollectionView.h"
 
 @interface HeaderWithMonthTableView : HeaderWithDynamicTableView
-
 
 @end

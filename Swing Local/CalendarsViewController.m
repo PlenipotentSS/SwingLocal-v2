@@ -8,7 +8,9 @@
 
 #import "CalendarsViewController.h"
 
-@interface CalendarsViewController ()
+@interface CalendarsViewController () <ContentSectionDelegate>
+
+@property (nonatomic) BOOL isReloadingTable;
 
 @end
 
@@ -27,8 +29,10 @@
     [sec1 findCellFromIdentifierWithTableView: self.theTableView];
     
     ContentSection *sec2 = [[ContentSection alloc] init];
+    sec2.delegate = self;
     sec2.cellIdentifier = @"cityMonthCalendarCell";
     [sec2 findCellFromIdentifierWithTableView:self.theTableView];
+    
     
     self.viewItems = [[NSMutableArray alloc] initWithObjects:sec1,sec2, nil];
 }
@@ -37,6 +41,26 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    self.isReloadingTable = YES;
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    self.isReloadingTable = NO;
+}
+
+- (void)redrawCell:(UITableViewCell *)cell
+{
+    if (!self.isReloadingTable) {
+        NSIndexPath *pathToCell = [self.theTableView indexPathForCell:cell];
+        [self.theTableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:pathToCell, nil] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 @end

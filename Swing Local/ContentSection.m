@@ -17,7 +17,6 @@
 {
     self = [super init];
     if (self) {
-        _needsHeightMeasurement = YES;
     }
     return self;
 }
@@ -25,12 +24,20 @@
 - (void)setContentCell:(ContentTableCell *)contentCell
 {
     _contentCell = contentCell;
-    _contentCell.sectionTableView.baseDelegate = self;
+    if (_contentCell.sectionTableView) {
+        _contentCell.sectionTableView.baseDelegate = self;
+    } else if (_contentCell.sectionCollectionView) {
+        _contentCell.sectionCollectionView.baseDelegate = self;
+    }
 }
 
 - (void)setTableData:(NSMutableArray *)tableData
 {
-    _contentCell.sectionTableView.dynamicData = tableData;
+    if (_contentCell.sectionTableView) {
+        _contentCell.sectionTableView.dynamicData = tableData;
+    } else if (_contentCell.sectionCollectionView) {
+        _contentCell.sectionCollectionView.dynamicData = tableData;
+    }
     _tableData = tableData;
 }
 
@@ -39,8 +46,10 @@
     ContentTableCell *cell = [tableView dequeueReusableCellWithIdentifier:_cellIdentifier];
     if (cell) {
         self.contentCell = cell;
-        if (self.tableData) {
+        if (self.tableData && _contentCell.sectionTableView) {
             _contentCell.sectionTableView.dynamicData = self.tableData;
+        } else if (self.tableData && _contentCell.sectionCollectionView) {
+            _contentCell.sectionCollectionView.dynamicData = self.tableData;
         }
         return true;
     } else {
@@ -50,8 +59,12 @@
 
 - (CGFloat)height
 {
-    if (_contentCell && self.needsHeightMeasurement) {
-        [_contentCell.sectionTableView reloadData];
+    if (_contentCell) {
+        if (_contentCell.sectionTableView) {
+            [_contentCell.sectionTableView reloadData];
+        } else if (_contentCell.sectionCollectionView) {
+            [_contentCell.sectionCollectionView reloadData];
+        }
         return [_contentCell sectionHeight];
     } else {
         return _height;
@@ -63,6 +76,9 @@
 - (void)heightOfCurrentSection:(CGFloat)height
 {
     _contentCell.sectionHeight = height;
+    if (self.delegate) {
+        [self.delegate redrawCell:_contentCell];
+    }
 }
 
 - (void)selectedRowAtIndexPath:(NSIndexPath *)indexPath forTableView:(UITableView *)tableView
@@ -70,6 +86,11 @@
     NSLog(@"%@ had row selected at index: %ld",tableView,indexPath.row);
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)selectedCellInCollectionView:(UICollectionView*)collectionView atIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%@ had row selected at index: %ld",collectionView,indexPath.row);
 }
 
 @end

@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Steven Stevenson. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseSectionCollectionView.h"
 
-@interface MonthCollectionView : UICollectionView <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface MonthCollectionView : BaseSectionCollectionView <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end

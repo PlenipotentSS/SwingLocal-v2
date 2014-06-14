@@ -10,7 +10,14 @@
 #import <Foundation/Foundation.h>
 #import "ContentTableCell.h"
 
-@interface ContentSection : NSObject <BaseSectionTableViewDelegate>
+@protocol ContentSectionDelegate <NSObject>
+
+@optional
+- (void)redrawCell:(UITableViewCell*)cell;
+
+@end
+
+@interface ContentSection : NSObject <BaseSectionTableViewDelegate, BaseSectionCollectionViewDelegate>
 
 @property (nonatomic) CGFloat height;
 
@@ -20,7 +27,7 @@
 
 @property (nonatomic,weak) NSMutableArray *tableData;
 
-@property (nonatomic) BOOL needsHeightMeasurement;
+@property (unsafe_unretained) id<ContentSectionDelegate> delegate;
 
 - (BOOL)findCellFromIdentifierWithTableView: (UITableView*) tableView;
 
