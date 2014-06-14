@@ -20,7 +20,6 @@
 		3B4C300E19484AF900F06E46 /* SplitControllerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4C300D19484AF900F06E46 /* SplitControllerSegue.m */; };
 		3B4C301119484B3000F06E46 /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4C301019484B3000F06E46 /* CustomSegue.m */; };
 		3B522D001948F9A40014FF2B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B522CFF1948F9A40014FF2B /* BaseViewController.m */; };
-		3B6FB6E6194C1F1E00D9B192 /* HeaderWithMonthTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6FB6E5194C1F1E00D9B192 /* HeaderWithMonthTableView.m */; };
 		3B6FB6F1194C30E000D9B192 /* MonthCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6FB6F0194C30E000D9B192 /* MonthCollectionView.m */; };
 		3B765BAF194C3ABD0087872A /* MonthCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B765BAE194C3ABD0087872A /* MonthCollectionViewCell.m */; };
 		3BA17D3E1946E5A600127DAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA17D3D1946E5A600127DAD /* main.m */; };
@@ -82,6 +81,8 @@
 		3BF3FBBC194910570087E469 /* pin_flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF3FBB0194910570087E469 /* pin_flat.png */; };
 		3BF3FBBE194910930087E469 /* ios8Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BF3FBBD194910930087E469 /* ios8Images.xcassets */; };
 		D20EF0D4194C4AAA00A107DA /* BaseSectionCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D20EF0D3194C4AAA00A107DA /* BaseSectionCollectionView.m */; };
+		D231AC3B194CE259009990C5 /* NSDate+SwingLocal.m in Sources */ = {isa = PBXBuildFile; fileRef = D231AC3A194CE259009990C5 /* NSDate+SwingLocal.m */; };
+		D296ECDE194CD4850027E733 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D296ECDD194CD4850027E733 /* RootNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,8 +121,6 @@
 		3B4C301019484B3000F06E46 /* CustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegue.m; sourceTree = "<group>"; };
 		3B522CFE1948F9A40014FF2B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		3B522CFF1948F9A40014FF2B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		3B6FB6E4194C1F1E00D9B192 /* HeaderWithMonthTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderWithMonthTableView.h; sourceTree = "<group>"; };
-		3B6FB6E5194C1F1E00D9B192 /* HeaderWithMonthTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderWithMonthTableView.m; sourceTree = "<group>"; };
 		3B6FB6EF194C30E000D9B192 /* MonthCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthCollectionView.h; sourceTree = "<group>"; };
 		3B6FB6F0194C30E000D9B192 /* MonthCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthCollectionView.m; sourceTree = "<group>"; };
 		3B765BAD194C3ABD0087872A /* MonthCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthCollectionViewCell.h; sourceTree = "<group>"; };
@@ -201,6 +200,10 @@
 		3BF3FBBD194910930087E469 /* ios8Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ios8Images.xcassets; sourceTree = "<group>"; };
 		D20EF0D2194C4AAA00A107DA /* BaseSectionCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSectionCollectionView.h; sourceTree = "<group>"; };
 		D20EF0D3194C4AAA00A107DA /* BaseSectionCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSectionCollectionView.m; sourceTree = "<group>"; };
+		D231AC39194CE259009990C5 /* NSDate+SwingLocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+SwingLocal.h"; sourceTree = "<group>"; };
+		D231AC3A194CE259009990C5 /* NSDate+SwingLocal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SwingLocal.m"; sourceTree = "<group>"; };
+		D296ECDC194CD4850027E733 /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
+		D296ECDD194CD4850027E733 /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,8 +269,6 @@
 				3B1C049C19498C6800211EFA /* CurrentCityMapTableView.m */,
 				3BD98E3B194A4719000EF668 /* HeaderWithDynamicTableView.h */,
 				3BD98E3C194A4719000EF668 /* HeaderWithDynamicTableView.m */,
-				3B6FB6E4194C1F1E00D9B192 /* HeaderWithMonthTableView.h */,
-				3B6FB6E5194C1F1E00D9B192 /* HeaderWithMonthTableView.m */,
 			);
 			name = TableViewSections;
 			sourceTree = "<group>";
@@ -322,6 +323,8 @@
 			children = (
 				3B522CFE1948F9A40014FF2B /* BaseViewController.h */,
 				3B522CFF1948F9A40014FF2B /* BaseViewController.m */,
+				D296ECDC194CD4850027E733 /* RootNavigationController.h */,
+				D296ECDD194CD4850027E733 /* RootNavigationController.m */,
 				3BD98E41194A54F0000EF668 /* View Controllers */,
 				3B4C300519484A0300F06E46 /* CustomSplitViewController */,
 			);
@@ -443,6 +446,8 @@
 			children = (
 				3BDDAB17194BC2D100207B77 /* UIColor+SwingLocal.h */,
 				3BDDAB18194BC2D100207B77 /* UIColor+SwingLocal.m */,
+				D231AC39194CE259009990C5 /* NSDate+SwingLocal.h */,
+				D231AC3A194CE259009990C5 /* NSDate+SwingLocal.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -767,6 +772,7 @@
 				3B4C3004194849FA00F06E46 /* SplitViewController.m in Sources */,
 				3B167EBB194B8FAC009D8E6E /* MapManager.m in Sources */,
 				3BD98E3D194A4719000EF668 /* HeaderWithDynamicTableView.m in Sources */,
+				D231AC3B194CE259009990C5 /* NSDate+SwingLocal.m in Sources */,
 				3B1C049D19498C6800211EFA /* CurrentCityMapTableView.m in Sources */,
 				3B1C049A19497E3000211EFA /* ContentSection.m in Sources */,
 				3BDDAB19194BC2D100207B77 /* UIColor+SwingLocal.m in Sources */,
@@ -776,7 +782,6 @@
 				3BD98E4C194A666F000EF668 /* BackgroundTriggerCellTableViewCell.m in Sources */,
 				3BD98E37194A3CBB000EF668 /* BaseSectionTableView.m in Sources */,
 				3B4C301119484B3000F06E46 /* CustomSegue.m in Sources */,
-				3B6FB6E6194C1F1E00D9B192 /* HeaderWithMonthTableView.m in Sources */,
 				3B1C049619497AE300211EFA /* ContentTableCell.m in Sources */,
 				3B4C3001194849E400F06E46 /* BackViewController.m in Sources */,
 				3B765BAF194C3ABD0087872A /* MonthCollectionViewCell.m in Sources */,
@@ -786,6 +791,7 @@
 				3BA17D3E1946E5A600127DAD /* main.m in Sources */,
 				3B4C300A19484A9500F06E46 /* SSFrontViewController.m in Sources */,
 				3B4C300B19484A9500F06E46 /* SSBackViewController.m in Sources */,
+				D296ECDE194CD4850027E733 /* RootNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

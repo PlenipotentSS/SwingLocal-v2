@@ -9,6 +9,8 @@
 #import "ContentTableCell.h"
 @interface ContentTableCell ()
 
+@property (nonatomic) IBOutlet UILabel *sectionTitleLabel;
+
 @end
 
 @implementation ContentTableCell
@@ -26,6 +28,22 @@
     self.contentView.clipsToBounds = NO;
     
     self.clipsToBounds = NO;
+    
+    if (_sectionTitleLabel && _sectionTitle) {
+        _sectionTitleLabel.text =_sectionTitle;
+    }
+}
+
+- (void)setSectionTitle:(NSString *)sectionTitle
+{
+    _sectionTitle = sectionTitle;
+    if (_sectionTableView) {
+        [_sectionTableView setSectionTitle:sectionTitle];
+    } else if (_sectionCollectionView) {
+        if (_sectionTitleLabel) {
+            [_sectionTitleLabel setText:sectionTitle];
+        }
+    }
 }
 
 @end

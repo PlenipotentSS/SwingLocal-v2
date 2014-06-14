@@ -20,4 +20,6 @@
 +(UIColor *) customDarkCellColor;
 +(UIColor *) customBlueColor;
 
++ (UIColor *)frequencyColorForNumberOfEvents:(NSInteger)count;
+
 @end

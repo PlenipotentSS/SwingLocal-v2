@@ -26,5 +26,7 @@
 
 @property (unsafe_unretained) id<BaseSectionTableViewDelegate> baseDelegate;
 
+@property (weak, nonatomic) NSString *sectionTitle;
+
 
 @end

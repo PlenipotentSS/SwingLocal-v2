@@ -10,4 +10,6 @@
 
 @interface CalendarsViewController : BaseViewController
 
+@property (nonatomic) NSMutableArray *monthInformation;
+
 @end

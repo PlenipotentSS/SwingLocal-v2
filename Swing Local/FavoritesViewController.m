@@ -81,12 +81,12 @@
     ContentSection *sec1 = [[ContentSection alloc] init];
     sec1.cellIdentifier = @"favoriteCitiesCell";
     [sec1 findCellFromIdentifierWithTableView: self.theTableView];
-    sec1.tableData = self.favoriteCities;
+    sec1.data = self.favoriteCities;
     
     ContentSection *sec2 = [[ContentSection alloc] init];
     sec2.cellIdentifier = @"favoriteCalendarsCell";
     [sec2 findCellFromIdentifierWithTableView: self.theTableView];
-    sec2.tableData = self.favoriteCalendars;
+    sec2.data = self.favoriteCalendars;
     
     self.viewItems = [[NSMutableArray alloc] initWithObjects:sec1, nil];
     self.hiddenItems = [[NSMutableArray alloc] initWithObjects:sec2, nil];

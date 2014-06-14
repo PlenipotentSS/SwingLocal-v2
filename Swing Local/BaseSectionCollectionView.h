@@ -25,4 +25,8 @@
 
 @property (unsafe_unretained) id<BaseSectionCollectionViewDelegate> baseDelegate;
 
+@property (weak, nonatomic) NSString *sectionTitle;
+
+- (void)drawCollectionView;
+
 @end

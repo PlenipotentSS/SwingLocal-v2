@@ -21,6 +21,14 @@
     return self;
 }
 
+- (void)setSectionTitle:(NSString *)sectionTitle
+{
+    _sectionTitle = sectionTitle;
+    if (_contentCell) {
+        self.contentCell.sectionTitle = sectionTitle;
+    }
+}
+
 - (void)setContentCell:(ContentTableCell *)contentCell
 {
     _contentCell = contentCell;
@@ -31,14 +39,14 @@
     }
 }
 
-- (void)setTableData:(NSMutableArray *)tableData
+- (void)setData:(NSMutableArray *)data
 {
     if (_contentCell.sectionTableView) {
-        _contentCell.sectionTableView.dynamicData = tableData;
+        _contentCell.sectionTableView.dynamicData = data;
     } else if (_contentCell.sectionCollectionView) {
-        _contentCell.sectionCollectionView.dynamicData = tableData;
+        _contentCell.sectionCollectionView.dynamicData = data;
     }
-    _tableData = tableData;
+    _data = data;
 }
 
 - (BOOL)findCellFromIdentifierWithTableView:(UITableView *)tableView
@@ -46,14 +54,50 @@
     ContentTableCell *cell = [tableView dequeueReusableCellWithIdentifier:_cellIdentifier];
     if (cell) {
         self.contentCell = cell;
-        if (self.tableData && _contentCell.sectionTableView) {
-            _contentCell.sectionTableView.dynamicData = self.tableData;
-        } else if (self.tableData && _contentCell.sectionCollectionView) {
-            _contentCell.sectionCollectionView.dynamicData = self.tableData;
+        if (self.data && _contentCell.sectionTableView) {
+            _contentCell.sectionTableView.dynamicData = self.data;
+        } else if (self.data && _contentCell.sectionCollectionView) {
+            _contentCell.sectionCollectionView.dynamicData = self.data;
         }
         return true;
     } else {
         return false;
+    }
+}
+
+- (BOOL)findCellFromIdentifierWithTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
+{
+    ContentTableCell *cell = [tableView dequeueReusableCellWithIdentifier:_cellIdentifier forIndexPath:indexPath];
+    if (cell) {
+        self.contentCell = cell;
+        if (self.data && _contentCell.sectionTableView) {
+            _contentCell.sectionTableView.dynamicData = self.data;
+        } else if (self.data && _contentCell.sectionCollectionView) {
+            _contentCell.sectionCollectionView.dynamicData = self.data;
+        }
+        if (_sectionTitle) {
+            _contentCell.sectionTitle = _sectionTitle;
+        }
+        if (self.delegate) {
+            if (_contentCell.nextButton) {
+                [_contentCell.nextButton addTarget:self.delegate action:@selector(nextButtonPushed:) forControlEvents:UIControlEventTouchUpInside];
+            }
+            if (_contentCell.previousButton) {
+                [_contentCell.previousButton addTarget:self.delegate action:@selector(previousButtonPushed:) forControlEvents:UIControlEventTouchUpInside];
+            }
+        }
+
+        return true;
+    } else {
+        return false;
+    }
+}
+
+- (void)drawGrandChildren
+{
+    NSLog(@"drawing GrandChildren!");
+    if (_contentCell.sectionCollectionView) {
+        [_contentCell.sectionCollectionView reloadData];
     }
 }
 
@@ -83,14 +127,14 @@
 
 - (void)selectedRowAtIndexPath:(NSIndexPath *)indexPath forTableView:(UITableView *)tableView
 {
-    NSLog(@"%@ had row selected at index: %ld",tableView,indexPath.row);
+    NSLog(@"%@ had row selected at index: %d",tableView,indexPath.row);
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)selectedCellInCollectionView:(UICollectionView*)collectionView atIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%@ had row selected at index: %ld",collectionView,indexPath.row);
+    NSLog(@"%@ had row selected at index: %d",collectionView,indexPath.row);
 }
 
 @end

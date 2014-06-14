@@ -32,7 +32,7 @@
 
 +(UIColor *) customBurntColor
 {
-    return [UIColor colorWithRed:0.705 green:0.194 blue:0.165 alpha:1.000];
+    return [UIColor colorWithRed:162.f/256.f green:59.f/256.f blue:35.f/256.f alpha:1.000];
 }
 
 +(UIColor *) customAquaColor
@@ -48,6 +48,19 @@
 + (UIColor *)customDarkCellColor
 {
     return [UIColor colorWithRed:49.f/256.f green:59.f/256.f blue:71.f/256.f alpha:1.f];
+}
+
++ (UIColor *)frequencyColorForNumberOfEvents:(NSInteger)count
+{
+    if (count == 0) {
+        return [UIColor clearColor];
+    } else if (count < 2) {
+        return [UIColor colorWithRed:162.f/256.f green:216.f/256.f blue:35.f/256.f alpha:1.000];
+    } else if (count < 5) {
+        return [UIColor colorWithRed:201.f/256.f green:130.f/256.f blue:35.f/256.f alpha:1.000];
+    } else {
+        return [self customBurntColor];
+    }
 }
 
 @end

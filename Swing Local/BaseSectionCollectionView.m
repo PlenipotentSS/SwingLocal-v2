@@ -24,4 +24,9 @@
     }
 }
 
+- (void)drawCollectionView
+{
+    [self reloadData];
+}
+
 @end

@@ -19,6 +19,12 @@
 
 @property (nonatomic) IBOutlet BaseSectionCollectionView *sectionCollectionView;
 
+@property (nonatomic, weak) IBOutlet UIButton *nextButton;
+
+@property (nonatomic, weak) IBOutlet UIButton *previousButton;
+
 @property (nonatomic) CGFloat sectionHeight;
+
+@property (nonatomic,weak) NSString *sectionTitle;
 
 @end

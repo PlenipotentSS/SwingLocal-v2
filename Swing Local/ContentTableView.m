@@ -54,4 +54,16 @@
     [super touchesEnded:touches withEvent:event];
 }
 
+- (void)beginUpdates
+{
+    self.isUpdating = YES;
+    [super beginUpdates];
+}
+
+- (void)endUpdates
+{
+    [super endUpdates];
+    self.isUpdating = NO;
+}
+
 @end

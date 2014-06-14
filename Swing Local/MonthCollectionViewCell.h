@@ -12,4 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *cellLabel;
 
+@property (weak, nonatomic) IBOutlet UIView *frequencyView;
+
 @end

@@ -45,6 +45,22 @@
     [self.theTableView reloadData];
 }
 
+-(BOOL)shouldAutorotate
+{
+    
+    return NO;
+}
+
+-(NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return UIInterfaceOrientationPortrait;
+}
+
 - (NSMutableArray*)viewItems {
     if (!_viewItems) {
         _viewItems = [[NSMutableArray alloc] init];
@@ -88,15 +104,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ContentTableCell *cell;
+    ContentSection *section;
     if (indexPath.row+1 == [self numberOfRows]) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"showBackgroundCell" forIndexPath:indexPath];
     } else if (indexPath.row % 2 == 0) {
         NSInteger tableItemIndex = indexPath.row / 2;
-        if (!(cell = [[_viewItems objectAtIndex:tableItemIndex] contentCell])) {
-            ContentSection *section = [_viewItems objectAtIndex:tableItemIndex];
-            [section findCellFromIdentifierWithTableView: self.theTableView];
-            cell = [[_viewItems objectAtIndex:tableItemIndex] contentCell];
-        }
+        section = [_viewItems objectAtIndex:tableItemIndex];
+        [section findCellFromIdentifierWithTableView: self.theTableView atIndexPath:indexPath];
+        
+        cell = [section contentCell];
+
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"spacerCell" forIndexPath:indexPath];
 
@@ -104,6 +121,5 @@
     cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
-
 
 @end

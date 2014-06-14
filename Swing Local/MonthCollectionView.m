@@ -16,7 +16,7 @@
 
 @property (nonatomic) NSIndexPath *currentActiveIndexPath;
 
-@property (nonatomic) NSInteger numberOfItems;
+@property (nonatomic) NSMutableArray *dayCells;
 
 @property (nonatomic) NSInteger numberOfInitialSpaces;
 
@@ -45,19 +45,21 @@
     
     self.sectionHeight = 50.f;
     
-    self.numberOfInitialSpaces = 5;
+    self.numberOfInitialSpaces = 0;
     
-    self.numberOfItems = 38;
+    _dayCells = [NSMutableArray new];
 }
 
 -(NSInteger)numberOfItems
 {
-    return _numberOfItems + self.numberOfInitialSpaces;
+    return [self.dynamicData count] + 7;
 }
 
 - (void)reloadData
 {
     self.sectionHeight = 50.f;
+    [self.dayCells removeAllObjects];
+    self.numberOfInitialSpaces = 0;
     [super reloadData];
 }
 
@@ -65,16 +67,18 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row >= 7 && indexPath.row-7 >= self.numberOfInitialSpaces) {
-        UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
-        cell.backgroundColor = [UIColor customLightGreyColor];
-        if (self.currentActiveIndexPath) {
-            UICollectionViewCell *oldActiveCell = [collectionView cellForItemAtIndexPath:self.currentActiveIndexPath];
-            oldActiveCell.backgroundColor = [UIColor clearColor];
-        }
-        self.currentActiveIndexPath = indexPath;
-        
-        if (self.baseDelegate) {
-            [self.baseDelegate selectedCellInCollectionView:collectionView atIndexPath:indexPath];
+        if (self.currentActiveIndexPath != indexPath) {
+            UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+            cell.backgroundColor = [UIColor customLightGreyColor];
+            if (self.currentActiveIndexPath) {
+                UICollectionViewCell *oldActiveCell = [collectionView cellForItemAtIndexPath:self.currentActiveIndexPath];
+                oldActiveCell.backgroundColor = [UIColor clearColor];
+            }
+            self.currentActiveIndexPath = indexPath;
+            
+            if (self.baseDelegate) {
+                [self.baseDelegate selectedCellInCollectionView:collectionView atIndexPath:indexPath];
+            }
         }
     }
 }
@@ -99,18 +103,29 @@
 
 - (MonthCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    MonthCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"dayCell" forIndexPath:indexPath];
-    if (indexPath.row <7) {
-        cell.cellLabel.text = [self.monthLabels objectAtIndex:indexPath.row];
-        cell.cellLabel.textColor = [UIColor grayColor];
-    } else if ( indexPath.row-7 < self.numberOfInitialSpaces) {
-        cell.cellLabel.text = @"";
+    MonthCollectionViewCell *cell;
+    if ([self.dayCells count] == indexPath.row) {
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"dayCell" forIndexPath:indexPath];
+        cell.frequencyView.backgroundColor = [UIColor clearColor];
+        if (indexPath.row <7) {
+            cell.cellLabel.text = [self.monthLabels objectAtIndex:indexPath.row];
+            cell.cellLabel.textColor = [UIColor grayColor];
+        } else {
+            NSInteger thisDayIndex = indexPath.row - 7;
+            if ([self.dynamicData objectAtIndex:thisDayIndex] == [NSNull null] ) {
+                self.numberOfInitialSpaces++;
+                cell.cellLabel.text = @"";
+            } else {
+                NSMutableArray *eventsThisDay = [self.dynamicData objectAtIndex:thisDayIndex];
+                cell.frequencyView.backgroundColor = [UIColor frequencyColorForNumberOfEvents:[eventsThisDay count]];
+                cell.cellLabel.text = [NSString stringWithFormat:@"%d",(indexPath.row-(6+self.numberOfInitialSpaces))];
+                cell.cellLabel.textColor = [UIColor blackColor];
+            }
+        }
+        [self.dayCells addObject:cell];
     } else {
-        cell.cellLabel.text = [NSString stringWithFormat:@"%ld",(indexPath.row-(6+self.numberOfInitialSpaces))];
-        cell.cellLabel.textColor = [UIColor blackColor];
+        cell = [self.dayCells objectAtIndex:indexPath.row];
     }
-//    cell.cellLabel.shadowColor = [UIColor blackColor];
-//    cell.cellLabel.shadowOffset = CGSizeMake(1.f, 1.f);
     return cell;
 }
 

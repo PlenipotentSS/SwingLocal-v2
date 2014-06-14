@@ -31,12 +31,12 @@
     ContentSection *sec2 = [[ContentSection alloc] init];
     sec2.cellIdentifier = @"todayEventCell";
     [sec2 findCellFromIdentifierWithTableView: self.theTableView];
-    sec2.tableData = self.todayEvents;
+    sec2.data = self.todayEvents;
     
     ContentSection *sec3 = [[ContentSection alloc] init];
     sec3.cellIdentifier = @"socialMediaCell";
     [sec3 findCellFromIdentifierWithTableView: self.theTableView];
-    sec3.tableData = self.currentChatter;
+    sec3.data = self.currentChatter;
     
     self.viewItems = [[NSMutableArray alloc] initWithObjects:sec1, sec2, sec3, nil];
 }

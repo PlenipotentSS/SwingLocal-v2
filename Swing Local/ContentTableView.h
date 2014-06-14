@@ -14,4 +14,6 @@
 
 @property (nonatomic, copy) void (^recognizerBlock)(NSSet *view);
 
+@property (nonatomic) BOOL isUpdating;
+
 @end

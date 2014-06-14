@@ -13,7 +13,11 @@
 @protocol ContentSectionDelegate <NSObject>
 
 @optional
-- (void)redrawCell:(UITableViewCell*)cell;
+- (void)redrawCell:(UITableViewCell *)cell;
+
+- (void)nextButtonPushed:(id)sender;
+
+- (void)previousButtonPushed:(id)sender;
 
 @end
 
@@ -25,11 +29,16 @@
 
 @property (nonatomic, weak) ContentTableCell *contentCell;
 
-@property (nonatomic,weak) NSMutableArray *tableData;
+@property (nonatomic,weak) NSMutableArray *data;
 
 @property (unsafe_unretained) id<ContentSectionDelegate> delegate;
 
+@property (nonatomic) NSString *sectionTitle;
+
 - (BOOL)findCellFromIdentifierWithTableView: (UITableView*) tableView;
 
+- (BOOL)findCellFromIdentifierWithTableView: (UITableView*) tableView atIndexPath:(NSIndexPath*)indexPath;
+
+- (void)drawGrandChildren;
 
 @end
