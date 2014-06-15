@@ -39,16 +39,16 @@ static NSString * const sampleDesc3 = @"lindy hoppers and swing dancers alike lo
     
     
     self.descStrings = [NSArray arrayWithObjects:sampleDesc1,sampleDesc2, sampleDesc3, nil];
-    self.introImages = [NSArray arrayWithObjects:[UIImage imageNamed:@"street-player.jpg"],
-                        [UIImage imageNamed:@"airplane-wing.jpg"],
-                        [UIImage imageNamed:@"can-talk-bw.jpg"], nil];
+    self.introImages = [NSArray arrayWithObjects:@"street-player",
+                        @"airplane-wing",
+                        @"can-talk-bw", nil];
     self.titles = [NSArray arrayWithObjects:@"Local Dancing",
                    @"Planning",
                    @"Community", nil];
     
-    self.titleImages = [NSArray arrayWithObjects:[UIImage imageNamed:@"PIN_FLAT_WHITE-03"],
-                        [UIImage imageNamed:@"MAP_FLAT_WHITE-04"],
-                        [UIImage imageNamed:@"PIN_FLAT_WHITE-03"], nil];
+    self.titleImages = [NSArray arrayWithObjects:@"PIN_FLAT_WHITE-03",
+                        @"MAP_FLAT_WHITE-04",
+                        @"PIN_FLAT_WHITE-03", nil];
     
     [self setupWalkThrough];
 }
@@ -104,14 +104,19 @@ static NSString * const sampleDesc3 = @"lindy hoppers and swing dancers alike lo
     cell.desc = [self.descStrings objectAtIndex:index];
     cell.descColor = [UIColor whiteColor];
     cell.descFont = [UIFont fontWithName:@"Avenir-Heavy" size:15.f];
-    cell.titleImage = [self.titleImages objectAtIndex:index];
+    
+    if ([self.titleImages count] > index) {
+        NSString *imagePath = [[NSBundle mainBundle]pathForResource:[self.titleImages objectAtIndex:index] ofType:@"png"];
+        cell.titleImage = [UIImage imageWithContentsOfFile:imagePath];
+    }
 }
 
 - (UIImage*) bgImageforPage:(NSInteger)index
 {
     UIImage* image;
     if ([self.introImages count] > index) {
-        image = [self.introImages objectAtIndex:index];
+        NSString *imagePath = [[NSBundle mainBundle]pathForResource:[self.introImages objectAtIndex:index] ofType:@"jpg"];
+        image = [UIImage imageWithContentsOfFile:imagePath];
     }
     return image;
 }
