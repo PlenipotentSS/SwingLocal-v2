@@ -18,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    [standardDefaults setBool:NO forKey:@"SkipIntro"];
+    
     return YES;
 }
 

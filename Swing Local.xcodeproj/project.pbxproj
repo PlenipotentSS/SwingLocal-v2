@@ -93,6 +93,10 @@
 		D267DBDE194D9AAD00D976B3 /* airplane-wing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D267DBDD194D9AAD00D976B3 /* airplane-wing.jpg */; };
 		D267DBE0194D9C7E00D976B3 /* can-talk-bw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D267DBDF194D9C7E00D976B3 /* can-talk-bw.jpg */; };
 		D267DBE4194D9EB900D976B3 /* RoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D267DBE3194D9EB900D976B3 /* RoundedButton.m */; };
+		D267DBEC194E447B00D976B3 /* GHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D267DBE7194E447B00D976B3 /* GHViewController.m */; };
+		D267DBED194E447B00D976B3 /* GHWalkThroughPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D267DBE9194E447B00D976B3 /* GHWalkThroughPageCell.m */; };
+		D267DBEE194E447B00D976B3 /* GHWalkThroughView.m in Sources */ = {isa = PBXBuildFile; fileRef = D267DBEB194E447B00D976B3 /* GHWalkThroughView.m */; };
+		D267DBF1194E45ED00D976B3 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D267DBF0194E45ED00D976B3 /* IntroViewController.m */; };
 		D296ECDE194CD4850027E733 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D296ECDD194CD4850027E733 /* RootNavigationController.m */; };
 /* End PBXBuildFile section */
 
@@ -231,6 +235,14 @@
 		D267DBDF194D9C7E00D976B3 /* can-talk-bw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "can-talk-bw.jpg"; sourceTree = "<group>"; };
 		D267DBE2194D9EB900D976B3 /* RoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedButton.h; sourceTree = "<group>"; };
 		D267DBE3194D9EB900D976B3 /* RoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedButton.m; sourceTree = "<group>"; };
+		D267DBE6194E447B00D976B3 /* GHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHViewController.h; sourceTree = "<group>"; };
+		D267DBE7194E447B00D976B3 /* GHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHViewController.m; sourceTree = "<group>"; };
+		D267DBE8194E447B00D976B3 /* GHWalkThroughPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHWalkThroughPageCell.h; sourceTree = "<group>"; };
+		D267DBE9194E447B00D976B3 /* GHWalkThroughPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHWalkThroughPageCell.m; sourceTree = "<group>"; };
+		D267DBEA194E447B00D976B3 /* GHWalkThroughView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHWalkThroughView.h; sourceTree = "<group>"; };
+		D267DBEB194E447B00D976B3 /* GHWalkThroughView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHWalkThroughView.m; sourceTree = "<group>"; };
+		D267DBEF194E45ED00D976B3 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
+		D267DBF0194E45ED00D976B3 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		D296ECDC194CD4850027E733 /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
 		D296ECDD194CD4850027E733 /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -352,6 +364,8 @@
 		3B522D011948F9AD0014FF2B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D267DBEF194E45ED00D976B3 /* IntroViewController.h */,
+				D267DBF0194E45ED00D976B3 /* IntroViewController.m */,
 				3B522CFE1948F9A40014FF2B /* BaseViewController.h */,
 				3B522CFF1948F9A40014FF2B /* BaseViewController.m */,
 				D296ECDC194CD4850027E733 /* RootNavigationController.h */,
@@ -380,6 +394,7 @@
 			children = (
 				3BA17D3A1946E5A600127DAD /* Swing Local */,
 				3BA17D5E1946ECFF00127DAD /* MapKit.framework */,
+				D267DBE5194E447B00D976B3 /* GHWalkThrough */,
 				3BD98E50194B7A43000EF668 /* SSPagedView */,
 				3B4C2FF9194849A400F06E46 /* SplitViewController */,
 				3BA17D511946E5A600127DAD /* Swing LocalTests */,
@@ -691,6 +706,19 @@
 			name = Buttons;
 			sourceTree = "<group>";
 		};
+		D267DBE5194E447B00D976B3 /* GHWalkThrough */ = {
+			isa = PBXGroup;
+			children = (
+				D267DBE6194E447B00D976B3 /* GHViewController.h */,
+				D267DBE7194E447B00D976B3 /* GHViewController.m */,
+				D267DBE8194E447B00D976B3 /* GHWalkThroughPageCell.h */,
+				D267DBE9194E447B00D976B3 /* GHWalkThroughPageCell.m */,
+				D267DBEA194E447B00D976B3 /* GHWalkThroughView.h */,
+				D267DBEB194E447B00D976B3 /* GHWalkThroughView.m */,
+			);
+			path = GHWalkThrough;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -850,14 +878,18 @@
 				3BD98E3D194A4719000EF668 /* HeaderWithDynamicTableView.m in Sources */,
 				D231AC3B194CE259009990C5 /* NSDate+SwingLocal.m in Sources */,
 				D267DBE4194D9EB900D976B3 /* RoundedButton.m in Sources */,
+				D267DBED194E447B00D976B3 /* GHWalkThroughPageCell.m in Sources */,
 				3B1C049D19498C6800211EFA /* CurrentCityMapTableView.m in Sources */,
+				D267DBEC194E447B00D976B3 /* GHViewController.m in Sources */,
 				3B1C049A19497E3000211EFA /* ContentSection.m in Sources */,
 				3BDDAB19194BC2D100207B77 /* UIColor+SwingLocal.m in Sources */,
 				3B522D001948F9A40014FF2B /* BaseViewController.m in Sources */,
 				D231AC45194D2107009990C5 /* SocialTableViewCell.m in Sources */,
+				D267DBF1194E45ED00D976B3 /* IntroViewController.m in Sources */,
 				3BD98E40194A5333000EF668 /* HomeViewController.m in Sources */,
 				D267DBD3194D879E00D976B3 /* EventViewController.m in Sources */,
 				3BD98E54194B85D1000EF668 /* PagedTitleView.m in Sources */,
+				D267DBEE194E447B00D976B3 /* GHWalkThroughView.m in Sources */,
 				3BD98E4C194A666F000EF668 /* BackgroundTriggerCellTableViewCell.m in Sources */,
 				3BD98E37194A3CBB000EF668 /* BaseSectionTableView.m in Sources */,
 				3B4C301119484B3000F06E46 /* CustomSegue.m in Sources */,
