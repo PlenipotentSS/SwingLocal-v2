@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="SmM-PR-SNf">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
@@ -1912,7 +1911,7 @@
                                                                     </tableViewCellContentView>
                                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                     <connections>
-                                                                        <outlet property="titleLabel" destination="4P7-ua-M1P" id="RJw-Xn-qmG"/>
+                                                                        <outlet property="titleLabel" destination="4P7-ua-M1P" id="hqw-gH-TE4"/>
                                                                     </connections>
                                                                 </tableViewCell>
                                                             </prototypes>
@@ -1942,7 +1941,6 @@
                                             <outlet property="nextButton" destination="QS3-Iw-zV8" id="TA5-f6-D9y"/>
                                             <outlet property="previousButton" destination="jud-nx-yLt" id="Kwd-vf-weP"/>
                                             <outlet property="sectionTableView" destination="QYo-hR-POY" id="CIh-Wh-mf6"/>
-                                            <outlet property="sectionTitleLabel" destination="QBO-h4-SX7" id="dAy-sW-co1"/>
                                             <outlet property="wrapperView" destination="n3l-Ka-RYG" id="7Tg-fS-UhM"/>
                                         </connections>
                                     </tableViewCell>
