@@ -87,6 +87,12 @@
 		D231AC45194D2107009990C5 /* SocialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D231AC44194D2107009990C5 /* SocialTableViewCell.m */; };
 		D231AC48194D2163009990C5 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D231AC47194D2163009990C5 /* EventTableViewCell.m */; };
 		D231AC4B194D3D17009990C5 /* DaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D231AC4A194D3D17009990C5 /* DaysViewController.m */; };
+		D267DBD3194D879E00D976B3 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D267DBD2194D879E00D976B3 /* EventViewController.m */; };
+		D267DBD8194D970F00D976B3 /* can-talk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D267DBD7194D970F00D976B3 /* can-talk.jpg */; };
+		D267DBDC194D9A1400D976B3 /* street-player.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D267DBDB194D9A1400D976B3 /* street-player.jpg */; };
+		D267DBDE194D9AAD00D976B3 /* airplane-wing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D267DBDD194D9AAD00D976B3 /* airplane-wing.jpg */; };
+		D267DBE0194D9C7E00D976B3 /* can-talk-bw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D267DBDF194D9C7E00D976B3 /* can-talk-bw.jpg */; };
+		D267DBE4194D9EB900D976B3 /* RoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D267DBE3194D9EB900D976B3 /* RoundedButton.m */; };
 		D296ECDE194CD4850027E733 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D296ECDD194CD4850027E733 /* RootNavigationController.m */; };
 /* End PBXBuildFile section */
 
@@ -217,6 +223,14 @@
 		D231AC47194D2163009990C5 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
 		D231AC49194D3D17009990C5 /* DaysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaysViewController.h; sourceTree = "<group>"; };
 		D231AC4A194D3D17009990C5 /* DaysViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaysViewController.m; sourceTree = "<group>"; };
+		D267DBD1194D879E00D976B3 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
+		D267DBD2194D879E00D976B3 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
+		D267DBD7194D970F00D976B3 /* can-talk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "can-talk.jpg"; sourceTree = "<group>"; };
+		D267DBDB194D9A1400D976B3 /* street-player.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "street-player.jpg"; sourceTree = "<group>"; };
+		D267DBDD194D9AAD00D976B3 /* airplane-wing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "airplane-wing.jpg"; sourceTree = "<group>"; };
+		D267DBDF194D9C7E00D976B3 /* can-talk-bw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "can-talk-bw.jpg"; sourceTree = "<group>"; };
+		D267DBE2194D9EB900D976B3 /* RoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedButton.h; sourceTree = "<group>"; };
+		D267DBE3194D9EB900D976B3 /* RoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedButton.m; sourceTree = "<group>"; };
 		D296ECDC194CD4850027E733 /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
 		D296ECDD194CD4850027E733 /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -252,6 +266,7 @@
 		3B1C049319497AB800211EFA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D267DBE1194D9E9B00D976B3 /* Buttons */,
 				3BD98E51194B85AF000EF668 /* PagedView */,
 				3BD98E4A194A666F000EF668 /* BackgroundTriggerCellTableViewCell.h */,
 				3BD98E4B194A666F000EF668 /* BackgroundTriggerCellTableViewCell.m */,
@@ -400,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				3BF3FBBD194910930087E469 /* ios8Images.xcassets */,
+				D267DBD4194D959A00D976B3 /* Images */,
 				3BF3FB9E194910210087E469 /* Flat Designs */,
 				3BF3FB5B19490DB60087E469 /* Icons */,
 				3BA17D3C1946E5A600127DAD /* Info.plist */,
@@ -436,6 +452,8 @@
 				3BD98E46194A5888000EF668 /* CalendarsViewController.m */,
 				D231AC49194D3D17009990C5 /* DaysViewController.h */,
 				D231AC4A194D3D17009990C5 /* DaysViewController.m */,
+				D267DBD1194D879E00D976B3 /* EventViewController.h */,
+				D267DBD2194D879E00D976B3 /* EventViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -653,6 +671,26 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		D267DBD4194D959A00D976B3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D267DBDF194D9C7E00D976B3 /* can-talk-bw.jpg */,
+				D267DBDD194D9AAD00D976B3 /* airplane-wing.jpg */,
+				D267DBDB194D9A1400D976B3 /* street-player.jpg */,
+				D267DBD7194D970F00D976B3 /* can-talk.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		D267DBE1194D9E9B00D976B3 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				D267DBE2194D9EB900D976B3 /* RoundedButton.h */,
+				D267DBE3194D9EB900D976B3 /* RoundedButton.m */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -740,6 +778,7 @@
 				3BF3FBB6194910570087E469 /* MAP_FLAT_WHITE-04.png in Resources */,
 				3BF3FB7919490DB60087E469 /* leftward-arrow.png in Resources */,
 				3BF3FB7819490DB60087E469 /* Contents.json in Resources */,
+				D267DBDE194D9AAD00D976B3 /* airplane-wing.jpg in Resources */,
 				3BF3FBBB194910570087E469 /* Contents.json in Resources */,
 				3BF3FB8C19490DB60087E469 /* menu@2x.png in Resources */,
 				3BF3FB8419490DB60087E469 /* Contents.json in Resources */,
@@ -762,7 +801,10 @@
 				3BF3FB7F19490DB60087E469 /* donward-arrow.png in Resources */,
 				3BF3FBB4194910570087E469 /* FLAT_LOGO-14.png in Resources */,
 				3BF3FBBE194910930087E469 /* ios8Images.xcassets in Resources */,
+				D267DBD8194D970F00D976B3 /* can-talk.jpg in Resources */,
 				3BF3FBB3194910570087E469 /* Contents.json in Resources */,
+				D267DBDC194D9A1400D976B3 /* street-player.jpg in Resources */,
+				D267DBE0194D9C7E00D976B3 /* can-talk-bw.jpg in Resources */,
 				3BF3FBB1194910570087E469 /* Contents.json in Resources */,
 				3BD98E56194B85E3000EF668 /* PagedTitleView.xib in Resources */,
 				3BF3FBB9194910570087E469 /* Contents.json in Resources */,
@@ -807,12 +849,14 @@
 				3B167EBB194B8FAC009D8E6E /* MapManager.m in Sources */,
 				3BD98E3D194A4719000EF668 /* HeaderWithDynamicTableView.m in Sources */,
 				D231AC3B194CE259009990C5 /* NSDate+SwingLocal.m in Sources */,
+				D267DBE4194D9EB900D976B3 /* RoundedButton.m in Sources */,
 				3B1C049D19498C6800211EFA /* CurrentCityMapTableView.m in Sources */,
 				3B1C049A19497E3000211EFA /* ContentSection.m in Sources */,
 				3BDDAB19194BC2D100207B77 /* UIColor+SwingLocal.m in Sources */,
 				3B522D001948F9A40014FF2B /* BaseViewController.m in Sources */,
 				D231AC45194D2107009990C5 /* SocialTableViewCell.m in Sources */,
 				3BD98E40194A5333000EF668 /* HomeViewController.m in Sources */,
+				D267DBD3194D879E00D976B3 /* EventViewController.m in Sources */,
 				3BD98E54194B85D1000EF668 /* PagedTitleView.m in Sources */,
 				3BD98E4C194A666F000EF668 /* BackgroundTriggerCellTableViewCell.m in Sources */,
 				3BD98E37194A3CBB000EF668 /* BaseSectionTableView.m in Sources */,

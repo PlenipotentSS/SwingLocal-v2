@@ -19,4 +19,6 @@
 
 @property (nonatomic) CGFloat backgroundCellHeight;
 
+@property (nonatomic, weak) IBOutlet UIView *headerView;
+
 @end

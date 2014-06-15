@@ -127,13 +127,11 @@
 
 - (void)selectedRowAtIndexPath:(NSIndexPath *)indexPath forTableView:(UITableView *)tableView
 {
-    NSLog(@"%@ had row selected at index: %ld",tableView,(long)indexPath.row);
     [self.delegate tableView:tableView tappedAtIndexPath:indexPath];
 }
 
 - (void)selectedCellInCollectionView:(UICollectionView*)collectionView atIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%@ had row selected at index: %ld",collectionView,(long)indexPath.row);
     [self.delegate collectionView:collectionView tappedAtIndexPath:indexPath];
 }
 

@@ -67,18 +67,16 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row >= 7 && indexPath.row-7 >= self.numberOfInitialSpaces) {
-        if (self.currentActiveIndexPath != indexPath) {
-            UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
-            cell.backgroundColor = [UIColor customLightGreyColor];
-            if (self.currentActiveIndexPath) {
-                UICollectionViewCell *oldActiveCell = [collectionView cellForItemAtIndexPath:self.currentActiveIndexPath];
-                oldActiveCell.backgroundColor = [UIColor clearColor];
-            }
-            self.currentActiveIndexPath = indexPath;
-            
-            if (self.baseDelegate) {
-                [self.baseDelegate selectedCellInCollectionView:collectionView atIndexPath:indexPath];
-            }
+        UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+        cell.backgroundColor = [UIColor customLightGreyColor];
+        if (self.currentActiveIndexPath) {
+            UICollectionViewCell *oldActiveCell = [collectionView cellForItemAtIndexPath:self.currentActiveIndexPath];
+            oldActiveCell.backgroundColor = [UIColor clearColor];
+        }
+        self.currentActiveIndexPath = indexPath;
+        
+        if (self.baseDelegate) {
+            [self.baseDelegate selectedCellInCollectionView:collectionView atIndexPath:indexPath];
         }
     }
 }

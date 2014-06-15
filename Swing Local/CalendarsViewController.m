@@ -43,8 +43,10 @@
 
 - (void)getCity
 {
-    self.cityInformation = [NSMutableArray new];
-    [self.cityInformation addObject:@"Seattle, WA"];
+    if (!self.cityInformation || [self.cityInformation count] == 0) {
+        self.cityInformation = [NSMutableArray new];
+        [self.cityInformation addObject:@"Seattle, WA"];
+    }
     
     self.allCityTitles = [NSMutableArray new];
     NSArray *cityNames = @[@"Seattle, WA",

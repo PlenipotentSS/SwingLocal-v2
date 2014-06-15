@@ -7,6 +7,8 @@
 //
 
 #import "DaysViewController.h"
+#import "EventViewController.h"
+
 @interface DaysViewController () <ContentSectionDelegate>
 
 @end
@@ -17,6 +19,16 @@
 {
     [super viewDidLoad];
     [self setupDay];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
 }
 
 - (void)setupEventsInDay
@@ -36,7 +48,7 @@
     
     if (self.currentDay) {
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"MMMM d"];
+        [dateFormatter setDateFormat:@"MMMM d, YYYY"];
         [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
         NSString *currentDayString = [dateFormatter stringFromDate:self.currentDay];
         [sec1 setSectionTitle:currentDayString];
@@ -44,17 +56,12 @@
     self.viewItems = [[NSMutableArray alloc] initWithObjects:sec1, nil];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
 - (void)setCurrentDay:(NSDate *)currentDay
 {
     _currentDay = currentDay;
     if ([self.viewItems count] > 0) {
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"MMMM d"];
+        [dateFormatter setDateFormat:@"MMMM d, YYYY"];
         [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
         NSString *currentDayString = [dateFormatter stringFromDate:self.currentDay];
         ContentSection *section = [self.viewItems objectAtIndex:0];
@@ -90,7 +97,11 @@
 #pragma mark - ContentSectionDelegate
 - (void)tableView:(UITableView *)tableView tappedAtIndexPath:(NSIndexPath *)indexPath
 {
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    EventViewController *controller = (EventViewController*)[mainStoryboard instantiateViewControllerWithIdentifier:@"EventController"];
+    controller.eventTitle = [_eventsThisDay objectAtIndex:indexPath.row];
     
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)nextButtonPushed:(id)sender
@@ -103,7 +114,7 @@
     [self.theTableView reloadData];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];;
-    [dateFormatter setDateFormat:@"MMMM d"];
+    [dateFormatter setDateFormat:@"MMMM d, YYYY"];
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     [section setSectionTitle:[dateFormatter stringFromDate:self.currentDay]];
 }
@@ -118,7 +129,7 @@
     [self.theTableView reloadData];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];;
-    [dateFormatter setDateFormat:@"MMMM d"];
+    [dateFormatter setDateFormat:@"MMMM d, YYYY"];
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     [section setSectionTitle:[dateFormatter stringFromDate:self.currentDay]];
     

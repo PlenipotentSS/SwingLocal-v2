@@ -7,8 +7,9 @@
 //
 
 #import "HomeViewController.h"
+#import "EventViewController.h"
 
-@interface HomeViewController ()
+@interface HomeViewController () <ContentSectionDelegate>
 
 @end
 
@@ -18,6 +19,11 @@
 {
     [super viewDidLoad];
     [self setupContentSection];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
 }
 
 - (void)setupContentSection
@@ -30,11 +36,13 @@
     
     ContentSection *sec2 = [[ContentSection alloc] init];
     sec2.cellIdentifier = @"todayEventCell";
+    sec2.delegate = self;
     [sec2 findCellFromIdentifierWithTableView: self.theTableView];
     sec2.data = self.todayEvents;
     
     ContentSection *sec3 = [[ContentSection alloc] init];
     sec3.cellIdentifier = @"socialMediaCell";
+    sec3.delegate = self;
     [sec3 findCellFromIdentifierWithTableView: self.theTableView];
     sec3.data = self.currentChatter;
     
@@ -60,7 +68,16 @@
 #pragma mark - ContentSectionDelegate
 - (void)tableView:(UITableView *)tableView tappedAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    for (NSInteger i=0;i<[self.viewItems count]; i++) {
+        if (tableView == [(ContentSection*)[self.viewItems objectAtIndex:i] contentCell].sectionTableView) {
+            UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+            EventViewController *controller = (EventViewController*)[mainStoryboard instantiateViewControllerWithIdentifier:@"EventController"];
+            controller.eventTitle = [[(ContentSection *)[self.viewItems objectAtIndex:i] data] objectAtIndex:indexPath.row];
+            
+            [self.navigationController pushViewController:controller animated:YES];
+            break;
+        }
+    }
 }
 
 @end

@@ -41,6 +41,24 @@
             NSLog(@"show Table View");
         }
     };
+    
+    _headerView.layer.shadowColor = [[UIColor blackColor] CGColor];
+    _headerView.layer.shadowOpacity = 0.5f;
+    _headerView.layer.shadowOffset = CGSizeMake(2.f,0.f);
+    _headerView.clipsToBounds = NO;
+    _headerView.alpha = 0.95f;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+//    NSLog(@"navigation stack size: %ld",[self.navigationController.viewControllers count]);
+    if ([self.navigationController.viewControllers count] <= 2 && [self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    } else if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    }
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
@@ -75,11 +93,6 @@
 - (NSInteger)numberOfRows
 {
     return [_viewItems count]*2+1;
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

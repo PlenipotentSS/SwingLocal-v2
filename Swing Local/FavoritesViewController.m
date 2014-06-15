@@ -10,8 +10,9 @@
 #import "SSPagedView.h"
 #import "PagedTitleView.h"
 #import "UIColor+SwingLocal.h"
+#import "CalendarsViewController.h"
 
-@interface FavoritesViewController () <SSPagedViewDelegate>
+@interface FavoritesViewController () <SSPagedViewDelegate, ContentSectionDelegate>
 
 @property (nonatomic) IBOutlet UIView *selectionView;
 
@@ -39,6 +40,11 @@
     [self setupContentSection];
     
     self.backgroundCellHeight = 110.f;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
 }
 
 - (void)setupPagedSelection
@@ -82,6 +88,7 @@
     sec1.cellIdentifier = @"favoriteCitiesCell";
     [sec1 findCellFromIdentifierWithTableView: self.theTableView];
     sec1.data = self.favoriteCities;
+    sec1.delegate = self;
     
     ContentSection *sec2 = [[ContentSection alloc] init];
     sec2.cellIdentifier = @"favoriteCalendarsCell";
@@ -204,7 +211,19 @@
 #pragma mark - ContentSectionDelegate
 - (void)tableView:(UITableView *)tableView tappedAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if ([(ContentSection*)[self.viewItems objectAtIndex:0] data] == self.favoriteCities) {
+        
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+        CalendarsViewController *controller = (CalendarsViewController*)[mainStoryboard instantiateViewControllerWithIdentifier:@"CalendarsController"];
+        
+        NSString *cityName = [self.favoriteCities objectAtIndex:indexPath.row];
+        NSMutableArray *cityInfo = [[NSMutableArray alloc] initWithObjects:cityName, nil];
+        controller.cityInformation = cityInfo;
+        
+        [self.navigationController pushViewController:controller animated:YES];
+    } else {
+        
+    }
 }
 
 @end
