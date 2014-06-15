@@ -47,9 +47,29 @@
     [self.cityInformation addObject:@"Seattle, WA"];
     
     self.allCityTitles = [NSMutableArray new];
-    [self.allCityTitles addObject:@"Seattle, WA"];
-    for (NSInteger i=0; i <10; i++) {
-        [self.allCityTitles addObject:@"Some Other City"];
+    NSArray *cityNames = @[@"Seattle, WA",
+                           @"Kirkland, WA",
+                           @"New York, NY",
+                           @"Seoul, Korea",
+                           @"Paris, France",
+                           @"New Orleans, LA",
+                           @"San Francisco, CA",
+                           @"Annandale-on-the-Hudson, NY",
+                           @"Olympia, WA",
+                           @"Zurich, Switzerland",
+                           @"Como, Italy",
+                           @"Stockholm, Sweden",
+                           @"Moscow, Russia",
+                           @"London, England",
+                           @"Denver, CO",
+                           @"Houston, TX",
+                           @"Los Angeles, CA",
+                           @"Austin, TX",
+                           @"Albuquerque, AZ",
+                           @"Omaha, NB",
+                           @"Minneapolis, MN"];
+    for (NSInteger i=0; i< [cityNames count]; i++) {
+        [self.allCityTitles addObject:[cityNames objectAtIndex:i]];
     }
 }
 

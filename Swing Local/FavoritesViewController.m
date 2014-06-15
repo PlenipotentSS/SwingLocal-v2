@@ -94,14 +94,33 @@
 
 - (void)getFavorites
 {
-    self.favoriteCities = [[NSMutableArray alloc] initWithObjects:@"Seattle, WA",
+    NSMutableArray *cityNames = [[NSMutableArray alloc] initWithArray:@[@"Seattle, WA",
                            @"Kirkland, WA",
                            @"New York, NY",
                            @"Seoul, Korea",
                            @"Paris, France",
                            @"New Orleans, LA",
                            @"San Francisco, CA",
-                           @"Annandale-on-the-Hudson, NY", nil];
+                           @"Annandale-on-the-Hudson, NY",
+                           @"Olympia, WA",
+                           @"Zurich, Switzerland",
+                           @"Como, Italy",
+                           @"Stockholm, Sweden",
+                           @"Moscow, Russia",
+                           @"London, England",
+                           @"Denver, CO",
+                           @"Houston, TX",
+                           @"Los Angeles, CA",
+                           @"Austin, TX",
+                           @"Albuquerque, AZ",
+                           @"Omaha, NB",
+                           @"Minneapolis, MN"]];
+    self.favoriteCities = [[NSMutableArray alloc] init];
+    for (NSInteger i=0; i< arc4random_uniform((int)[cityNames count]); i++) {
+        NSInteger randomEvent = arc4random_uniform((int)[cityNames count]);
+        [self.favoriteCities addObject:[cityNames objectAtIndex:randomEvent]];
+        [cityNames removeObjectAtIndex:randomEvent];
+    }
     
     self.favoriteCalendars = [[NSMutableArray alloc] initWithObjects:@"Savoy Swing Calendar",@"New Orleans Lindy Hop Calendar", nil];
 }
