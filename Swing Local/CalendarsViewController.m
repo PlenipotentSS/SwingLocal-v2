@@ -8,6 +8,7 @@
 
 #import "CalendarsViewController.h"
 #import "NSDate+SwingLocal.h"
+#import "DaysViewController.h"
 
 @interface CalendarsViewController () <ContentSectionDelegate>
 
@@ -16,6 +17,8 @@
 @property (nonatomic) BOOL isDisplayingAllCities;
 
 @property (nonatomic) ContentSection *calendarSection;
+
+@property (nonatomic) NSInteger numberOfBlankDays;
 
 @end
 
@@ -75,10 +78,10 @@
     //Create date for first day in week
     NSDate *beginningOfWeek = [c dateByAddingComponents:componentsToSubtract toDate:firstDayOfMonthDate options:0];
     
-    NSInteger blankDays = [NSDate daysBetweenDate:beginningOfWeek andDate:firstDayOfMonthDate];
+    self.numberOfBlankDays = [NSDate daysBetweenDate:beginningOfWeek andDate:firstDayOfMonthDate];
 
-    for (NSInteger i=0; i < days.length + blankDays; i++) {
-        if (i < blankDays) {
+    for (NSInteger i=0; i < days.length + self.numberOfBlankDays; i++) {
+        if (i < self.numberOfBlankDays) {
             [self.monthInformation addObject:[NSNull null]];
         } else {
             // get the current index for useable days in month
@@ -113,7 +116,6 @@
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     self.calendarSection.sectionTitle = [dateFormatter stringFromDate:self.theDay];
     
-//    self.viewItems = [[NSMutableArray alloc] initWithObjects:sec1, nil];    
     self.viewItems = [[NSMutableArray alloc] initWithObjects:sec1,self.calendarSection, nil];
 }
 
@@ -185,6 +187,24 @@
 
 - (void)collectionView:(UICollectionView *)collectionView tappedAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSInteger dayForThisMonth = indexPath.row-self.numberOfBlankDays-7;
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    DaysViewController *controller = (DaysViewController*)[mainStoryboard instantiateViewControllerWithIdentifier:@"DayController"];
+    
+    NSCalendar *c = [NSCalendar currentCalendar];
+    NSDateComponents *comp = [c components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:self.theDay];
+    [comp setDay:1];
+    NSDate *firstDayOfMonthDate = [c dateFromComponents:comp];
+    
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    [dateComponents setDay:dayForThisMonth];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDate *thisDate = [calendar dateByAddingComponents:dateComponents toDate:firstDayOfMonthDate options:0];
+    
+    controller.currentDay = thisDate;
+    
+    [self.navigationController pushViewController:controller animated:YES];
+    
 }
 
 #pragma mark - Helpers

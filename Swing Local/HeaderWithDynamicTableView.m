@@ -34,6 +34,12 @@
     self.sectionHeight = 50.f;
 }
 
+- (void)setSectionTitle:(NSString *)sectionTitle
+{
+    [super setSectionTitle:sectionTitle];
+    _titleLabel.text = sectionTitle;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.dynamicData count];

@@ -39,6 +39,7 @@
     _sectionTitle = sectionTitle;
     if (_sectionTableView) {
         [_sectionTableView setSectionTitle:sectionTitle];
+        NSLog(@"%@",_sectionTitleLabel.text);
     } else if (_sectionCollectionView) {
         if (_sectionTitleLabel) {
             [_sectionTitleLabel setText:sectionTitle];

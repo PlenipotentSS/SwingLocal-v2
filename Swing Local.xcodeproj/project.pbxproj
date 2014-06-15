@@ -86,6 +86,7 @@
 		D231AC42194D2023009990C5 /* CalendarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D231AC41194D2023009990C5 /* CalendarTableViewCell.m */; };
 		D231AC45194D2107009990C5 /* SocialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D231AC44194D2107009990C5 /* SocialTableViewCell.m */; };
 		D231AC48194D2163009990C5 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D231AC47194D2163009990C5 /* EventTableViewCell.m */; };
+		D231AC4B194D3D17009990C5 /* DaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D231AC4A194D3D17009990C5 /* DaysViewController.m */; };
 		D296ECDE194CD4850027E733 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D296ECDD194CD4850027E733 /* RootNavigationController.m */; };
 /* End PBXBuildFile section */
 
@@ -214,6 +215,8 @@
 		D231AC44194D2107009990C5 /* SocialTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialTableViewCell.m; sourceTree = "<group>"; };
 		D231AC46194D2163009990C5 /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
 		D231AC47194D2163009990C5 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
+		D231AC49194D3D17009990C5 /* DaysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaysViewController.h; sourceTree = "<group>"; };
+		D231AC4A194D3D17009990C5 /* DaysViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaysViewController.m; sourceTree = "<group>"; };
 		D296ECDC194CD4850027E733 /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
 		D296ECDD194CD4850027E733 /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -431,6 +434,8 @@
 				3BD98E43194A5511000EF668 /* FavoritesViewController.m */,
 				3BD98E45194A5888000EF668 /* CalendarsViewController.h */,
 				3BD98E46194A5888000EF668 /* CalendarsViewController.m */,
+				D231AC49194D3D17009990C5 /* DaysViewController.h */,
+				D231AC4A194D3D17009990C5 /* DaysViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -820,6 +825,7 @@
 				3BA17D411946E5A600127DAD /* AppDelegate.m in Sources */,
 				3B6FB6F1194C30E000D9B192 /* MonthCollectionView.m in Sources */,
 				3BD98E44194A5511000EF668 /* FavoritesViewController.m in Sources */,
+				D231AC4B194D3D17009990C5 /* DaysViewController.m in Sources */,
 				3BA17D3E1946E5A600127DAD /* main.m in Sources */,
 				3B4C300A19484A9500F06E46 /* SSFrontViewController.m in Sources */,
 				3B4C300B19484A9500F06E46 /* SSBackViewController.m in Sources */,
