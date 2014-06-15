@@ -43,18 +43,24 @@
 
 - (void)getChatter
 {
-    self.currentChatter = [[NSMutableArray alloc] initWithObjects:@"1",@"2",@"3",@"4", nil];
+    self.currentChatter = [[NSMutableArray alloc] initWithObjects:@"Facebook...",@"Twitter...",@"Instagram...",@"Facebook...", nil];
 }
 
 - (void)getEventsForToday
 {
-    self.todayEvents = [[NSMutableArray alloc] initWithObjects:@"1",@"2", nil];
+    self.todayEvents = [[NSMutableArray alloc] initWithObjects:@"Camp Jitterbug",@"Century Swings", nil];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - ContentSectionDelegate
+- (void)tableView:(UITableView *)tableView tappedAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 
 @end

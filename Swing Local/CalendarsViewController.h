@@ -12,4 +12,8 @@
 
 @property (nonatomic) NSMutableArray *monthInformation;
 
+@property (nonatomic) NSMutableArray *cityInformation;
+
+@property (nonatomic) NSMutableArray *allCityTitles;
+
 @end

@@ -10,6 +10,8 @@
 
 @interface BaseViewController () 
 
+@property (nonatomic) NSMutableArray *storedCells;
+
 @end
 
 @implementation BaseViewController
@@ -28,6 +30,8 @@
     _theTableView.delegate = self;
     
     _backgroundCellHeight = 20.f;
+    
+    _storedCells = [NSMutableArray new];
     
     __block BaseViewController *weakself = self;
     _theTableView.recognizerBlock = ^void(NSSet *veiw) {
@@ -104,19 +108,19 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ContentTableCell *cell;
-    ContentSection *section;
     if (indexPath.row+1 == [self numberOfRows]) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"showBackgroundCell" forIndexPath:indexPath];
     } else if (indexPath.row % 2 == 0) {
+        ContentSection *section;
         NSInteger tableItemIndex = indexPath.row / 2;
         section = [_viewItems objectAtIndex:tableItemIndex];
         [section findCellFromIdentifierWithTableView: self.theTableView atIndexPath:indexPath];
+        cell.backgroundColor = [UIColor purpleColor];
         
         cell = [section contentCell];
-
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"spacerCell" forIndexPath:indexPath];
-
+        
     }
     cell.backgroundColor = [UIColor clearColor];
     return cell;

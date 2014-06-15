@@ -13,6 +13,10 @@
 
 @property (nonatomic) NSDate *theDay;
 
+@property (nonatomic) BOOL isDisplayingAllCities;
+
+@property (nonatomic) ContentSection *calendarSection;
+
 @end
 
 @implementation CalendarsViewController
@@ -28,9 +32,22 @@
     [super viewDidAppear:animated];
     self.theDay = [NSDate date];
     
+    [self getCity];
     [self setupMonthInfo];
     [self setupContentSection];
     [self.theTableView reloadData];
+}
+
+- (void)getCity
+{
+    self.cityInformation = [NSMutableArray new];
+    [self.cityInformation addObject:@"Seattle, WA"];
+    
+    self.allCityTitles = [NSMutableArray new];
+    [self.allCityTitles addObject:@"Seattle, WA"];
+    for (NSInteger i=0; i <10; i++) {
+        [self.allCityTitles addObject:@"Some Other City"];
+    }
 }
 
 - (void)setupMonthInfo
@@ -80,22 +97,24 @@
 - (void)setupContentSection
 {
     ContentSection *sec1 = [[ContentSection alloc] init];
+    sec1.delegate = self;
     sec1.cellIdentifier = @"currentCityCell";
+    sec1.data = self.cityInformation;
     [sec1 findCellFromIdentifierWithTableView: self.theTableView];
     
-    ContentSection *sec2 = [[ContentSection alloc] init];
-    sec2.delegate = self;
-    sec2.cellIdentifier = @"cityMonthCalendarCell";
-    sec2.data = self.monthInformation;
-    [sec2 findCellFromIdentifierWithTableView:self.theTableView];
+    self.calendarSection = [[ContentSection alloc] init];
+    self.calendarSection.delegate = self;
+    self.calendarSection.cellIdentifier = @"cityMonthCalendarCell";
+    self.calendarSection.data = self.monthInformation;
+    [self.calendarSection findCellFromIdentifierWithTableView:self.theTableView];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MMMM yyyy"];
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    sec2.sectionTitle = [dateFormatter stringFromDate:self.theDay];
+    self.calendarSection.sectionTitle = [dateFormatter stringFromDate:self.theDay];
     
-    
-    self.viewItems = [[NSMutableArray alloc] initWithObjects:sec1,sec2, nil];
+//    self.viewItems = [[NSMutableArray alloc] initWithObjects:sec1, nil];    
+    self.viewItems = [[NSMutableArray alloc] initWithObjects:sec1,self.calendarSection, nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -146,6 +165,29 @@
 
 }
 
+- (void)tableView:(UITableView *)tableView tappedAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.cityInformation removeLastObject];
+    [self.cityInformation addObject:[self.allCityTitles objectAtIndex:indexPath.row]];
+    
+    ContentSection *section = [self.viewItems objectAtIndex:0];
+    if (self.isDisplayingAllCities) {
+        section.data = self.cityInformation;
+        self.isDisplayingAllCities = NO;
+        [self.viewItems addObject:self.calendarSection];
+    } else {
+        section.data = self.allCityTitles;
+        self.isDisplayingAllCities = YES;
+        [self.viewItems removeObject:self.calendarSection];
+    }
+    [self.theTableView reloadData];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView tappedAtIndexPath:(NSIndexPath *)indexPath
+{
+}
+
+#pragma mark - Helpers
 - (NSDate*)addOneMonthToDate:(NSDate*)aDay
 {
     
@@ -163,5 +205,6 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     return [calendar dateByAddingComponents:dateComponents toDate:aDay options:0];
 }
+
 
 @end

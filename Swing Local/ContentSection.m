@@ -120,21 +120,21 @@
 - (void)heightOfCurrentSection:(CGFloat)height
 {
     _contentCell.sectionHeight = height;
-    if (self.delegate) {
+    if (self.delegate && _contentCell.sectionCollectionView) {
         [self.delegate redrawCell:_contentCell];
     }
 }
 
 - (void)selectedRowAtIndexPath:(NSIndexPath *)indexPath forTableView:(UITableView *)tableView
 {
-    NSLog(@"%@ had row selected at index: %d",tableView,indexPath.row);
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSLog(@"%@ had row selected at index: %ld",tableView,(long)indexPath.row);
+    [self.delegate tableView:tableView tappedAtIndexPath:indexPath];
 }
 
 - (void)selectedCellInCollectionView:(UICollectionView*)collectionView atIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%@ had row selected at index: %d",collectionView,indexPath.row);
+    NSLog(@"%@ had row selected at index: %ld",collectionView,(long)indexPath.row);
+    [self.delegate collectionView:collectionView tappedAtIndexPath:indexPath];
 }
 
 @end

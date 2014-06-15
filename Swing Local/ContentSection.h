@@ -19,6 +19,10 @@
 
 - (void)previousButtonPushed:(id)sender;
 
+- (void)collectionView:(UICollectionView *)collectionView tappedAtIndexPath:(NSIndexPath *)indexPath;
+
+- (void)tableView:(UITableView *)tableView tappedAtIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 @interface ContentSection : NSObject <BaseSectionTableViewDelegate, BaseSectionCollectionViewDelegate>

@@ -82,6 +82,10 @@
 		3BF3FBBE194910930087E469 /* ios8Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BF3FBBD194910930087E469 /* ios8Images.xcassets */; };
 		D20EF0D4194C4AAA00A107DA /* BaseSectionCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D20EF0D3194C4AAA00A107DA /* BaseSectionCollectionView.m */; };
 		D231AC3B194CE259009990C5 /* NSDate+SwingLocal.m in Sources */ = {isa = PBXBuildFile; fileRef = D231AC3A194CE259009990C5 /* NSDate+SwingLocal.m */; };
+		D231AC3E194D1ED7009990C5 /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D231AC3D194D1ED7009990C5 /* CityTableViewCell.m */; };
+		D231AC42194D2023009990C5 /* CalendarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D231AC41194D2023009990C5 /* CalendarTableViewCell.m */; };
+		D231AC45194D2107009990C5 /* SocialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D231AC44194D2107009990C5 /* SocialTableViewCell.m */; };
+		D231AC48194D2163009990C5 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D231AC47194D2163009990C5 /* EventTableViewCell.m */; };
 		D296ECDE194CD4850027E733 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D296ECDD194CD4850027E733 /* RootNavigationController.m */; };
 /* End PBXBuildFile section */
 
@@ -202,6 +206,14 @@
 		D20EF0D3194C4AAA00A107DA /* BaseSectionCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSectionCollectionView.m; sourceTree = "<group>"; };
 		D231AC39194CE259009990C5 /* NSDate+SwingLocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+SwingLocal.h"; sourceTree = "<group>"; };
 		D231AC3A194CE259009990C5 /* NSDate+SwingLocal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SwingLocal.m"; sourceTree = "<group>"; };
+		D231AC3C194D1ED7009990C5 /* CityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTableViewCell.h; sourceTree = "<group>"; };
+		D231AC3D194D1ED7009990C5 /* CityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTableViewCell.m; sourceTree = "<group>"; };
+		D231AC40194D2023009990C5 /* CalendarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarTableViewCell.h; sourceTree = "<group>"; };
+		D231AC41194D2023009990C5 /* CalendarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarTableViewCell.m; sourceTree = "<group>"; };
+		D231AC43194D2107009990C5 /* SocialTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialTableViewCell.h; sourceTree = "<group>"; };
+		D231AC44194D2107009990C5 /* SocialTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialTableViewCell.m; sourceTree = "<group>"; };
+		D231AC46194D2163009990C5 /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
+		D231AC47194D2163009990C5 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
 		D296ECDC194CD4850027E733 /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
 		D296ECDD194CD4850027E733 /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -269,6 +281,7 @@
 				3B1C049C19498C6800211EFA /* CurrentCityMapTableView.m */,
 				3BD98E3B194A4719000EF668 /* HeaderWithDynamicTableView.h */,
 				3BD98E3C194A4719000EF668 /* HeaderWithDynamicTableView.m */,
+				D231AC3F194D1EDD009990C5 /* Cells */,
 			);
 			name = TableViewSections;
 			sourceTree = "<group>";
@@ -620,6 +633,21 @@
 			path = pin_flat.imageset;
 			sourceTree = "<group>";
 		};
+		D231AC3F194D1EDD009990C5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D231AC3C194D1ED7009990C5 /* CityTableViewCell.h */,
+				D231AC3D194D1ED7009990C5 /* CityTableViewCell.m */,
+				D231AC40194D2023009990C5 /* CalendarTableViewCell.h */,
+				D231AC41194D2023009990C5 /* CalendarTableViewCell.m */,
+				D231AC43194D2107009990C5 /* SocialTableViewCell.h */,
+				D231AC44194D2107009990C5 /* SocialTableViewCell.m */,
+				D231AC46194D2163009990C5 /* EventTableViewCell.h */,
+				D231AC47194D2163009990C5 /* EventTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -768,6 +796,7 @@
 				3BD98E47194A5888000EF668 /* CalendarsViewController.m in Sources */,
 				3BD98E4F194B7A3E000EF668 /* SSPagedView.m in Sources */,
 				3BD98E3A194A40E1000EF668 /* ContentTableView.m in Sources */,
+				D231AC48194D2163009990C5 /* EventTableViewCell.m in Sources */,
 				D20EF0D4194C4AAA00A107DA /* BaseSectionCollectionView.m in Sources */,
 				3B4C3004194849FA00F06E46 /* SplitViewController.m in Sources */,
 				3B167EBB194B8FAC009D8E6E /* MapManager.m in Sources */,
@@ -777,12 +806,15 @@
 				3B1C049A19497E3000211EFA /* ContentSection.m in Sources */,
 				3BDDAB19194BC2D100207B77 /* UIColor+SwingLocal.m in Sources */,
 				3B522D001948F9A40014FF2B /* BaseViewController.m in Sources */,
+				D231AC45194D2107009990C5 /* SocialTableViewCell.m in Sources */,
 				3BD98E40194A5333000EF668 /* HomeViewController.m in Sources */,
 				3BD98E54194B85D1000EF668 /* PagedTitleView.m in Sources */,
 				3BD98E4C194A666F000EF668 /* BackgroundTriggerCellTableViewCell.m in Sources */,
 				3BD98E37194A3CBB000EF668 /* BaseSectionTableView.m in Sources */,
 				3B4C301119484B3000F06E46 /* CustomSegue.m in Sources */,
 				3B1C049619497AE300211EFA /* ContentTableCell.m in Sources */,
+				D231AC42194D2023009990C5 /* CalendarTableViewCell.m in Sources */,
+				D231AC3E194D1ED7009990C5 /* CityTableViewCell.m in Sources */,
 				3B4C3001194849E400F06E46 /* BackViewController.m in Sources */,
 				3B765BAF194C3ABD0087872A /* MonthCollectionViewCell.m in Sources */,
 				3BA17D411946E5A600127DAD /* AppDelegate.m in Sources */,

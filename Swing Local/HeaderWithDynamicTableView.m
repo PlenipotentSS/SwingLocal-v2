@@ -7,6 +7,10 @@
 //
 
 #import "HeaderWithDynamicTableView.h"
+#import "CityTableViewCell.h"
+#import "CalendarTableViewCell.h"
+#import "SocialTableViewCell.h"
+#import "EventTableViewCell.h"
 
 @implementation HeaderWithDynamicTableView
 
@@ -50,6 +54,19 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"dynamicCell" forIndexPath:indexPath];
+    if ([cell isKindOfClass:[CityTableViewCell class]]) {
+        CityTableViewCell *thisCell = (CityTableViewCell*)cell;
+        thisCell.titleLabel.text = [self.dynamicData objectAtIndex:indexPath.row];
+    } else if ([cell isKindOfClass:[CalendarTableViewCell class]]) {
+        CalendarTableViewCell *thisCell = (CalendarTableViewCell*)cell;
+        thisCell.titleLabel.text = [self.dynamicData objectAtIndex:indexPath.row];
+    } else if ([cell isKindOfClass:[SocialTableViewCell class]]) {
+        SocialTableViewCell *thisCell = (SocialTableViewCell*)cell;
+        thisCell.titleLabel.text = [self.dynamicData objectAtIndex:indexPath.row];
+    } else if ([cell isKindOfClass:[EventTableViewCell class]]) {
+        EventTableViewCell *thisCell = (EventTableViewCell*)cell;
+        thisCell.titleLabel.text = [self.dynamicData objectAtIndex:indexPath.row];
+    }
     return cell;
 }
 

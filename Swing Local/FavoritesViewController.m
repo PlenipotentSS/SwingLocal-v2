@@ -94,9 +94,16 @@
 
 - (void)getFavorites
 {
-    self.favoriteCities = [[NSMutableArray alloc] initWithObjects:@"Test",@"Testing",@"Test",@"Testing",@"Test",@"Testing",@"Test",@"Testing", nil];
+    self.favoriteCities = [[NSMutableArray alloc] initWithObjects:@"Seattle, WA",
+                           @"Kirkland, WA",
+                           @"New York, NY",
+                           @"Seoul, Korea",
+                           @"Paris, France",
+                           @"New Orleans, LA",
+                           @"San Francisco, CA",
+                           @"Annandale-on-the-Hudson, NY", nil];
     
-    self.favoriteCalendars = [[NSMutableArray alloc] initWithObjects:@"Hello",@"World!", nil];
+    self.favoriteCalendars = [[NSMutableArray alloc] initWithObjects:@"Savoy Swing Calendar",@"New Orleans Lindy Hop Calendar", nil];
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
@@ -171,7 +178,14 @@
     [self.hiddenItems addObject:oldPage];
     
     [incomingPage findCellFromIdentifierWithTableView:self.theTableView];
+    
     [self.theTableView reloadData];
+}
+
+#pragma mark - ContentSectionDelegate
+- (void)tableView:(UITableView *)tableView tappedAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 
 @end

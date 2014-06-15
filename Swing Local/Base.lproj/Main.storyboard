@@ -177,7 +177,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I7Q-by-xWn" id="6Yp-h0-8vC">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendars" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPg-0W-qJN">
+                                                <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Calendars" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPg-0W-qJN">
                                                     <rect key="frame" x="50" y="-3" width="201" height="46"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -529,7 +529,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <prototypes>
-                                                                <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dynamicCell" rowHeight="50" id="f94-mB-cIS">
+                                                                <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dynamicCell" rowHeight="50" id="f94-mB-cIS" customClass="EventTableViewCell">
                                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f94-mB-cIS" id="92L-vb-jtw">
@@ -583,6 +583,9 @@
                                                                         </constraints>
                                                                     </tableViewCellContentView>
                                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                    <connections>
+                                                                        <outlet property="titleLabel" destination="fw5-7B-zz7" id="03W-7G-hmg"/>
+                                                                    </connections>
                                                                 </tableViewCell>
                                                             </prototypes>
                                                             <connections>
@@ -652,13 +655,24 @@
                                                                 </constraints>
                                                             </view>
                                                             <prototypes>
-                                                                <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dynamicCell" rowHeight="50" id="J7i-pk-N9Y">
+                                                                <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dynamicCell" rowHeight="50" id="J7i-pk-N9Y" customClass="SocialTableViewCell">
                                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J7i-pk-N9Y" id="6Yk-8S-OXi">
                                                                         <autoresizingMask key="autoresizingMask"/>
+                                                                        <subviews>
+                                                                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jitterbug Productions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qos-Tu-OHH">
+                                                                                <rect key="frame" x="7" y="0.0" width="220" height="32"/>
+                                                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
+                                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
                                                                     </tableViewCellContentView>
                                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                    <connections>
+                                                                        <outlet property="titleLabel" destination="qos-Tu-OHH" id="SFt-su-5rx"/>
+                                                                    </connections>
                                                                 </tableViewCell>
                                                             </prototypes>
                                                             <connections>
@@ -854,7 +868,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <prototypes>
-                                                                <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dynamicCell" rowHeight="50" id="yt4-Ke-gZr">
+                                                                <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dynamicCell" rowHeight="50" id="yt4-Ke-gZr" customClass="CalendarTableViewCell">
                                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yt4-Ke-gZr" id="lfA-Iq-uue">
@@ -885,6 +899,9 @@
                                                                         </constraints>
                                                                     </tableViewCellContentView>
                                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                    <connections>
+                                                                        <outlet property="titleLabel" destination="yvp-l3-89f" id="cFV-cz-4y0"/>
+                                                                    </connections>
                                                                 </tableViewCell>
                                                             </prototypes>
                                                             <connections>
@@ -961,7 +978,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <prototypes>
-                                                                <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dynamicCell" rowHeight="50" id="QTs-zx-0Pf">
+                                                                <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dynamicCell" rowHeight="50" id="QTs-zx-0Pf" customClass="CityTableViewCell">
                                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QTs-zx-0Pf" id="Goe-3E-SPt">
@@ -993,6 +1010,9 @@
                                                                         </constraints>
                                                                     </tableViewCellContentView>
                                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                    <connections>
+                                                                        <outlet property="titleLabel" destination="cCi-K1-l30" id="eER-zc-88e"/>
+                                                                    </connections>
                                                                 </tableViewCell>
                                                             </prototypes>
                                                             <connections>
@@ -1129,8 +1149,8 @@
                         <subviews>
                             <tableView appearanceType="aqua" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="222" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qx4-aD-FJs" customClass="ContentTableView">
                                 <rect key="frame" x="10" y="66" width="300" height="824"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="separatorColor" red="0.1381635034" green="0.16558555129999999" blue="0.20069969090000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.2117647231" green="0.29803922770000002" blue="0.33725491169999999" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="separatorColor" red="0.2117647231" green="0.29803922770000002" blue="0.33725491169999999" alpha="1" colorSpace="deviceRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1165,10 +1185,10 @@
                                                                         <size key="shadowOffset" width="1" height="1"/>
                                                                     </label>
                                                                     <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wM6-Iu-QZR">
-                                                                        <rect key="frame" x="140" y="31" width="20" height="20"/>
+                                                                        <rect key="frame" x="83" y="13" width="135" height="53"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="20" id="etR-d7-gBG"/>
-                                                                            <constraint firstAttribute="width" constant="20" id="fyZ-nj-lG3"/>
+                                                                            <constraint firstAttribute="height" constant="53" id="etR-d7-gBG"/>
+                                                                            <constraint firstAttribute="width" constant="135" id="fyZ-nj-lG3"/>
                                                                         </constraints>
                                                                         <state key="normal" image="donward-arrow.png">
                                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1177,20 +1197,48 @@
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.08235294118" green="0.2274509804" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="centerY" secondItem="wM6-Iu-QZR" secondAttribute="centerY" constant="-16" id="7M0-yI-3LC"/>
+                                                                    <constraint firstAttribute="centerY" secondItem="wM6-Iu-QZR" secondAttribute="centerY" constant="-14.5" id="7M0-yI-3LC"/>
                                                                     <constraint firstAttribute="centerX" secondItem="wM6-Iu-QZR" secondAttribute="centerX" id="Edc-1J-EL9"/>
                                                                     <constraint firstAttribute="centerX" secondItem="EQp-A0-rO7" secondAttribute="centerX" id="HhA-9b-Ppz"/>
                                                                     <constraint firstAttribute="centerY" secondItem="EQp-A0-rO7" secondAttribute="centerY" constant="2.5" id="y9s-TN-jrh"/>
                                                                 </constraints>
                                                             </view>
                                                             <prototypes>
-                                                                <tableViewCell appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dynamicCell" rowHeight="50" id="5ds-mO-CEc">
+                                                                <tableViewCell appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dynamicCell" rowHeight="50" id="t6V-uS-593" customClass="CityTableViewCell">
                                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
-                                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5ds-mO-CEc" id="bgE-aC-Fp2">
+                                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t6V-uS-593" id="MST-p2-NS0">
                                                                         <autoresizingMask key="autoresizingMask"/>
+                                                                        <subviews>
+                                                                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# CALENDARS" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfI-i4-wGQ">
+                                                                                <rect key="frame" x="201" y="14" width="79" height="21"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="79" id="5AR-Tv-B76"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="10"/>
+                                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKW-p7-c0A">
+                                                                                <rect key="frame" x="20" y="8" width="188" height="33"/>
+                                                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstItem="IKW-p7-c0A" firstAttribute="top" secondItem="MST-p2-NS0" secondAttribute="top" constant="8" id="4O2-Wg-vMr"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="AfI-i4-wGQ" secondAttribute="bottom" constant="14" id="Rg9-FA-Ppp"/>
+                                                                            <constraint firstItem="IKW-p7-c0A" firstAttribute="leading" secondItem="MST-p2-NS0" secondAttribute="leading" constant="20" id="S0W-lq-Xba"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="IKW-p7-c0A" secondAttribute="trailing" constant="92" id="Uwp-QL-MUd"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="AfI-i4-wGQ" secondAttribute="trailing" constant="20" id="ceG-Il-k87"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="IKW-p7-c0A" secondAttribute="bottom" constant="8" id="qKw-cb-gk2"/>
+                                                                            <constraint firstItem="AfI-i4-wGQ" firstAttribute="top" secondItem="MST-p2-NS0" secondAttribute="top" constant="14" id="tCF-xU-4m0"/>
+                                                                        </constraints>
                                                                     </tableViewCellContentView>
                                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                    <connections>
+                                                                        <outlet property="titleLabel" destination="IKW-p7-c0A" id="keU-CC-4uj"/>
+                                                                    </connections>
                                                                 </tableViewCell>
                                                             </prototypes>
                                                             <connections>
@@ -1227,7 +1275,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QsV-8m-E93" id="1JE-bB-1V5">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.2117647231" green="0.29803922770000002" blue="0.33725491169999999" alpha="1" colorSpace="deviceRGB"/>
                                     </tableViewCell>
                                     <tableViewCell appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cityMonthCalendarCell" rowHeight="315" id="3xw-PJ-CZR" customClass="ContentTableCell">
                                         <rect key="frame" x="20" y="86" width="300" height="156"/>
@@ -1238,10 +1286,10 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRS-XJ-NEu">
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="315"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntH-tH-ruq">
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ntH-tH-ruq">
                                                             <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                             <subviews>
-                                                                <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhB-xh-Css">
+                                                                <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhB-xh-Css">
                                                                     <rect key="frame" x="31" y="11" width="238" height="29"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="29" id="XRg-yg-jUy"/>
@@ -1253,7 +1301,7 @@
                                                                     <color key="shadowColor" red="0.047058823530000002" green="0.050980392159999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <size key="shadowOffset" width="1" height="1"/>
                                                                 </label>
-                                                                <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YH-Ao-kLv">
+                                                                <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YH-Ao-kLv">
                                                                     <rect key="frame" x="260" y="5" width="40" height="40"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="40" id="Uas-Sa-bEE"/>
@@ -1263,7 +1311,7 @@
                                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </state>
                                                                 </button>
-                                                                <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHX-bi-KPV">
+                                                                <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHX-bi-KPV">
                                                                     <rect key="frame" x="0.0" y="5" width="40" height="40"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="40" id="V6m-tG-68o"/>
@@ -1275,19 +1323,8 @@
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.1647058824" green="0.31764705879999999" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstItem="5YH-Ao-kLv" firstAttribute="top" secondItem="ntH-tH-ruq" secondAttribute="top" constant="5" id="49V-gF-C3s"/>
-                                                                <constraint firstItem="mHX-bi-KPV" firstAttribute="leading" secondItem="ntH-tH-ruq" secondAttribute="leading" id="TDH-kk-bgZ"/>
-                                                                <constraint firstAttribute="centerX" secondItem="DhB-xh-Css" secondAttribute="centerX" id="dCc-1i-Jky"/>
-                                                                <constraint firstAttribute="trailing" secondItem="5YH-Ao-kLv" secondAttribute="trailing" id="kG2-9t-H4I"/>
-                                                                <constraint firstAttribute="bottom" secondItem="5YH-Ao-kLv" secondAttribute="bottom" constant="5" id="lrM-OE-cWc"/>
-                                                                <constraint firstItem="mHX-bi-KPV" firstAttribute="top" secondItem="ntH-tH-ruq" secondAttribute="top" constant="5" id="nvH-PY-jBf"/>
-                                                                <constraint firstAttribute="centerY" secondItem="DhB-xh-Css" secondAttribute="centerY" id="sJ5-Nu-JTF"/>
-                                                                <constraint firstAttribute="bottom" secondItem="mHX-bi-KPV" secondAttribute="bottom" constant="5" id="wfk-RK-XS8"/>
-                                                                <constraint firstAttribute="height" constant="50" id="xTV-IJ-e0u"/>
-                                                            </constraints>
                                                         </view>
-                                                        <collectionView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="w2Z-Of-NB9" customClass="MonthCollectionView">
+                                                        <collectionView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="w2Z-Of-NB9" customClass="MonthCollectionView">
                                                             <rect key="frame" x="0.0" y="50" width="300" height="265"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="fae-mu-STr">
@@ -1304,13 +1341,6 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <subviews>
-                                                                            <view appearanceType="aqua" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fo9-NS-iLa">
-                                                                                <rect key="frame" x="0.0" y="2" width="40" height="5"/>
-                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="5" id="peO-qo-ckq"/>
-                                                                                </constraints>
-                                                                            </view>
                                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bR1-cX-jwZ">
                                                                                 <rect key="frame" x="6" y="6" width="28" height="28"/>
                                                                                 <constraints>
@@ -1321,6 +1351,13 @@
                                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
+                                                                            <view appearanceType="aqua" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fo9-NS-iLa">
+                                                                                <rect key="frame" x="0.0" y="2" width="40" height="5"/>
+                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="5" id="peO-qo-ckq"/>
+                                                                                </constraints>
+                                                                            </view>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     </view>
@@ -1340,15 +1377,6 @@
                                                         </collectionView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.93725496530532837" green="0.93725496530532837" blue="0.95686280727386475" alpha="1" colorSpace="deviceRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="w2Z-Of-NB9" secondAttribute="trailing" id="60V-qJ-GV1"/>
-                                                        <constraint firstItem="w2Z-Of-NB9" firstAttribute="leading" secondItem="HRS-XJ-NEu" secondAttribute="leading" id="arC-rv-W7D"/>
-                                                        <constraint firstItem="w2Z-Of-NB9" firstAttribute="top" secondItem="ntH-tH-ruq" secondAttribute="bottom" id="b06-M3-xx0"/>
-                                                        <constraint firstItem="ntH-tH-ruq" firstAttribute="top" secondItem="HRS-XJ-NEu" secondAttribute="top" id="dtA-Is-i8X"/>
-                                                        <constraint firstAttribute="trailing" secondItem="ntH-tH-ruq" secondAttribute="trailing" id="iNc-66-vZf"/>
-                                                        <constraint firstAttribute="bottom" secondItem="w2Z-Of-NB9" secondAttribute="bottom" id="isQ-eS-YYF"/>
-                                                        <constraint firstItem="ntH-tH-ruq" firstAttribute="leading" secondItem="HRS-XJ-NEu" secondAttribute="leading" id="qjH-zZ-ph8"/>
-                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1374,14 +1402,14 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8OI-bO-B4M" id="Z5g-jS-Rvq">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.2117647231" green="0.29803922770000002" blue="0.33725491169999999" alpha="1" colorSpace="deviceRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <view appearanceType="aqua" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JcQ-5h-uZa">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
                                 <subviews>
-                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VU7-OU-npC">
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Calendars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VU7-OU-npC">
                                         <rect key="frame" x="83" y="20" width="154" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="154" id="HtX-KP-gN2"/>
