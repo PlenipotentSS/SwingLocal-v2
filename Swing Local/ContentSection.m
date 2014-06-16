@@ -12,6 +12,7 @@
 @end
 
 @implementation ContentSection
+@synthesize height = _height;
 
 - (instancetype)init
 {
@@ -37,6 +38,7 @@
     } else if (_contentCell.sectionCollectionView) {
         _contentCell.sectionCollectionView.baseDelegate = self;
     }
+    _contentCell.socialDelegate = self;
 }
 
 - (void)setData:(NSMutableArray *)data
@@ -103,12 +105,11 @@
 
 - (CGFloat)height
 {
-    if (_contentCell) {
-        if (_contentCell.sectionTableView) {
-            [_contentCell.sectionTableView reloadData];
-        } else if (_contentCell.sectionCollectionView) {
-            [_contentCell.sectionCollectionView reloadData];
-        }
+    if (_contentCell && _contentCell.sectionTableView) {
+        [_contentCell.sectionTableView reloadData];
+        return [_contentCell sectionHeight];
+    } else if (_contentCell && _contentCell.sectionCollectionView) {
+        [_contentCell.sectionCollectionView reloadData];
         return [_contentCell sectionHeight];
     } else {
         return _height;
@@ -133,6 +134,34 @@
 - (void)selectedCellInCollectionView:(UICollectionView*)collectionView atIndexPath:(NSIndexPath *)indexPath
 {
     [self.delegate collectionView:collectionView tappedAtIndexPath:indexPath];
+}
+
+-(void)facebookShare:(id)sender
+{
+    if (self.socialDelegate) {
+        [self.socialDelegate facebookShare:sender];
+    }
+}
+
+-(void)twitterShare:(id)sender
+{
+    if (self.socialDelegate) {
+        [self.socialDelegate twitterShare:sender];
+    }
+}
+
+-(void)googleShare:(id)sender
+{
+    if (self.socialDelegate) {
+        [self.socialDelegate googleShare:sender];
+    }
+}
+
+-(void)emailShare:(id)sender
+{
+    if (self.socialDelegate) {
+        [self.socialDelegate emailShare:sender];
+    }
 }
 
 @end

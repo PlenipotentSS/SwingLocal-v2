@@ -10,6 +10,17 @@
 #import "BaseSectionTableView.h"
 #import "BaseSectionCollectionView.h"
 
+@protocol ContentCellSocialDelegate <NSObject>
+
+- (void)facebookShare:sender;
+
+- (void)twitterShare:sender;
+
+- (void)googleShare:sender;
+
+- (void)emailShare:sender;
+
+@end
 
 @interface ContentTableCell : UITableViewCell
 
@@ -26,5 +37,7 @@
 @property (nonatomic) CGFloat sectionHeight;
 
 @property (nonatomic,weak) NSString *sectionTitle;
+
+@property (unsafe_unretained) id<ContentCellSocialDelegate> socialDelegate;
 
 @end

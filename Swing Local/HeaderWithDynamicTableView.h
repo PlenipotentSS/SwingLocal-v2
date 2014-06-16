@@ -8,7 +8,7 @@
 
 #import "BaseSectionTableView.h"
 
-@interface HeaderWithDynamicTableView : BaseSectionTableView <UITableViewDataSource, UITableViewDelegate>
+@interface HeaderWithDynamicTableView : BaseSectionTableView 
 
 @property (nonatomic, weak) IBOutlet UIView *headerView;
 

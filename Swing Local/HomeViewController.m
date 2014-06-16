@@ -12,6 +12,8 @@
 
 @interface HomeViewController () <ContentSectionDelegate>
 
+@property (nonatomic) BOOL eventLoad;
+
 @end
 
 @implementation HomeViewController
@@ -20,17 +22,23 @@
 {
     [super viewDidLoad];
     [self setupContentSection];
+    
+    self.animatedTableCellOnEntryOnly = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    if (self.eventLoad) {
+        self.eventLoad = NO;
+        self.animateTableViews = NO;
+        [self.theTableView reloadData];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [[MapManager sharedManager] removeMapViewFromSuperView];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -85,7 +93,7 @@
             UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
             EventViewController *controller = (EventViewController*)[mainStoryboard instantiateViewControllerWithIdentifier:@"EventController"];
             controller.eventTitle = [[(ContentSection *)[self.viewItems objectAtIndex:i] data] objectAtIndex:indexPath.row];
-            
+            self.eventLoad = YES;
             [self.navigationController pushViewController:controller animated:YES];
             break;
         }

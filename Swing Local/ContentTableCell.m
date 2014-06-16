@@ -46,4 +46,32 @@
     }
 }
 
+-(IBAction)facebookShare:(id)sender
+{
+    if (self.socialDelegate) {
+        [self.socialDelegate facebookShare:sender];
+    }
+}
+
+-(IBAction)twitterShare:(id)sender
+{
+    if (self.socialDelegate) {
+        [self.socialDelegate twitterShare:sender];
+    }
+}
+
+-(IBAction)googleShare:(id)sender
+{
+    if (self.socialDelegate) {
+        [self.socialDelegate googleShare:sender];
+    }
+}
+
+-(IBAction)emailShare:(id)sender
+{
+    if (self.socialDelegate) {
+        [self.socialDelegate emailShare:sender];
+    }
+}
+
 @end

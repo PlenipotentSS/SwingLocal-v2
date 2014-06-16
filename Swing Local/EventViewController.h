@@ -12,4 +12,10 @@
 
 @property (nonatomic) NSString *eventTitle;
 
+@property (nonatomic) NSMutableArray *times;
+
+@property (nonatomic) NSMutableArray *costs;
+
+@property (nonatomic) NSMutableArray *info;
+
 @end

@@ -10,6 +10,18 @@
 #import <Foundation/Foundation.h>
 #import "ContentTableCell.h"
 
+@protocol ContentSectionSocialDelegate <NSObject>
+
+- (void)facebookShare:sender;
+
+- (void)twitterShare:sender;
+
+- (void)googleShare:sender;
+
+- (void)emailShare:sender;
+
+@end
+
 @protocol ContentSectionDelegate <NSObject>
 
 @optional
@@ -25,7 +37,7 @@
 
 @end
 
-@interface ContentSection : NSObject <BaseSectionTableViewDelegate, BaseSectionCollectionViewDelegate>
+@interface ContentSection : NSObject <BaseSectionTableViewDelegate, BaseSectionCollectionViewDelegate, ContentCellSocialDelegate>
 
 @property (nonatomic) CGFloat height;
 
@@ -36,6 +48,8 @@
 @property (nonatomic,weak) NSMutableArray *data;
 
 @property (unsafe_unretained) id<ContentSectionDelegate> delegate;
+
+@property (unsafe_unretained) id<ContentSectionSocialDelegate> socialDelegate;
 
 @property (nonatomic) NSString *sectionTitle;
 

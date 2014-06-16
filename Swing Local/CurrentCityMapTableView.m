@@ -64,6 +64,22 @@
         self.mapView = [[MapManager sharedManager] getMapViewWithFrame:cell.frame];
 //        NSLog(@"loading Map View %@",self.mapView);
         [cell.contentView addSubview:self.mapView];
+        [NSLayoutConstraint constraintWithItem:self.mapView attribute:NSLayoutAttributeRight
+                                     relatedBy:NSLayoutRelationEqual toItem:cell.contentView
+                                     attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0];
+        
+        [NSLayoutConstraint constraintWithItem:self.mapView attribute:NSLayoutAttributeLeft
+                                     relatedBy:NSLayoutRelationEqual toItem:cell.contentView
+                                     attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0];
+        
+        [NSLayoutConstraint constraintWithItem:self.mapView attribute:NSLayoutAttributeTop
+                                     relatedBy:NSLayoutRelationEqual toItem:cell.contentView
+                                     attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0];
+        
+        [NSLayoutConstraint constraintWithItem:self.mapView attribute:NSLayoutAttributeBottom
+                                     relatedBy:NSLayoutRelationEqual toItem:cell.contentView
+                                     attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0];
+
         cell.clipsToBounds = YES;
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"descriptionCell" forIndexPath:indexPath];

@@ -98,6 +98,8 @@
 		D267DBEE194E447B00D976B3 /* GHWalkThroughView.m in Sources */ = {isa = PBXBuildFile; fileRef = D267DBEB194E447B00D976B3 /* GHWalkThroughView.m */; };
 		D267DBF1194E45ED00D976B3 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D267DBF0194E45ED00D976B3 /* IntroViewController.m */; };
 		D296ECDE194CD4850027E733 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D296ECDD194CD4850027E733 /* RootNavigationController.m */; };
+		D2CF9C03194EE6C90025EC32 /* DynamicTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CF9C02194EE6C90025EC32 /* DynamicTableView.m */; };
+		D2CF9C06194EF5740025EC32 /* DescriptionTableViewcell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CF9C05194EF5740025EC32 /* DescriptionTableViewcell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -245,6 +247,10 @@
 		D267DBF0194E45ED00D976B3 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		D296ECDC194CD4850027E733 /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
 		D296ECDD194CD4850027E733 /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
+		D2CF9C01194EE6C90025EC32 /* DynamicTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicTableView.h; sourceTree = "<group>"; };
+		D2CF9C02194EE6C90025EC32 /* DynamicTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicTableView.m; sourceTree = "<group>"; };
+		D2CF9C04194EF5740025EC32 /* DescriptionTableViewcell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionTableViewcell.h; sourceTree = "<group>"; };
+		D2CF9C05194EF5740025EC32 /* DescriptionTableViewcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionTableViewcell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +313,8 @@
 			children = (
 				3BD98E35194A3CBB000EF668 /* BaseSectionTableView.h */,
 				3BD98E36194A3CBB000EF668 /* BaseSectionTableView.m */,
+				D2CF9C01194EE6C90025EC32 /* DynamicTableView.h */,
+				D2CF9C02194EE6C90025EC32 /* DynamicTableView.m */,
 				3B1C049B19498C6800211EFA /* CurrentCityMapTableView.h */,
 				3B1C049C19498C6800211EFA /* CurrentCityMapTableView.m */,
 				3BD98E3B194A4719000EF668 /* HeaderWithDynamicTableView.h */,
@@ -682,6 +690,8 @@
 				D231AC44194D2107009990C5 /* SocialTableViewCell.m */,
 				D231AC46194D2163009990C5 /* EventTableViewCell.h */,
 				D231AC47194D2163009990C5 /* EventTableViewCell.m */,
+				D2CF9C04194EF5740025EC32 /* DescriptionTableViewcell.h */,
+				D2CF9C05194EF5740025EC32 /* DescriptionTableViewcell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -892,10 +902,12 @@
 				D267DBEE194E447B00D976B3 /* GHWalkThroughView.m in Sources */,
 				3BD98E4C194A666F000EF668 /* BackgroundTriggerCellTableViewCell.m in Sources */,
 				3BD98E37194A3CBB000EF668 /* BaseSectionTableView.m in Sources */,
+				D2CF9C06194EF5740025EC32 /* DescriptionTableViewcell.m in Sources */,
 				3B4C301119484B3000F06E46 /* CustomSegue.m in Sources */,
 				3B1C049619497AE300211EFA /* ContentTableCell.m in Sources */,
 				D231AC42194D2023009990C5 /* CalendarTableViewCell.m in Sources */,
 				D231AC3E194D1ED7009990C5 /* CityTableViewCell.m in Sources */,
+				D2CF9C03194EE6C90025EC32 /* DynamicTableView.m in Sources */,
 				3B4C3001194849E400F06E46 /* BackViewController.m in Sources */,
 				3B765BAF194C3ABD0087872A /* MonthCollectionViewCell.m in Sources */,
 				3BA17D411946E5A600127DAD /* AppDelegate.m in Sources */,

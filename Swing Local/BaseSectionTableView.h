@@ -16,9 +16,17 @@
 
 - (void)selectedRowAtIndexPath:(NSIndexPath*)indexPath forTableView:(UITableView*)tableView;
 
+- (void)facebookShare;
+
+- (void)twitterShare;
+
+- (void)googleShare;
+
+- (void)emailShare;
+
 @end
 
-@interface BaseSectionTableView : UITableView
+@interface BaseSectionTableView : UITableView <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic,weak) NSMutableArray *dynamicData;
 

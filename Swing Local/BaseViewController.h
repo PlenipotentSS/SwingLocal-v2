@@ -29,6 +29,8 @@
 
 @property (nonatomic) NSOperationQueue *cellAnimationQueue;
 
+@property (nonatomic) BOOL entryAnimatedOccurred;
+
 - (void)finishedAnimating;
 
 @end

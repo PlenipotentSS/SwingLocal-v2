@@ -12,8 +12,6 @@
 
 @property (nonatomic) NSMutableArray *storedCells;
 
-@property (nonatomic) BOOL entryAnimatedOccurred;
-
 @end
 
 @implementation BaseViewController
@@ -83,6 +81,15 @@
             [self.theTableView reloadData];
         }];
     }];
+    if (fromInterfaceOrientation == UIInterfaceOrientationPortrait) {
+        [UIView animateWithDuration:.4 animations:^{
+            [self.headerView setAlpha:0.f];
+        }];
+    } else {
+        [UIView animateWithDuration:.4 animations:^{
+            [self.headerView setAlpha:1.f];
+        }];
+    }
 }
 
 -(BOOL)shouldAutorotate

@@ -10,6 +10,6 @@
 
 
 
-@interface CurrentCityMapTableView : BaseSectionTableView <UITableViewDataSource, UITableViewDelegate>
+@interface CurrentCityMapTableView : BaseSectionTableView
 
 @end
