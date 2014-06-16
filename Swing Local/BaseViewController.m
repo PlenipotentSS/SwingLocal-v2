@@ -12,6 +12,8 @@
 
 @property (nonatomic) NSMutableArray *storedCells;
 
+@property (nonatomic) BOOL entryAnimatedOccurred;
+
 @end
 
 @implementation BaseViewController
@@ -47,16 +49,28 @@
     _headerView.layer.shadowOffset = CGSizeMake(2.f,0.f);
     _headerView.clipsToBounds = NO;
     _headerView.alpha = 0.95f;
+    
+    _cellAnimationQueue = [NSOperationQueue new];
+    [_cellAnimationQueue setMaxConcurrentOperationCount:1];
+    _animateTableViews = YES;
+    
+    self.entryAnimatedOccurred = NO;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-//    NSLog(@"navigation stack size: %ld",[self.navigationController.viewControllers count]);
+    NSLog(@"navigation stack size: %ld",[self.navigationController.viewControllers count]);
     if ([self.navigationController.viewControllers count] <= 2 && [self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     } else if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
         self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     }
 }
@@ -64,7 +78,11 @@
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
     [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-    [self.theTableView reloadData];
+    [self.cellAnimationQueue addOperationWithBlock:^{
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [self.theTableView reloadData];
+        }];
+    }];
 }
 
 -(BOOL)shouldAutorotate
@@ -138,5 +156,48 @@
     cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (_animateTableViews) {
+        if (!_animatedTableCellOnEntryOnly || !_entryAnimatedOccurred) {
+            [self animateCell:cell withIndexPath:indexPath];
+        }
+    }
+}
+
+-(void) animateCell: (UITableViewCell*) cell withIndexPath:(NSIndexPath*)indexPath
+{
+    [cell.contentView setAlpha:0.f];
+    [self.cellAnimationQueue addOperationWithBlock:^{
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [UIView animateWithDuration:.4f animations:^{
+                [cell.contentView setAlpha:1.f];
+            } completion:^(BOOL finished) {
+                if (indexPath.row == [self numberOfRows]-1 && [self numberOfRows] > 0) {
+                    self.entryAnimatedOccurred = YES;
+                    NSInvocationOperation *done = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(finishedAnimating) object:nil];
+                    [self.cellAnimationQueue addOperation:done];
+                }
+            }];
+        }];
+        usleep(100000);
+    }];
+    
+    if (SYSTEM_VERSION_LESS_THAN(@"8.0")) {
+        CATransform3D transform3d = CATransform3DMakeScale(1.15, 1.15, 1.15);
+        cell.layer.transform = transform3d;
+        [self.cellAnimationQueue addOperationWithBlock:^{
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                [UIView animateWithDuration:.4f animations:^{
+                    cell.layer.transform = CATransform3DIdentity;
+                }];
+            }];
+            usleep(30000);
+        }];
+    }
+}
+
+- (void)finishedAnimating { }
 
 @end

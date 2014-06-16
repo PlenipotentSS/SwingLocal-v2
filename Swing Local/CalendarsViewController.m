@@ -20,6 +20,8 @@
 
 @property (nonatomic) NSInteger numberOfBlankDays;
 
+@property (nonatomic) NSOperationQueue *postAnimationQueue;
+
 @end
 
 @implementation CalendarsViewController
@@ -28,6 +30,10 @@
 {
     [super viewDidLoad];
 
+    self.animatedTableCellOnEntryOnly = YES;
+    _postAnimationQueue = [NSOperationQueue new];
+    [_postAnimationQueue setMaxConcurrentOperationCount:1];
+//    [_postAnimationQueue setSuspended:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -147,13 +153,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)finishedAnimating
+{
+//    [self.postAnimationQueue setSuspended:NO];
+}
+
 #pragma mark - ContentSectionDelegate
 - (void)redrawCell:(UITableViewCell *)cell
 {
-    if (!self.theTableView.isUpdating) {
-        [self.theTableView beginUpdates];
-        [self.theTableView endUpdates];
-    }
+    [self.theTableView beginUpdates];
+    [self.theTableView endUpdates];
 }
 
 - (void)nextButtonPushed:(id)sender

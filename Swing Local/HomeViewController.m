@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "EventViewController.h"
+#import "MapManager.h"
 
 @interface HomeViewController () <ContentSectionDelegate>
 
@@ -24,6 +25,17 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[MapManager sharedManager] removeMapViewFromSuperView];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
 }
 
 - (void)setupContentSection

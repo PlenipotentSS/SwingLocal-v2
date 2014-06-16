@@ -134,7 +134,6 @@
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
-
     [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
 }
 

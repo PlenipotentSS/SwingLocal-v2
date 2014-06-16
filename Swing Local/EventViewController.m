@@ -23,8 +23,7 @@
         self.viewTitle.text = self.eventTitle;
     }
     
-    self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
-    [self.navigationController.interactivePopGestureRecognizer setEnabled:YES];
+    self.animatedTableCellOnEntryOnly = YES;
 }
 
 - (void)setEventTitle:(NSString *)eventTitle

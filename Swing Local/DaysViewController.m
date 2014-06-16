@@ -19,6 +19,8 @@
 {
     [super viewDidLoad];
     [self setupDay];
+    
+    self.animatedTableCellOnEntryOnly = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated

@@ -10,7 +10,7 @@
 
 @interface MapManager()
 
-//@property (nonatomic) SSMapView *mapView;
+@property (nonatomic) MKMapView *mapView;
 
 @end
 
@@ -23,10 +23,10 @@
     
     dispatch_once(&pred, ^{
         shared = [[MapManager alloc] init];
-//        if (!shared.mapView) {
-//            [shared setupMap];
-//        }
     });
+    if (!shared.mapView) {
+        [shared setupMap];
+    }
     
     return shared;
 }
@@ -43,17 +43,29 @@
     }
 }
 
-//- (SSMapView*)getMapView
-//{
-//    if (self.mapView) {
-//        return self.mapView;
-//    } else {
-//        return nil;
-//    }
-//}
+- (MKMapView*)getMapViewWithFrame:(CGRect)frame
+{
+    if (self.mapView) {
+        self.mapView.frame = frame;
+        return self.mapView;
+    } else {
+        return nil;
+    }
+}
+
+- (void)removeMapViewFromSuperView
+{
+    [self.mapView removeFromSuperview];
+    self.mapView = nil;
+}
 
 - (void)setupMap
 {
+    self.mapView = [[MKMapView alloc] init];
+    [self.mapView setUserInteractionEnabled:NO];
+    [self.mapView setShowsPointsOfInterest:NO];
+    [self.mapView setScrollEnabled:NO];
+    [self.mapView setMapType:MKMapTypeStandard];
 //    self.mapView = [[[NSBundle mainBundle] loadNibNamed:@"SSMapView" owner:self options:nil] objectAtIndex:0];
 }
 

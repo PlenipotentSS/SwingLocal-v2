@@ -7,9 +7,11 @@
 //
 
 #import "CurrentCityMapTableView.h"
+#import "MapManager.h"
 
 @interface CurrentCityMapTableView ()
 
+@property (nonatomic,weak) MKMapView *mapView;
 
 @end
 
@@ -59,6 +61,9 @@
     UITableViewCell *cell;
     if (indexPath.row == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"mapCell" forIndexPath:indexPath];
+        self.mapView = [[MapManager sharedManager] getMapViewWithFrame:cell.frame];
+//        NSLog(@"loading Map View %@",self.mapView);
+        [cell.contentView addSubview:self.mapView];
         cell.clipsToBounds = YES;
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"descriptionCell" forIndexPath:indexPath];

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
 @protocol MapManagerDelegate <NSObject>
 
@@ -18,7 +19,9 @@
 
 + (MapManager*)sharedManager;
 
-//- (SSMapView*)getMapView;
+- (MKMapView*)getMapViewWithFrame:(CGRect)frame;
+
+- (void)removeMapViewFromSuperView;
 
 @property (weak,nonatomic) id<MapManagerDelegate> mapDelegate;
 

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="SmM-PR-SNf">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
@@ -414,17 +413,6 @@
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ug8-J6-yMQ" id="9lf-t4-UEj">
                                                                         <autoresizingMask key="autoresizingMask"/>
-                                                                        <subviews>
-                                                                            <mapView appearanceType="aqua" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" pitchEnabled="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLg-Fv-sNU">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="149"/>
-                                                                            </mapView>
-                                                                        </subviews>
-                                                                        <constraints>
-                                                                            <constraint firstItem="sLg-Fv-sNU" firstAttribute="leading" secondItem="9lf-t4-UEj" secondAttribute="leading" id="awG-LP-G3o"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="sLg-Fv-sNU" secondAttribute="trailing" id="h81-Po-v0m"/>
-                                                                            <constraint firstItem="sLg-Fv-sNU" firstAttribute="top" secondItem="9lf-t4-UEj" secondAttribute="top" id="ifc-dN-wYO"/>
-                                                                            <constraint firstAttribute="bottom" secondItem="sLg-Fv-sNU" secondAttribute="bottom" id="kJI-4z-gw3"/>
-                                                                        </constraints>
                                                                     </tableViewCellContentView>
                                                                 </tableViewCell>
                                                                 <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="descriptionCell" rowHeight="50" id="GMu-Je-ycd">
@@ -1385,10 +1373,6 @@
                                                                         <subviews>
                                                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bR1-cX-jwZ">
                                                                                 <rect key="frame" x="6" y="6" width="28" height="28"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="28" id="h38-jR-CG7"/>
-                                                                                    <constraint firstAttribute="width" constant="28" id="vuU-6c-h7o"/>
-                                                                                </constraints>
                                                                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -1405,10 +1389,14 @@
                                                                     </view>
                                                                     <constraints>
                                                                         <constraint firstAttribute="trailing" secondItem="fo9-NS-iLa" secondAttribute="trailing" id="4Qk-Fj-Baf"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="bR1-cX-jwZ" secondAttribute="bottom" constant="6" id="Jzp-Sg-WrP"/>
                                                                         <constraint firstItem="fo9-NS-iLa" firstAttribute="leading" secondItem="HbY-tt-HFi" secondAttribute="leading" id="NGW-em-BDK"/>
                                                                         <constraint firstAttribute="centerX" secondItem="bR1-cX-jwZ" secondAttribute="centerX" id="Zks-cB-8hH"/>
+                                                                        <constraint firstItem="bR1-cX-jwZ" firstAttribute="leading" secondItem="HbY-tt-HFi" secondAttribute="leading" constant="6" id="aYw-tA-fPA"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="bR1-cX-jwZ" secondAttribute="trailing" constant="6" id="bhu-I4-Jsx"/>
                                                                         <constraint firstAttribute="centerY" secondItem="bR1-cX-jwZ" secondAttribute="centerY" id="dcd-MZ-UvP"/>
                                                                         <constraint firstItem="fo9-NS-iLa" firstAttribute="top" secondItem="HbY-tt-HFi" secondAttribute="top" constant="2" id="oYU-WG-FLI"/>
+                                                                        <constraint firstItem="bR1-cX-jwZ" firstAttribute="top" secondItem="HbY-tt-HFi" secondAttribute="top" constant="6" id="x9w-a0-UQK"/>
                                                                     </constraints>
                                                                     <connections>
                                                                         <outlet property="cellLabel" destination="bR1-cX-jwZ" id="U1e-NM-eHk"/>

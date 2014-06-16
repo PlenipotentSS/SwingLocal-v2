@@ -8,6 +8,11 @@
 
 #import "RootNavigationController.h"
 #import "SplitViewController.h"
+@interface RootNavigationController () <UIGestureRecognizerDelegate, UINavigationControllerDelegate>
+
+@property (nonatomic) NSOperationQueue *popedcontrollers;
+
+@end
 
 @implementation RootNavigationController
 
@@ -27,6 +32,49 @@
         [standardDefaults setBool:YES forKey:@"SkipIntro"];
         [self performSegueWithIdentifier:@"showIntro" sender:self];
     }
+    
+    _popedcontrollers = [NSOperationQueue new];
+    _popedcontrollers.maxConcurrentOperationCount = 1;
+    
+    __weak RootNavigationController *weakSelf = self;
+    
+    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)])
+    {
+        self.interactivePopGestureRecognizer.delegate = weakSelf;
+        self.delegate = weakSelf;
+    }
+}
+
+-(NSURL *)documentDir {
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)])
+        self.interactivePopGestureRecognizer.enabled = NO;
+    [_popedcontrollers addOperationWithBlock:^{
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [super pushViewController:viewController animated:animated];
+        }];
+    }];
+}
+
+- (UIViewController *)popViewControllerAnimated:(BOOL)animated
+{
+    return [super popViewControllerAnimated:animated];
+}
+
+#pragma mark UINavigationControllerDelegate
+
+- (void)navigationController:(UINavigationController *)navigationController
+       didShowViewController:(UIViewController *)viewController
+                    animated:(BOOL)animate
+{
+    // Enable the gesture again once the new controller is shown
+    
+    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)])
+        self.interactivePopGestureRecognizer.enabled = YES;
 }
 
 //- (UIViewController*)getFrontViewController
@@ -55,9 +103,4 @@
 //{
 //    return [[self getFrontViewController] preferredInterfaceOrientationForPresentation];
 //}
-
--(NSURL *)documentDir {
-    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-}
-
 @end

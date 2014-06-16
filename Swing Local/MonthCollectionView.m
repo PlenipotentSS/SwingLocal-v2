@@ -48,6 +48,7 @@
     self.numberOfInitialSpaces = 0;
     
     _dayCells = [NSMutableArray new];
+    self.backgroundColor = [UIColor grayColor];
 }
 
 -(NSInteger)numberOfItems
@@ -104,16 +105,23 @@
     MonthCollectionViewCell *cell;
     if ([self.dayCells count] == indexPath.row) {
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"dayCell" forIndexPath:indexPath];
-        cell.frequencyView.backgroundColor = [UIColor clearColor];
-        cell.backgroundColor = [UIColor clearColor];
+        cell.frequencyView.backgroundColor = [UIColor lightGrayColor];
+        cell.backgroundColor = [UIColor whiteColor];
         if (indexPath.row <7) {
+            if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
+                cell.cellLabel.font = [UIFont fontWithName:@"Avenir-Heavy" size:30.f];
+            }
             cell.cellLabel.text = [self.monthLabels objectAtIndex:indexPath.row];
             cell.cellLabel.textColor = [UIColor grayColor];
+            cell.backgroundColor = [UIColor customLightGreyColor];
+            cell.frequencyView.backgroundColor = [UIColor customLightGreyColor];
         } else {
             NSInteger thisDayIndex = indexPath.row - 7;
             if ([self.dynamicData objectAtIndex:thisDayIndex] == [NSNull null] ) {
                 self.numberOfInitialSpaces++;
                 cell.cellLabel.text = @"";
+                cell.frequencyView.backgroundColor = [UIColor grayColor];
+                cell.backgroundColor = [UIColor grayColor];
             } else {
                 NSMutableArray *eventsThisDay = [self.dynamicData objectAtIndex:thisDayIndex];
                 cell.frequencyView.backgroundColor = [UIColor frequencyColorForNumberOfEvents:[eventsThisDay count]];
