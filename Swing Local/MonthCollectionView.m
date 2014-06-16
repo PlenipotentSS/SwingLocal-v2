@@ -107,6 +107,9 @@
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"dayCell" forIndexPath:indexPath];
         cell.frequencyView.backgroundColor = [UIColor lightGrayColor];
         cell.backgroundColor = [UIColor whiteColor];
+        if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
+            cell.cellLabel.font = [UIFont fontWithName:@"Avenir-Roman" size:30.f];
+        }
         if (indexPath.row <7) {
             if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
                 cell.cellLabel.font = [UIFont fontWithName:@"Avenir-Heavy" size:30.f];

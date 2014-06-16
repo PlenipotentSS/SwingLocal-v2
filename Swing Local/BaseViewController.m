@@ -66,7 +66,7 @@
 {
     [super viewDidAppear:animated];
     
-    NSLog(@"navigation stack size: %ld",[self.navigationController.viewControllers count]);
+//    NSLog(@"navigation stack size: %ld",[self.navigationController.viewControllers count]);
     if ([self.navigationController.viewControllers count] <= 2 && [self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     } else if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
