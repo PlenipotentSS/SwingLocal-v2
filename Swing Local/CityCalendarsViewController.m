@@ -1,16 +1,16 @@
 //
-//  CalendarsViewController.m
+//  CityCalendarsViewController.m
 //  Swing Local
 //
 //  Created by Steven Stevenson on 6/12/14.
 //  Copyright (c) 2014 Steven Stevenson. All rights reserved.
 //
 
-#import "CalendarsViewController.h"
+#import "CityCalendarsViewController.h"
 #import "NSDate+SwingLocal.h"
 #import "DaysViewController.h"
 
-@interface CalendarsViewController () <ContentSectionDelegate>
+@interface CityCalendarsViewController () <ContentSectionDelegate>
 
 @property (nonatomic) NSDate *theDay;
 
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation CalendarsViewController
+@implementation CityCalendarsViewController
 
 - (void)viewDidLoad
 {
@@ -44,22 +44,35 @@
 
 - (void)getCity
 {
-    if (!self.calendarInformation || [self.calendarInformation count] == 0) {
-        self.calendarInformation = [NSMutableArray new];
-        [self.calendarInformation addObject:@"Savoy Monday Calendar"];
+    if (!self.cityInformation || [self.cityInformation count] == 0) {
+        self.cityInformation = [NSMutableArray new];
+        [self.cityInformation addObject:@"Seattle, WA"];
     }
     
     self.allCityTitles = [NSMutableArray new];
-    NSArray *calendarNames = @[@"Jitterbug Productions Events",
-                               @"Century Ballroom Events",
-                               @"Eastside Stomp",
-                               @"Seattle Lindy Exchange",
-                               @"Seattle Swing Events",
-                               @"Killer Diller Weekend",
-                               @"New Orleans Lindy Hop Calendar",
-                               @"Savoy Swing Calendar"];
-    for (NSInteger i=0; i< [calendarNames count]; i++) {
-        [self.allCityTitles addObject:[calendarNames objectAtIndex:i]];
+    NSArray *cityNames = @[@"Seattle, WA",
+                           @"Kirkland, WA",
+                           @"New York, NY",
+                           @"Seoul, Korea",
+                           @"Paris, France",
+                           @"New Orleans, LA",
+                           @"San Francisco, CA",
+                           @"Annandale-on-the-Hudson, NY",
+                           @"Olympia, WA",
+                           @"Zurich, Switzerland",
+                           @"Como, Italy",
+                           @"Stockholm, Sweden",
+                           @"Moscow, Russia",
+                           @"London, England",
+                           @"Denver, CO",
+                           @"Houston, TX",
+                           @"Los Angeles, CA",
+                           @"Austin, TX",
+                           @"Albuquerque, AZ",
+                           @"Omaha, NB",
+                           @"Minneapolis, MN"];
+    for (NSInteger i=0; i< [cityNames count]; i++) {
+        [self.allCityTitles addObject:[cityNames objectAtIndex:i]];
     }
 }
 
@@ -111,8 +124,8 @@
 {
     ContentSection *sec1 = [[ContentSection alloc] init];
     sec1.delegate = self;
-    sec1.cellIdentifier = @"currentCalendarCell";
-    sec1.data = self.calendarInformation;
+    sec1.cellIdentifier = @"currentCityCell";
+    sec1.data = self.cityInformation;
     [sec1 findCellFromIdentifierWithTableView: self.theTableView];
     
     self.calendarSection = [[ContentSection alloc] init];
@@ -137,7 +150,7 @@
 
 - (void)finishedAnimating
 {
-    //    NSLog(@"finishedAnimating");
+//    NSLog(@"finishedAnimating");
 }
 
 #pragma mark - ContentSectionDelegate
@@ -182,12 +195,12 @@
 
 - (void)tableView:(UITableView *)tableView tappedAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.calendarInformation removeLastObject];
-    [self.calendarInformation addObject:[self.allCityTitles objectAtIndex:indexPath.row]];
+    [self.cityInformation removeLastObject];
+    [self.cityInformation addObject:[self.allCityTitles objectAtIndex:indexPath.row]];
     
     ContentSection *section = [self.viewItems objectAtIndex:0];
     if (self.isDisplayingAllCities) {
-        section.data = self.calendarInformation;
+        section.data = self.cityInformation;
         self.isDisplayingAllCities = NO;
         [self.viewItems addObject:self.calendarSection];
     } else {

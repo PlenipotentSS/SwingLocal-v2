@@ -100,6 +100,8 @@
 		D296ECDE194CD4850027E733 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D296ECDD194CD4850027E733 /* RootNavigationController.m */; };
 		D2CF9C03194EE6C90025EC32 /* DynamicTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CF9C02194EE6C90025EC32 /* DynamicTableView.m */; };
 		D2CF9C06194EF5740025EC32 /* DescriptionTableViewcell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CF9C05194EF5740025EC32 /* DescriptionTableViewcell.m */; };
+		D2CF9C08194F73870025EC32 /* CityCalendarsViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = D2CF9C07194F73870025EC32 /* CityCalendarsViewController.h */; };
+		D2CF9C0A194F739F0025EC32 /* CityCalendarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CF9C09194F739F0025EC32 /* CityCalendarsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -251,6 +253,8 @@
 		D2CF9C02194EE6C90025EC32 /* DynamicTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicTableView.m; sourceTree = "<group>"; };
 		D2CF9C04194EF5740025EC32 /* DescriptionTableViewcell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionTableViewcell.h; sourceTree = "<group>"; };
 		D2CF9C05194EF5740025EC32 /* DescriptionTableViewcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionTableViewcell.m; sourceTree = "<group>"; };
+		D2CF9C07194F73870025EC32 /* CityCalendarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityCalendarsViewController.h; sourceTree = "<group>"; };
+		D2CF9C09194F739F0025EC32 /* CityCalendarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityCalendarsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -473,6 +477,8 @@
 				3BD98E43194A5511000EF668 /* FavoritesViewController.m */,
 				3BD98E45194A5888000EF668 /* CalendarsViewController.h */,
 				3BD98E46194A5888000EF668 /* CalendarsViewController.m */,
+				D2CF9C07194F73870025EC32 /* CityCalendarsViewController.h */,
+				D2CF9C09194F739F0025EC32 /* CityCalendarsViewController.m */,
 				D231AC49194D3D17009990C5 /* DaysViewController.h */,
 				D231AC4A194D3D17009990C5 /* DaysViewController.m */,
 				D267DBD1194D879E00D976B3 /* EventViewController.h */,
@@ -816,6 +822,7 @@
 				3BF3FBB6194910570087E469 /* MAP_FLAT_WHITE-04.png in Resources */,
 				3BF3FB7919490DB60087E469 /* leftward-arrow.png in Resources */,
 				3BF3FB7819490DB60087E469 /* Contents.json in Resources */,
+				D2CF9C08194F73870025EC32 /* CityCalendarsViewController.h in Resources */,
 				D267DBDE194D9AAD00D976B3 /* airplane-wing.jpg in Resources */,
 				3BF3FBBB194910570087E469 /* Contents.json in Resources */,
 				3BF3FB8C19490DB60087E469 /* menu@2x.png in Resources */,
@@ -902,6 +909,7 @@
 				D267DBEE194E447B00D976B3 /* GHWalkThroughView.m in Sources */,
 				3BD98E4C194A666F000EF668 /* BackgroundTriggerCellTableViewCell.m in Sources */,
 				3BD98E37194A3CBB000EF668 /* BaseSectionTableView.m in Sources */,
+				D2CF9C0A194F739F0025EC32 /* CityCalendarsViewController.m in Sources */,
 				D2CF9C06194EF5740025EC32 /* DescriptionTableViewcell.m in Sources */,
 				3B4C301119484B3000F06E46 /* CustomSegue.m in Sources */,
 				3B1C049619497AE300211EFA /* ContentTableCell.m in Sources */,

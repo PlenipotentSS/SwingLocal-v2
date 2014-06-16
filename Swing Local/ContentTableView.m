@@ -33,6 +33,12 @@
     self.clipsToBounds = NO;
 }
 
+- (void)reloadData
+{
+    [super reloadData];
+    NSLog(@"reloading");
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     self.touchesMoved = NO;

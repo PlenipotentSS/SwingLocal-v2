@@ -11,8 +11,6 @@
 
 @interface FrontViewController ()
 
-@property (nonatomic) IBOutlet UIButton *menu_burger;
-
 @end
 
 @implementation FrontViewController

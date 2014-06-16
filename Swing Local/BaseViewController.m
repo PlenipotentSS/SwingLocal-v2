@@ -12,14 +12,25 @@
 
 @property (nonatomic) NSMutableArray *storedCells;
 
+@property (nonatomic, weak) IBOutlet UIButton *backButton;
 @end
 
 @implementation BaseViewController
+@synthesize showBackButton = _showBackButton;
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setShowBackButton:(BOOL)showBackButton
+{
+    if (showBackButton) {
+        [self.backButton setHidden:!showBackButton];
+        [self.menu_burger setHidden:!showBackButton];
+    }
+    _showBackButton = showBackButton;
 }
 
 - (void)viewDidLoad
@@ -50,7 +61,7 @@
     
     _cellAnimationQueue = [NSOperationQueue new];
     [_cellAnimationQueue setMaxConcurrentOperationCount:1];
-    _animateTableViews = YES;
+    _animateTableViews = NO;
     
     self.entryAnimatedOccurred = NO;
 }
@@ -58,6 +69,21 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+    if (orientation != UIDeviceOrientationLandscapeLeft || orientation != UIDeviceOrientationLandscapeRight) {
+        if (self.headerView.alpha == 0.f) {
+            [UIView animateWithDuration:.4 animations:^{
+                [self.headerView setAlpha:1.f];
+            }];
+        }
+    } else {
+        [self.headerView setAlpha:0.f];
+    }
+}
+
+- (IBAction)goBack:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -84,10 +110,16 @@
     if (fromInterfaceOrientation == UIInterfaceOrientationPortrait) {
         [UIView animateWithDuration:.4 animations:^{
             [self.headerView setAlpha:0.f];
+            CGRect frame = self.theTableView.frame;
+            frame.origin.y = 0.f;
+            self.theTableView.frame = frame;
         }];
     } else {
         [UIView animateWithDuration:.4 animations:^{
             [self.headerView setAlpha:1.f];
+            CGRect frame = self.theTableView.frame;
+            frame.origin.y = CGRectGetHeight(self.headerView.frame);
+            self.theTableView.frame = frame;
         }];
     }
 }

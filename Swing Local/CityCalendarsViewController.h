@@ -1,5 +1,5 @@
 //
-//  CalendarsViewController.h
+//  CityCalendarsViewController.h
 //  Swing Local
 //
 //  Created by Steven Stevenson on 6/12/14.
@@ -8,12 +8,12 @@
 
 #import "BaseViewController.h"
 
-@interface CalendarsViewController : BaseViewController
+@interface CityCalendarsViewController : BaseViewController
 
 @property (nonatomic) NSMutableArray *monthInformation;
 
-@property (nonatomic) NSMutableArray *calendarInformation;
-
 @property (nonatomic) NSMutableArray *allCityTitles;
+
+@property (nonatomic) NSMutableArray *cityInformation;
 
 @end

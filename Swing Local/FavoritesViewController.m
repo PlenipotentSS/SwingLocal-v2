@@ -10,6 +10,7 @@
 #import "SSPagedView.h"
 #import "PagedTitleView.h"
 #import "UIColor+SwingLocal.h"
+#import "CityCalendarsViewController.h"
 #import "CalendarsViewController.h"
 
 @interface FavoritesViewController () <SSPagedViewDelegate, ContentSectionDelegate>
@@ -94,6 +95,7 @@
     sec2.cellIdentifier = @"favoriteCalendarsCell";
     [sec2 findCellFromIdentifierWithTableView: self.theTableView];
     sec2.data = self.favoriteCalendars;
+    sec2.delegate = self;
     
     self.viewItems = [[NSMutableArray alloc] initWithObjects:sec1, nil];
     self.hiddenItems = [[NSMutableArray alloc] initWithObjects:sec2, nil];
@@ -129,7 +131,20 @@
         [cityNames removeObjectAtIndex:randomEvent];
     }
     
-    self.favoriteCalendars = [[NSMutableArray alloc] initWithObjects:@"Savoy Swing Calendar",@"New Orleans Lindy Hop Calendar", nil];
+    NSMutableArray *calendarNames = [[NSMutableArray alloc] initWithArray:@[@"Jitterbug Productions Events",
+                               @"Century Ballroom Events",
+                               @"Eastside Stomp",
+                               @"Seattle Lindy Exchange",
+                               @"Seattle Swing Events",
+                               @"Killer Diller Weekend",
+                               @"New Orleans Lindy Hop Calendar",
+                               @"Savoy Swing Calendar"]];
+    self.favoriteCalendars = [[NSMutableArray alloc] init];
+    for (NSInteger i=0; i< arc4random_uniform((int)[calendarNames count]); i++) {
+        NSInteger randomEvent = arc4random_uniform((int)[calendarNames count]);
+        [self.favoriteCalendars addObject:[calendarNames objectAtIndex:randomEvent]];
+        [calendarNames removeObjectAtIndex:randomEvent];
+    }
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
@@ -210,19 +225,28 @@
 #pragma mark - ContentSectionDelegate
 - (void)tableView:(UITableView *)tableView tappedAtIndexPath:(NSIndexPath *)indexPath
 {
+    UIViewController *controller;
     if ([(ContentSection*)[self.viewItems objectAtIndex:0] data] == self.favoriteCities) {
         
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-        CalendarsViewController *controller = (CalendarsViewController*)[mainStoryboard instantiateViewControllerWithIdentifier:@"CalendarsController"];
+        controller = [mainStoryboard instantiateViewControllerWithIdentifier:@"CityCalendarsController"];
+        CityCalendarsViewController *citycontroller = (CityCalendarsViewController*)controller;
         
         NSString *cityName = [self.favoriteCities objectAtIndex:indexPath.row];
         NSMutableArray *cityInfo = [[NSMutableArray alloc] initWithObjects:cityName, nil];
-        controller.cityInformation = cityInfo;
+        citycontroller.cityInformation = cityInfo;
         
-        [self.navigationController pushViewController:controller animated:YES];
-    } else {
+    } else if ([(ContentSection*)[self.viewItems objectAtIndex:0] data] == self.favoriteCalendars) {
         
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+        controller = [mainStoryboard instantiateViewControllerWithIdentifier:@"CalendarsController"];
+        CalendarsViewController *citycontroller = (CalendarsViewController*)controller;
+        
+        NSString *calendarName = [self.favoriteCalendars objectAtIndex:indexPath.row];
+        NSMutableArray *cityInfo = [[NSMutableArray alloc] initWithObjects:calendarName, nil];
+        citycontroller.calendarInformation = cityInfo;
     }
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end

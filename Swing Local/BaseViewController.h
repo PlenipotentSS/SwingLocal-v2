@@ -31,6 +31,8 @@
 
 @property (nonatomic) BOOL entryAnimatedOccurred;
 
+@property (nonatomic) BOOL showBackButton;
+
 - (void)finishedAnimating;
 
 @end

@@ -68,11 +68,33 @@
     _theTableView.separatorColor = [self.view backgroundColor];
     
     if (self.isOrganizer) {
-        _menuItems = @[@"HeaderMenu",@"homeCell",@"favoritesCell",@"calendarsCell",@"organizerCell",@"accountCell"];
-        _segueItems = @[@"",@"showHome",@"showFavorites",@"showCalendars",@"showOrganizer",@"showAccount"];
+        _menuItems = @[@"HeaderMenu",
+                       @"homeCell",
+                       @"favoritesCell",
+                       @"calendarsCell",
+                       @"cityCalendarsCell",
+                       @"organizerCell",
+                       @"accountCell"];
+        _segueItems = @[@"",
+                        @"showHome",
+                        @"showFavorites",
+                        @"showCalendars",
+                        @"showCityCalendars",
+                        @"showOrganizer",
+                        @"showAccount"];
     } else {
-        _menuItems = @[@"HeaderMenu",@"homeCell",@"favoritesCell",@"calendarsCell",@"accountCell"];
-        _segueItems = @[@"",@"showHome",@"showFavorites",@"showCalendars",@"showAccount"];
+        _menuItems = @[@"HeaderMenu",
+                       @"homeCell",
+                       @"favoritesCell",
+                       @"calendarsCell",
+                       @"cityCalendarsCell",
+                       @"accountCell"];
+        _segueItems = @[@"",
+                        @"showHome",
+                        @"showFavorites",
+                        @"showCalendars",
+                        @"showCityCalendars",
+                        @"showAccount"];
     }
     
     //temporary static data;
